@@ -1,0 +1,363 @@
+@media screen and (min-width : 992px){
+
+    .tabContent{
+        display: none !important;
+    }
+
+    .mobContent{
+        display: none !important;
+    }
+
+    .sec1{
+        height: 600px;
+        /* background-color: red; */
+        flex-direction: column;
+    }
+    
+    .hc{
+        font-size: 64px;
+        font-weight: bold;
+        color: #03045E;
+    }
+    
+    .slang{
+        font-size: 48px;
+        width: 700px;
+        text-align: center;
+        color: #0078B7;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+    
+    .lj{
+        font-size: 24px;
+        text-decoration: none;
+        border: 1px solid  #03045E;
+        border-radius: 50px;
+        padding : 10px;
+        width: 200px;
+        text-align: center;
+        color: #03045E;
+       
+    }
+    
+    .sec2{
+        height: 600px;
+        background-color:  #00B4D7;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .tentang{
+        text-align: center;
+        font-size: 48px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    .ttgText{
+        width: 260px;
+        color: whitesmoke;
+    }
+    
+    .hcdesc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 50%;
+        height: 600px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+       font-weight: 400;
+       color: whitesmoke;
+        /* background-color: aqua; */
+    }
+    
+    .descText{
+        width: 460px;
+    }
+    
+    .sec3{
+        height: 600px;
+        /* background-color: orange; */
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    
+    .why{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 40px;
+        color: #0078B7;
+        font-weight: bold;
+        height: 200px;
+        /* background-color: gainsboro; */
+    }
+    
+    .reason{
+        width: 100%;
+        
+    }
+    
+    .penampung{
+        width: 280px;
+        text-align: center;
+    }
+    
+    .point{
+        /* background-color: aqua; */
+        font-size: 30px;
+        color: #0078B7;
+        padding-bottom: 30px;
+    }
+    
+    .pointDesc{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width : 601px) and (max-width : 992px){
+    .content{
+        display: none !important;
+    }
+
+    .mobContent{
+        display: none !important;
+    }
+
+    .sec1{
+        height: 500px;
+        /* background-color: red; */
+        flex-direction: column;
+    }
+    
+    .hc{
+        font-size: 48px;
+        font-weight: bold;
+        color: #03045E;
+    }
+    
+    .slang{
+        font-size: 28px;
+        width: 400px;
+        text-align: center;
+        color: #0078B7;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    
+    .lj{
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid  #03045E;
+        border-radius: 50px;
+        padding : 10px;
+        width: 140px;
+        text-align: center;
+        color: #03045E;
+    }
+
+    .sec2{
+        height: 500px;
+        background-color:  #00B4D7;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .tentang{
+        text-align: center;
+        font-size: 36px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    .ttgText{
+        width: 200px;
+        color: whitesmoke;
+    }
+    
+    .hcdesc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 50%;
+        height: 500px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        color: whitesmoke;
+        /* background-color: aqua; */
+    }
+    
+    .descText{
+        width: 260px !important;
+    }
+
+    .sec3{
+        height: 500px;
+        /* background-color: orange; */
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    
+    .why{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        color: #0078B7;
+        font-weight: bold;
+        height: 140px;
+        /* background-color: gainsboro; */
+    }
+    
+    .reason{
+        width: 100%;
+        
+    }
+    
+    .penampung{
+        width: 200px;
+        text-align: center;
+    }
+    
+    .point{
+        /* background-color: aqua; */
+        font-size: 24px;
+        color: #0078B7;
+        padding-bottom: 30px;
+    }
+    
+    .pointDesc{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .sec1{
+        height: 400px;
+        /* background-color: red; */
+        flex-direction: column;
+    }
+    
+    .hc{
+        font-size: 36px;
+        font-weight: bold;
+        color: #03045E;
+    }
+    
+    .slang{
+        font-size: 20px;
+        width: 300px;
+        text-align: center;
+        color: #0078B7;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    
+    .lj{
+        font-size: 12px;
+        text-decoration: none;
+        border: 1px solid  #03045E;
+        border-radius: 50px;
+        padding : 10px;
+        width: 100px;
+        text-align: center;
+        color: #03045E;
+    }
+
+    .sec2{
+        height: 400px;
+        background-color:  #00B4D7;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .tentang{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .ttgText{
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        width: 320px;
+        color: whitesmoke;
+    }
+
+    .hcdesc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    .descText{
+        text-align: center;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        color: whitesmoke;
+        width: 320px !important;
+    }
+
+    .sec3{
+        height: 400px;
+        /* background-color: orange; */
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+    
+    .why{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 24px;
+        color: #0078B7;
+        font-weight: bold;
+        height: 80px;
+        /* background-color: gainsboro; */
+    }
+    
+    .reason{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 300px;
+    }
+    
+    .penampung{
+        width: 200px;
+        text-align: center;
+    }
+    
+    .point{
+        /* background-color: aqua; */
+        font-size: 16px;
+        color: #0078B7;
+    }
+    
+    .pointDesc{
+        font-size: 12px;
+    }
+    
+    
+}

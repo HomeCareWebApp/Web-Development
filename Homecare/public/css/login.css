@@ -1,0 +1,213 @@
+@media screen and (min-width : 992px)
+{
+    .sec{
+        height: 600px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cont{
+        /* background-color: blue; */
+        width: 350px;
+        height: 370px;
+        border :2px solid #00B4D7;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginTxt{
+        width: 270px;
+        padding-bottom: 20px;
+        font-size: 23px;
+    }
+
+    #floatingInput, #floatingPassword
+    {
+        width: 270px;
+        height: 56px;
+        border: 1px solid black;
+        font-size: 16px !important;
+
+    }
+
+    .ph{
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .btnLogin{
+        margin-top : 20px;
+        width: 270px;
+        height: 56px;
+        color: white !important;
+        background-color: #00B4D7 !important;
+        border: 1px solid #0078B7;
+        font-size: 16px !important;
+    }
+
+    .keDaftar{
+        display: flex;
+        justify-content: center;
+        width: 270px;
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+    .form-floating>.form-control-plaintext~label::after, 
+    .form-floating>.form-control:focus~label::after, 
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+     .form-floating>.form-select~label::after {
+        position: static !important;
+    }
+    
+}
+
+@media screen and (min-width : 601px) and (max-width : 992px){
+
+    .sec{
+        height: 500px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cont{
+        /* background-color: blue; */
+        width: 320px;
+        height: 340px;
+        border :2px solid #00B4D7;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginTxt{
+        width: 260px;
+        padding-bottom: 10px;
+        font-size: 20px !important;
+    }
+
+    #floatingInput, #floatingPassword
+    {
+        width: 260px;
+        height: 52px;
+        border: 1px solid black;
+        font-size: 14px !important;
+
+    }
+
+    .ph{
+        font-size: 14px !important;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .btnLogin{
+        margin-top : 20px;
+        width: 260px;
+        height: 52px;
+        color: white !important;
+        background-color: #00B4D7 !important;
+        border: 1px solid #0078B7;
+        font-size: 14px !important; 
+    }
+
+    .keDaftar{
+        display: flex;
+        justify-content: center;
+        width: 260px;
+        padding-top: 10px;
+        font-size: 13px;
+    }
+
+    .form-floating>.form-control-plaintext~label::after, 
+    .form-floating>.form-control:focus~label::after, 
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+     .form-floating>.form-select~label::after {
+        position: static !important;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .sec{
+        height: 400px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cont{
+        /* background-color: blue; */
+        width: 300px;
+        height: 320px;
+        border :2px solid #00B4D7;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginTxt{
+        width: 250px;
+        padding-bottom: 10px;
+        font-size: 18px !important;
+    }
+
+    .form-floating{
+        z-index: -1;
+    }
+
+    #floatingInput, #floatingPassword
+    {
+        width: 250px;
+        height: 48px;
+        border: 1px solid black;
+        font-size: 13px !important;
+
+    }
+
+    .ph{
+        font-size: 13px !important;
+        display: flex !important;
+        align-items: center;
+    }
+
+    .btnLogin{
+        margin-top : 20px;
+        width: 250px;
+        height: 48px;
+        color: white !important;
+        background-color: #00B4D7 !important;
+        border: 1px solid #0078B7;
+        font-size: 13px !important; 
+    }
+
+    .keDaftar{
+        display: flex;
+        justify-content: center;
+        width: 250px;
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .form-floating>.form-control-plaintext~label::after, 
+    .form-floating>.form-control:focus~label::after, 
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+     .form-floating>.form-select~label::after {
+        position: static !important;
+    }
+
+}
+
