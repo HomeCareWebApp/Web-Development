@@ -1,0 +1,145 @@
+@media screen and (min-width : 993px){
+
+    .content{
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+
+    .judull{
+        font-size: 40px;
+        color: #0078B7;
+        font-weight: bold;
+    }
+    
+    .line{
+        border: 1px solid black  !important;
+        width: 600px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .descCont{
+        width: 500px;
+        background-color: #E3FAFF;
+        padding: 15px;
+        border: 1px solid black;
+    }
+
+    .desc{
+        margin: 5px 0px;
+    }
+
+    .textArea{
+        margin: 5px 0px;
+        width: 470px;
+        height: 80px;
+    }
+
+    .btnAcc{
+        color: white !important;
+        background-color: #00B4D7 !important;
+        border: 1px solid #0078B7;
+        font-size: 14px !important; 
+    }
+
+}
+
+@media screen and (min-width : 601px) and (max-width : 992px){
+    .content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+
+    .judull{
+        font-size: 32px;
+        color: #0078B7;
+        font-weight: bold;
+    }
+    
+    .line{
+        border: 1px solid black  !important;
+        width:500px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .descCont{
+        width: 500px;
+        background-color: #E3FAFF;
+        padding: 15px;
+        border: 1px solid black;
+    }
+
+    .desc{
+        margin: 5px 0px;
+    }
+
+    .textArea{
+        margin: 5px 0px;
+        width: 470px;
+        height: 80px;
+    }
+
+    .btnAcc{
+        color: white !important;
+        background-color: #00B4D7 !important;
+        border: 1px solid #0078B7;
+        font-size: 14px !important; 
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .content{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+
+    .judull{
+        font-size: 28px;
+        color: #0078B7;
+        font-weight: bold;
+    }
+    
+    .line{
+        border: 1px solid black  !important;
+        width:300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .descCont{
+        width: 300px;
+        background-color: #E3FAFF;
+        padding: 15px;
+        border: 1px solid black;
+    }
+
+    .desc{
+        margin: 5px 0px;
+    }
+
+    .textArea{
+        margin: 5px 0px;
+        width: 270px;
+        height: 120px;
+    }
+
+    .btnAcc{
+        color: white !important;
+        background-color: #00B4D7 !important;
+        border: 1px solid #0078B7;
+        font-size: 14px !important; 
+    }
+}

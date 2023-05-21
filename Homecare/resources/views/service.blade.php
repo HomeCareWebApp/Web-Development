@@ -12,31 +12,31 @@
         <div class="container d-flex justify-content-center">
 
             <div class="servCont row ">
-                <div class="perServ col-md-6 col-sm-12 col-lg-2">
+                <div id="aa" class="perServ col">
                     <a href="" class="servLink">
                         <div class="imgCont"></div>
                         <div>AC</div>
                     </a>
                 </div>
-                <div class="perServ col-md-6 col-sm-12 col-lg-2">
+                <div id="aa" class="perServ col">
                     <a href="" class="servLink">
                         <div class="imgCont"></div>
                         <div>Electrical</div>
                     </a>
                 </div>
-                <div class="perServ col-md-6 col-sm-12 col-lg-2">
+                <div id="aa" class="perServ col">
                     <a href="" class="servLink">
                         <div class="imgCont"></div>
                         <div>Cleaning</div>
                     </a>
                 </div>
-                <div class="perServ col-md-6 col-sm-12 col-lg-2">
+                <div id="aa" class="perServ col">
                     <a href="" class="servLink">
                         <div class="imgCont"></div>
                         <div>Water</div>
                     </a>
                 </div>
-                <div class="perServ col-md-6 col-sm-12 col-lg-2">
+                <div id="aa" class="perServ col">
                     <a href="" class="servLink">
                         <div class="imgCont"></div>
                         <div>Refrigirator</div>
@@ -47,3 +47,5 @@
     </div>
 
 @endsection
+
+<script src="{{ asset('js/service.js') }}"></script>

@@ -29,4 +29,28 @@ Route::get('/service', function () {
     return view('service');
 });
 
+Route::get('/technician', function () {
+    return view('chooseTechnician');
+});
+
+Route::get('/order', function () {
+    return view('order');
+});
+
+Route::get('/vieworder', function () {
+    return view('viewOrder');
+});
+
+Route::get('/orderdetail', function () {
+    return view('orderDetail');
+});
+
+Route::get('/orderHistory', function () {
+    return view('orderHistory');
+});
+
+Route::get('/orderHistoryDetail', function () {
+    return view('orderHistoryDetail');
+});
+
 // Route::get('/')
