@@ -31,6 +31,11 @@
 
     .desc{
         margin: 5px 0px;
+        display: flex;
+    }
+
+    .kata{
+        width: 100px;
     }
 
     .textArea{
@@ -80,7 +85,13 @@
 
     .desc{
         margin: 5px 0px;
+        display: flex;
     }
+
+    .kata{
+        width: 100px;
+    }
+
 
     .textArea{
         margin: 5px 0px;
@@ -128,6 +139,11 @@
 
     .desc{
         margin: 5px 0px;
+        display: flex;
+    }
+
+    .kata{
+        width: 90px;
     }
 
     .textArea{

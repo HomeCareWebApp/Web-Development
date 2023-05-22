@@ -5,10 +5,6 @@
        display: none !important;
     }
 
-    .tabHeader{
-        display : none !important;
-    }
-    
     .header{
         background-color: #00B4D7;
         height: 80px;
@@ -42,15 +38,12 @@
 
 /* tablet */
 @media screen and (min-width : 601px) and (max-width : 992px){
-    .header{
-        display: none !important;
-   }
-
+  
    .mobHeader{
         display: none !important;
    }
 
-   .tabHeader{
+   .header{
         background-color: #00B4D7;
         height: 80px;
         color : white;
@@ -84,10 +77,6 @@
    .header{
         display: none !important;
    }
-
-   .tabHeader{
-        display: none !important;
-    }
 
    .mobHeader{
         height: 80px;

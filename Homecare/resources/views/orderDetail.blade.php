@@ -8,20 +8,26 @@
 
 <div class="content">
 
-    <div class="judull">Order</div>
+    <div class="judull">Order Detail</div>
     <div class="line"></div>
     <div class="descCont">
         <div class="desc">
-            <div>Service : </div>
+            <div class="kata">Service</div>
+            <div> : </div>
         </div>
         <div class="desc">
-            <div>Technician : </div>
+            <div class="kata">Technician</div>
+            <div> : </div>
         </div>
         <div class="desc">
-            <div>Address : </div>
+            <div class="kata">Address</div>
+            <div> : </div>
         </div>
-        <div class="desc">
-            <div>Description : </div>
+        <div>
+            <div class="desc">
+                <div class="kata">Description</div>
+                <div>: </div>
+            </div>
             <textarea name="" id="" class="textArea">
 
             </textarea>

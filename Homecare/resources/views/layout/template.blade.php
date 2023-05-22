@@ -14,36 +14,17 @@
            <div class="">HomeCare</div>
        </div>
        <div class="d-flex dir nav-menu justify-content-around">
-           <a href="" class="na">Tentang</a>
-           <a href="" class="na">Service</a>
-           <a href="" class="na">Pesanan</a>
+           <a href="#section-2" class="na">Tentang</a>
+           <a href="/service" class="na">Service</a>
+           <a href="/" class="na">Pesanan</a>
            <div class="d-flex dir">
-               <a href="" class="na">Daftar</a>
+               <a href="/register" class="na">Daftar</a>
                <div class="">/</div>
-               <a href="" class="na">Masuk</a>
+               <a href="/login" class="na">Masuk</a>
            </div>
        </div>
 
        
-    </div>
-
-    <div class="tabHeader d-flex align-items-center">
-       
-        <div class="judul">
-            <div class="">HomeCare</div>
-        </div>
-        <div class="d-flex dir nav-menu justify-content-around">
-            <a href="" class="na">Tentang</a>
-            <a href="" class="na">Service</a>
-            <a href="" class="na">Pesanan</a>
-            <div class="d-flex dir">
-                <a href="" class="na">Daftar</a>
-                <div class="">/</div>
-                <a href="" class="na">Masuk</a>
-            </div>
-        </div>
-     
-        
     </div>
 
     <div class="mobHeader">
@@ -54,12 +35,12 @@
             </label>
         
             <ul class="menu__box">
-              <li><a class="menu__item" href="#">Home</a></li>
-              <li><a class="menu__item" href="#">Tentang</a></li>
-              <li><a class="menu__item" href="#">Servis</a></li>
-              <li><a class="menu__item" href="#">Pesanan</a></li>
-              <li><a class="menu__item" href="#">Daftar</a></li>
-              <li><a class="menu__item" href="#">Masuk</a></li>
+              <li><a class="menu__item" href="/">Home</a></li>
+              <li><a class="menu__item" href="#section-2">Tentang</a></li>
+              <li><a class="menu__item" href="/service">Servis</a></li>
+              <li><a class="menu__item" href="/">Pesanan</a></li>
+              <li><a class="menu__item" href="/register">Daftar</a></li>
+              <li><a class="menu__item" href="/login">Masuk</a></li>
             </ul>
         </div>
     </div>

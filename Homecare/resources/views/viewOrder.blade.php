@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Choose Technician')
+@section('title','View Order')
 
 @section('content')
 
@@ -11,15 +11,15 @@
         <div class="ro">Request Order</div>
         <div class="line"></div>
         <div class="dt">Daftar Order Servis</div>
-        <div class="techCont">
+        <div class="ordCont">
             <div class="leftPart ">
                 <div class="d-flex ordTxt">
-                    <div>Service : </div>
-                    <div>Nama Servis </div>
+                    <div class="kata">Service</div>
+                    <div> : Nama Servis </div>
                 </div>
                 <div class="d-flex ordTxt">
-                    <div>Customer : </div>
-                    <div>Nama Cust</div>
+                    <div class="kata">Customer</div>
+                    <div> : Nama Cust</div>
                 </div>
             </div>
             <div class="rightPart">

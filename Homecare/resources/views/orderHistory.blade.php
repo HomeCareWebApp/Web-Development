@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Choose Technician')
+@section('title','Order History')
 
 @section('content')
 
@@ -10,11 +10,11 @@
 
         <div class="ro">Order History</div>
         <div class="line"></div>
-        <div class="techCont">
+        <div class="descCont">
             <div class="leftPart ">
                 <div class="d-flex ordTxt">
-                    <div>Service : </div>
-                    <div>Nama Servis </div>
+                    <div class="kata">Service</div>
+                    <div> : Nama Servis </div>
                 </div>
                 <div class="date">
                    date

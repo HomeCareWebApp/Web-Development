@@ -12,10 +12,10 @@
     
         <div class="hc">HomeCare</div>
         <div class="slang">Solusi Terbaik Dalam Merawat Rumah Anda</div>
-        <a href="" class="lj">Lihat Jasa</a>
+        <a href="/service" class="lj">Lihat Jasa</a>
     </div>
     
-    <div class="d-flex sec2">
+    <div id="section-2" class="d-flex sec2">
         <div class="tentang">
             <div class="ttgText">
                 Tentang Kami
