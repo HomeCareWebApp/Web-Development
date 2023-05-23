@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\TechnicianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,44 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [CustomerController::class, 'home']);
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [CustomerController::class, 'login']);
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register', [CustomerController::class, 'register']);
 
-Route::get('/service', function () {
-    return view('service');
-});
+Route::get('/service', [CustomerController::class, 'service']);
 
-Route::get('/technician', function () {
-    return view('chooseTechnician');
-});
+Route::get('/technician', [CustomerController::class, 'technician']);
 
-Route::get('/order', function () {
-    return view('order');
-});
+Route::get('/order', [CustomerController::class, 'order']);
 
-Route::get('/vieworder', function () {
-    return view('viewOrder');
-});
+Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
 
-Route::get('/orderdetail', function () {
-    return view('orderDetail');
-});
+Route::get('/orderDetail', [TechnicianController::class, 'orderDetail']);
 
-Route::get('/orderHistory', function () {
-    return view('orderHistory');
-});
+Route::get('/orderHistory', [TechnicianController::class, 'orderHistory']);
 
-Route::get('/orderHistoryDetail', function () {
-    return view('orderHistoryDetail');
-});
+Route::get('/orderHistoryDetail', [TechnicianController::class, 'orderHistoryDetail']);
+
 
 // Route::get('/')

@@ -13,13 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order', function (Blueprint $table) {
-            $table->orderId();
-            $table->orderDate();
-            $table->orderTime();
-            $table->service();
-            $table->orderAddress();
+        Schema::create('orders', function (Blueprint $table) {
+            $table->string('orderId')->primary();
+            $table->date('orderDate');
+            $table->string('service',50);
+            $table->string('address');
             $table->timestamps();
+
+            $table->string('technicianId');
+
+            $table->foreign('technicianId')->references('technicianId')->on('technicians');
+
+            $table->string('customerId');
+
+            $table->foreign('customerId')->references('customerId')->on('customers');
         });
     }
 

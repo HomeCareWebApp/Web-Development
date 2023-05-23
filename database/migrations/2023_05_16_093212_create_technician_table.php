@@ -13,17 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('technician', function (Blueprint $table) {
-            $table->technicianId();
-            $table->name();
-            $table->age();
-            $table->rating();
-            $table->email();
-            $table->password();
-            $table->category();
-            $table->experience();
-            $table->location();
-            $table->profilePicture();
+        Schema::create('technicians', function (Blueprint $table) {
+            $table->string('technicianId')->primary();
+            $table->string('name',50);
+            $table->integer('age');
+            $table->float('rating',3,2);
+            $table->string('email',50);
+            $table->string('password',50);
+            $table->string('category',50);
+            $table->string('experience',50);
+            $table->string('location',50);
+            $table->string('profilePicture',255);
+            $table->string('phone',15);
             $table->timestamps();
         });
     }
