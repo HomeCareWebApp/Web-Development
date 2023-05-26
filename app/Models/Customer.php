@@ -12,6 +12,15 @@ class Customer extends Model
     protected $primaryKey = 'customerId';
     protected $keyType = 'string';
 
+    protected $fillable =[
+        'customerId',
+        'name',
+        'email',
+        'password',
+        'phone',
+        'location'
+    ];
+
     public function Order()
     {
         return $this->hasMany(Order::class);

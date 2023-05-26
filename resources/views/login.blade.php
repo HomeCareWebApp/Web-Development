@@ -10,9 +10,10 @@
     <div class="sec">
         <div class="cont">
             <div class="loginTxt">Login</div>
-            <form action="">
+            <form action="/login" method="POST">
+                @csrf
                 <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <input type="email" class="form-control" name="email" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}">
                     <label class="ph" for="floatingInput">
                         <div>
                             Email Address
@@ -20,14 +21,15 @@
                     </label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                    <input type="password" class="form-control" name="password" id="floatingPassword" placeholder="Password">
                     <label class="ph" for="floatingPassword">
                         <div>
                             Password
                         </div>
                     </label>
                 </div>
-               <input type="button" value="Masuk" class="btn btnLogin">
+                <button type="submit" class="btn btnLogin">Masuk</button>
+               
                <div class="keDaftar">
                    <div>Belum ada akun? </div><a href="">Daftar</a>
                </div>

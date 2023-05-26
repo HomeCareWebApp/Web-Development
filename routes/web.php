@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TechnicianController;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CustomerController::class, 'home']);
 
-Route::get('/login', [CustomerController::class, 'login']);
+Route::get('/login', [AuthController::class, 'loginPage']);
 
-Route::get('/register', [CustomerController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/register', [AuthController::class, 'registerPage']);
+
+Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/service', [CustomerController::class, 'service']);
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Technician;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -28,7 +29,9 @@ class CustomerController extends Controller
 
     public function technician()
     {
-        return view('chooseTechnician');
+        $technician = Technician::paginate(5);
+        // dd($technician);
+        return view('chooseTechnician', compact('technician'));
     }
 
     public function order()
