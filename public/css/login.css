@@ -10,8 +10,8 @@
 
     .cont{
         /* background-color: blue; */
-        width: 350px;
-        height: 370px;
+        width: 400px;
+        height: 460px;
         border :2px solid #00B4D7;
         border-radius: 8px;
         display: flex;
@@ -26,6 +26,11 @@
         font-size: 23px;
     }
 
+    .al{
+        width: 270px;
+        font-size: 16px;
+    }
+
     #floatingInput, #floatingPassword
     {
         width: 270px;
@@ -36,8 +41,6 @@
 
     .ph{
         font-size: 16px !important;
-        display: flex !important;
-        align-items: center;
     }
 
     .btnLogin{
@@ -79,8 +82,8 @@
 
     .cont{
         /* background-color: blue; */
-        width: 320px;
-        height: 340px;
+        width: 360px;
+        height: 380px;
         border :2px solid #00B4D7;
         border-radius: 8px;
         display: flex;
@@ -95,6 +98,11 @@
         font-size: 20px !important;
     }
 
+    .al{
+        width: 260px;
+        font-size: 14px;
+    }
+
     #floatingInput, #floatingPassword
     {
         width: 260px;
@@ -105,8 +113,6 @@
 
     .ph{
         font-size: 14px !important;
-        display: flex !important;
-        align-items: center;
     }
 
     .btnLogin{
@@ -148,7 +154,7 @@
     .cont{
         /* background-color: blue; */
         width: 300px;
-        height: 320px;
+        height: 360px;
         border :2px solid #00B4D7;
         border-radius: 8px;
         display: flex;
@@ -163,8 +169,9 @@
         font-size: 18px !important;
     }
 
-    .form-floating{
-        z-index: -1;
+    .al{
+        width: 250px;
+        font-size: 13px;
     }
 
     #floatingInput, #floatingPassword
@@ -177,8 +184,6 @@
 
     .ph{
         font-size: 13px !important;
-        display: flex !important;
-        align-items: center;
     }
 
     .btnLogin{

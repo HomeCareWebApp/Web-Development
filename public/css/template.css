@@ -28,11 +28,23 @@
         padding-right: 100px;
     
     }
+
+    .wel{
+        font-size: 16px;
+    }
     
     .na{
         font-size: 16px;
         color: white;
         text-decoration: none;
+        display: flex;
+        align-items: center;
+        /* height: 40px; */
+    }
+
+    .usr{
+        color: white;
+        font-weight: 600;
     }
 }
 
@@ -47,7 +59,6 @@
         background-color: #00B4D7;
         height: 80px;
         color : white;
-
    }
 
    .judul{
@@ -57,17 +68,27 @@
     }
 
     .nav-menu{
-      
         width: 50%;
         font-size: 16px;
         padding-right: 40px;
-    
+    }
+
+    .wel{
+        font-size: 14px;
     }
     
     .na{
         font-size: 14px;
         color: white;
         text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .usr{
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
     }
 
 }
@@ -81,6 +102,15 @@
    .mobHeader{
         height: 80px;
         background-color: #00B4D7;
+        display: flex;
+        justify-content: space-between;
+   }
+
+   .usr{
+     padding-top: 25px;
+     padding-right: 25px;
+     color: white;
+     font-weight: 600;
    }
 
 
@@ -109,7 +139,7 @@
         width: 26px;
         height: 26px;
         cursor: pointer;
-        z-index: 1;
+        z-index: 2;
     }
     .menu__btn > span,
     .menu__btn > span::before,
@@ -145,6 +175,7 @@
         background-color: #00B4D7;
         box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
         transition-duration: .25s;
+        z-index: 1;
     }
     .menu__item {
         display: block;

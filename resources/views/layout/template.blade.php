@@ -17,11 +17,27 @@
            <a href="#section-2" class="na">Tentang</a>
            <a href="/service" class="na">Service</a>
            <a href="/" class="na">Pesanan</a>
-           <div class="d-flex dir">
-               <a href="/register" class="na">Daftar</a>
-               <div class="">/</div>
-               <a href="/login" class="na">Masuk</a>
-           </div>
+
+           @auth
+           <div class="navbar-nav">
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle usr" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ auth()->user()->name }}
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                 
+                </ul>
+              </li>
+            </div>
+           @else
+              <div class="d-flex dir">
+                  <a href="/register" class="na">Daftar</a>
+                  <div class="">/</div>
+                  <a href="/login" class="na">Masuk</a>
+              </div>
+
+           @endauth
        </div>
 
        
@@ -39,10 +55,19 @@
               <li><a class="menu__item" href="#section-2">Tentang</a></li>
               <li><a class="menu__item" href="/service">Servis</a></li>
               <li><a class="menu__item" href="/">Pesanan</a></li>
-              <li><a class="menu__item" href="/register">Daftar</a></li>
-              <li><a class="menu__item" href="/login">Masuk</a></li>
+              @auth
+                <li><a class="menu__item" href="/logout">Logout</a></li>
+              @else
+                <li><a class="menu__item" href="/register">Daftar</a></li>
+                <li><a class="menu__item" href="/login">Masuk</a></li>
+              @endauth
             </ul>
         </div>
+        @auth
+          <div class="usr">
+            Hi, {{ auth()->user()->name }}
+          </div>
+        @endauth
     </div>
 
     @yield('content')

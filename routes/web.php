@@ -26,6 +26,8 @@ Route::get('/register', [AuthController::class, 'registerPage']);
 
 Route::post('/register', [AuthController::class, 'register']);
 
+Route::get('/logout',[AuthController::class, 'logout']);
+
 Route::get('/service', [CustomerController::class, 'service']);
 
 Route::get('/technician', [CustomerController::class, 'technician']);

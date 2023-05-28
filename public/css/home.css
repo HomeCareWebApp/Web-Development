@@ -1,13 +1,5 @@
 @media screen and (min-width : 993px){
 
-    .tabContent{
-        display: none !important;
-    }
-
-    .mobContent{
-        display: none !important;
-    }
-
     .sec1{
         height: 600px;
         /* background-color: red; */
@@ -123,14 +115,7 @@
 }
 
 @media screen and (min-width : 601px) and (max-width : 992px){
-    .content{
-        display: none !important;
-    }
-
-    .mobContent{
-        display: none !important;
-    }
-
+   
     .sec1{
         height: 500px;
         /* background-color: red; */
