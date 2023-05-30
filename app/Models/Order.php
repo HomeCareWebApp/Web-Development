@@ -12,6 +12,16 @@ class Order extends Model
     protected $primaryKey = 'orderId';
     protected $keyType = 'string';
 
+    protected $fillable =[
+        'orderId',
+        'orderDate',
+        'service',
+        'address',
+        'description',
+        'technicianId',
+        'customerId'
+    ];
+
     public function Technician()
     {
         return $this->belongsTo(Technician::class, 'foreign_key', 'technicianId');

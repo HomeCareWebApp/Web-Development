@@ -11,10 +11,10 @@
     
     <div class="header d-flex align-items-center">
        <div class="judul">
-           <div class="">HomeCare</div>
+           <a href="/" class="hm">HomeCare</a>
        </div>
        <div class="d-flex dir nav-menu justify-content-around">
-           <a href="#section-2" class="na">Tentang</a>
+           <a href="/#section-2" class="na">Tentang</a>
            <a href="/service" class="na">Service</a>
            <a href="/" class="na">Pesanan</a>
 

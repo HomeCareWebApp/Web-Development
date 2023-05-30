@@ -41,6 +41,9 @@
         border: 1px solid black;
         border-radius: 28px;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -87,6 +90,14 @@
         border: 1px solid black;
         border-radius: 24px;
         margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgCont img{
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -133,6 +144,17 @@
         border: 1px solid black;
         border-radius: 24px;
         margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    .imgCont img{
+        width: 90px;
+        height: 90px;
+    }
+    
 }
+
+
 

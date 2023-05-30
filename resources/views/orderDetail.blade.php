@@ -13,27 +13,29 @@
     <div class="descCont">
         <div class="desc">
             <div class="kata">Service</div>
-            <div> : </div>
+            <div> : {{ $order->service }}</div>
         </div>
         <div class="desc">
-            <div class="kata">Technician</div>
-            <div> : </div>
+            <div class="kata">Customer</div>
+            <div> : {{ $order->name }}</div>
         </div>
-        <div class="desc">
-            <div class="kata">Address</div>
-            <div> : </div>
+        <div>
+            <div class="desc">
+                <div class="kata">Address</div>
+                <div> : </div>
+            </div>
+            <div>{{ $order->address }}</div>
+
         </div>
         <div>
             <div class="desc">
                 <div class="kata">Description</div>
                 <div>: </div>
             </div>
-            <textarea name="" id="" class="textArea">
-
-            </textarea>
+            <div>{{ $order->description }}</div>
         </div>
         <div class="d-flex justify-content-end">
-            <button class="btn btnAcc">Accept</button>
+            <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a>
         </div>
     </div>
    

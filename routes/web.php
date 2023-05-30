@@ -18,25 +18,33 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CustomerController::class, 'home']);
 
-Route::get('/login', [AuthController::class, 'loginPage']);
+Route::get('/login', [AuthController::class, 'loginPage'])->middleware('guest');
 
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login'])->middleware('guest');
 
-Route::get('/register', [AuthController::class, 'registerPage']);
+Route::get('/register', [AuthController::class, 'registerPage'])->middleware('guest');
 
-Route::post('/register', [AuthController::class, 'register']);
+Route::post('/register', [AuthController::class, 'register'])->middleware('guest');
 
-Route::get('/logout',[AuthController::class, 'logout']);
+Route::get('/logout',[AuthController::class, 'logout'])->middleware('auth');
 
-Route::get('/service', [CustomerController::class, 'service']);
+Route::get('/service', [CustomerController::class, 'service'])->middleware('auth');
 
-Route::get('/technician', [CustomerController::class, 'technician']);
+Route::get('/service/{name}', [CustomerController::class, 'chooseService']);
 
-Route::get('/order', [CustomerController::class, 'order']);
+// Route::get('/technician', [CustomerController::class, 'technician']);
+
+Route::get('/technician/{id}', [CustomerController::class, 'chooseTechnician']);
+
+Route::get('/order', [CustomerController::class, 'orderPage']);
+
+Route::post('/order', [CustomerController::class, 'order']);
 
 Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
 
-Route::get('/orderDetail', [TechnicianController::class, 'orderDetail']);
+Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
+
+Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
 
 Route::get('/orderHistory', [TechnicianController::class, 'orderHistory']);
 

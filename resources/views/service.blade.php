@@ -13,32 +13,32 @@
 
             <div class="servCont row ">
                 <div id="aa" class="perServ col">
-                    <a href="" class="servLink">
-                        <div class="imgCont"></div>
+                    <a href="/service/ac" class="servLink">
+                        <div class="imgCont"><img src="{{ asset('img/AC.png') }}" alt=""></div>
                         <div>AC</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="" class="servLink">
-                        <div class="imgCont"></div>
+                    <a href="/service/electrical" class="servLink">
+                        <div class="imgCont"><img src="{{ asset('img/Electrical.png') }}" alt=""></div>
                         <div>Electrical</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="" class="servLink">
-                        <div class="imgCont"></div>
+                    <a href="/service/cleaning" class="servLink">
+                        <div class="imgCont"><img src="{{ asset('img/Cleaning.png') }}" alt=""></div>
                         <div>Cleaning</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="" class="servLink">
-                        <div class="imgCont"></div>
+                    <a href="/service/water" class="servLink">
+                        <div class="imgCont"><img src="{{ asset('img/Water.png') }}" alt=""></div>
                         <div>Water</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="" class="servLink">
-                        <div class="imgCont"></div>
+                    <a href="/service/refrigirator" class="servLink">
+                        <div class="imgCont"><img src="{{ asset('img/Refrigirator.png') }}" alt=""></div>
                         <div>Refrigirator</div>
                     </a>
                 </div>

@@ -16,6 +16,12 @@
         padding-left:100px;
         font-size: 24px;
     }
+
+    .hm{
+        text-decoration: none;
+        color: white;
+    }
+
     
     .dir{
         flex-direction: row;
@@ -60,6 +66,11 @@
         height: 80px;
         color : white;
    }
+
+   .hm{
+        text-decoration: none;
+        color: white;
+    }
 
    .judul{
         width: 50%;

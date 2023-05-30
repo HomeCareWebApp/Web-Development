@@ -23,7 +23,8 @@
     }
 
     .descCont{
-        width: 500px;
+        width: 600px;
+        /* height: 400px; */
         background-color: #E3FAFF;
         padding: 15px;
         border: 1px solid black;
@@ -38,10 +39,9 @@
         width: 100px;
     }
 
-    .textArea{
+    #floatingTextarea{
         margin: 5px 0px;
-        width: 470px;
-        height: 80px;
+        height: 100px;
     }
 
     .btnOrder{
@@ -51,11 +51,18 @@
         font-size: 14px !important; 
     }
 
+    .form-floating>.form-control-plaintext~label::after, 
+    .form-floating>.form-control:focus~label::after, 
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+     .form-floating>.form-select~label::after {
+        position: static !important;
+    }
+
 }
 
 @media screen and (min-width : 601px) and (max-width : 992px){
     .content{
-        height: 500px;
+        height: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -93,10 +100,9 @@
     }
 
 
-    .textArea{
+    #floatingTextarea{
         margin: 5px 0px;
-        width: 470px;
-        height: 80px;
+        height: 100px;
     }
 
     .btnOrder{
@@ -105,11 +111,18 @@
         border: 1px solid #0078B7;
         font-size: 14px !important; 
     }
+
+    .form-floating>.form-control-plaintext~label::after, 
+    .form-floating>.form-control:focus~label::after, 
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+     .form-floating>.form-select~label::after {
+        position: static !important;
+    }
 }
 
 @media screen and (max-width : 600px) {
     .content{
-        height: 500px;
+        height: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -146,10 +159,10 @@
         width: 90px;
     }
 
-    .textArea{
+    #floatingTextarea{
         margin: 5px 0px;
         width: 270px;
-        height: 120px;
+        height: 100px;
     }
 
     .btnOrder{
@@ -157,5 +170,12 @@
         background-color: #00B4D7 !important;
         border: 1px solid #0078B7;
         font-size: 14px !important; 
+    }
+
+    .form-floating>.form-control-plaintext~label::after, 
+    .form-floating>.form-control:focus~label::after, 
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+     .form-floating>.form-select~label::after {
+        position: static !important;
     }
 }

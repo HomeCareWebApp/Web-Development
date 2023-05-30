@@ -8,7 +8,7 @@
 
 <div class="content">
 
-    <div class="judulJasa">Jasa Servis AC</div>
+    <div class="judulJasa">Jasa Servis {{ $servName }}</div>
     <div class="line"></div>
     <div class="dt">Daftar Teknisi</div>
     @foreach ($technician as $t)
@@ -24,7 +24,7 @@
             </div>
             <div class="rightPart">
                 <button class="btn btnAction">View Profile</button>
-                <button class="btn btnAction">Choose</button>
+                <a href="/technician/{{ $t->technicianId }}" class="btn btnAction">Choose</a>
             </div>
         </div>
         
