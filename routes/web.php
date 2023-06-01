@@ -26,6 +26,10 @@ Route::get('/register', [AuthController::class, 'registerPage'])->middleware('gu
 
 Route::post('/register', [AuthController::class, 'register'])->middleware('guest');
 
+Route::get('/registerTechnician', [AuthController::class, 'registerTechPage'])->middleware('guest');
+
+Route::post('/registerTechnician', [AuthController::class, 'registerTech'])->middleware('guest');
+
 Route::get('/logout',[AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/service', [CustomerController::class, 'service'])->middleware('auth');
@@ -45,6 +49,8 @@ Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
 Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
 
 Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
+
+Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile']);
 
 Route::get('/orderHistory', [TechnicianController::class, 'orderHistory']);
 

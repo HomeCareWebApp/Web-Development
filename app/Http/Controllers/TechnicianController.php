@@ -48,4 +48,12 @@ class TechnicianController extends Controller
         return view('orderHistoryDetail');
     }
 
+    public function viewProfile(String $id)
+    {
+        $technician = DB::table('technicians')->where('technicianId',$id)->first();
+        return view('technicianProfile',[
+            'technician' => $technician
+        ]);
+    }
+
 }

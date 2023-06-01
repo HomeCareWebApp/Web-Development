@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="rightPart">
-                <button class="btn btnAction">View Profile</button>
+                <a href="/profile/{{ $t->technicianId }}" class="btn btnAction">View Profile</a>
                 <a href="/technician/{{ $t->technicianId }}" class="btn btnAction">Choose</a>
             </div>
         </div>

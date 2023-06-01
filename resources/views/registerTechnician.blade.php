@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="{{ asset('css/register.css') }}">
+<link rel="stylesheet" href="{{ asset('css/registerTechnician.css') }}">
 
 @extends('layout.template')
 
-@section('title','Daftar')
+@section('title','Daftar Teknisi')
 
 @section('content')
 
@@ -17,7 +17,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <form action="/register" method="POST">
+            <form action="/registerTechnician" method="POST">
                 @csrf
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}">
@@ -78,6 +78,27 @@
 
                 </div>
                 <div class="form-floating mb-3">
+                    <select class="form-select @error('category') is-invalid @enderror ph" id="floatingSelect" name="category" aria-label="Floating label select example">
+                      <option value="0">Choose Category</option>
+                      <option value="AC">AC</option>
+                      <option value="Electrical">Electrical</option>
+                      <option value="Cleaning">Cleaning</option>
+                      <option value="Water">Water</option>
+                      <option value="Refrigirator">Refrigirator</option>
+                    </select>
+                    <label class="ph" for="floatingSelect">
+                        <div>
+                            Category
+                        </div>
+                    </label>
+                    @error('category')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+
+                </div>
+                <div class="form-floating mb-3">
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="floatingPassword" placeholder="Password">
                     <label class="ph" for="floatingPassword">
                         <div>
@@ -104,13 +125,9 @@
                     @enderror
                 </div>
                 <button type="submit" class="btn btnReg">Register</button>
-               <div class="keMasuk mb-2">
+               <div class="keMasuk">
                    <div>Sudah ada akun? </div><a href="/login">Masuk</a>
                </div>
-
-               <div class="keMasuk">
-                <div>Ingin menjadi teknisi? <a href="/registerTechnician">Daftar</a></div>
-            </div>
 
             </form>
         </div>
