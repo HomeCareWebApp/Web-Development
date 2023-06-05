@@ -42,9 +42,7 @@
     
     .descCont{
         height: 400px;
-        background-color: #E3FAFF;
-        padding: 20px;
-        border: 1px solid black;
+        padding-left: 20px;        
     }
 
     .desc{
@@ -59,7 +57,7 @@
     .imgCont{
         width: 150px;
         height: 150px;
-        background-color: #E3FAFF;
+        /* background-color: #E3FAFF; */
         border: 1px solid black;
         border-radius: 50%;
         display: flex;
@@ -73,6 +71,41 @@
         border: 1px solid;
         border-radius: 50%;
     }
+
+    .custom-file-input {
+        color: transparent;
+        width: 120px;
+      }
+      .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      .custom-file-input::before {
+        content: 'Change Picture';
+        color: black;
+        display: inline-block;
+        background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 500;
+        font-size: 10pt;
+        margin-left: 3px;
+      }
+      .custom-file-input:hover::before {
+        border-color: black;
+      }
+      .custom-file-input:active {
+        outline: 0;
+      }
+      .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+      }
 
 
 }
@@ -120,10 +153,8 @@
     }
     
     .descCont{
-        height: 300px;
-        background-color: #E3FAFF;
+        height: 400px;
         padding: 15px;
-        border: 1px solid black;
     }
 
     .desc{
@@ -138,7 +169,7 @@
     .imgCont{
         width: 120px;
         height: 120px;
-        background-color: #E3FAFF;
+        /* background-color: #E3FAFF; */
         border: 1px solid black;
         border-radius: 50%;
         display: flex;
@@ -153,12 +184,47 @@
         border-radius: 50%;
     }
 
+    .custom-file-input {
+        color: transparent;
+        width: 120px;
+      }
+      .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      .custom-file-input::before {
+        content: 'Change Picture';
+        color: black;
+        display: inline-block;
+        background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 500;
+        font-size: 14px;
+        /* margin-left: 3px; */
+      }
+      .custom-file-input:hover::before {
+        border-color: black;
+      }
+      .custom-file-input:active {
+        outline: 0;
+      }
+      .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+      }
+
 }
 
 @media screen and (max-width:600px) {
 
     .content{
-        height: 700px;
+        height: 800px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -199,11 +265,11 @@
     }
     
     .descCont{
-        height: 300px;
+        height: 400px;
         width: 300px;
-        background-color: #E3FAFF;
+       
         padding: 15px;
-        border: 1px solid black;
+        
     }
 
     .desc{
@@ -218,7 +284,7 @@
     .imgCont{
         width: 120px;
         height: 120px;
-        background-color: #E3FAFF;
+        /* background-color: #E3FAFF; */
         border: 1px solid black;
         border-radius: 50%;
         display: flex;
@@ -232,4 +298,39 @@
         border: 1px solid;
         border-radius: 50%;
     }
+
+
+    .custom-file-input {
+        color: transparent;
+        width: 120px;
+      }
+      .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      .custom-file-input::before {
+        content: 'Change Picture';
+        color: black;
+        display: inline-block;
+        background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 5px 8px;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: pointer;
+        text-shadow: 1px 1px #fff;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .custom-file-input:hover::before {
+        border-color: black;
+      }
+      .custom-file-input:active {
+        outline: 0;
+      }
+      .custom-file-input:active::before {
+        background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+      }
 }

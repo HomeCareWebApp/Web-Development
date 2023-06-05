@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class TechnicianController extends Controller
@@ -54,6 +55,38 @@ class TechnicianController extends Controller
         return view('technicianProfile',[
             'technician' => $technician
         ]);
+    }
+
+    public function changeProfile(String $id)
+    {
+        
+
+        $technician = DB::table('technicians')->where('technicianId',$id)->first();
+
+        return view('changeProfile',[
+            'technician' => $technician
+        ]);
+
+    }
+
+    public function changePicture(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|max:1024|',
+        ]);
+
+        $email = Auth::user()->email;
+
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId ;
+     
+        $request->image->move(public_path('techImg'), $id.".png");
+
+        DB::table('technicians')->where('technicianId',$id)->update(['profilePicture' => $id]);
+
+        return back();
+
+
     }
 
 }

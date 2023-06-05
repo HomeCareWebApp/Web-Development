@@ -44,6 +44,8 @@ Route::get('/order', [CustomerController::class, 'orderPage']);
 
 Route::post('/order', [CustomerController::class, 'order']);
 
+Route::get('/myOrder', [CustomerController::class, 'myOrder']);
+
 Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
 
 Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
@@ -51,6 +53,10 @@ Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
 Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
 
 Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile']);
+
+Route::get('/changeProfile/{id}', [TechnicianController::class, 'changeProfile']);
+
+Route::post('/changePicture', [TechnicianController::class, 'changePicture']);
 
 Route::get('/orderHistory', [TechnicianController::class, 'orderHistory']);
 

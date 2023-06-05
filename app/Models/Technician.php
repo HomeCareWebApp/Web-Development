@@ -12,6 +12,20 @@ class Technician extends Model
     protected $primaryKey = 'technicianId';
     protected $keyType = 'string';
 
+    protected $fillable =[
+        'technicianId',
+        'name',
+        'age',
+        'rating',
+        'email',
+        'password',
+        'category',
+        'experience',
+        'location',
+        'profilePicture',
+        'phone'
+    ];
+
     public function order()
     {
         return $this->hasMany(Order::class);

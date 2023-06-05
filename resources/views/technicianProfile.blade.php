@@ -13,7 +13,7 @@
     <div class="d-flex cont">
         <div class="leftPart">
             <div class="imgCont mb-2">
-
+                <img class="pp" src="{{ asset('techImg/'.$technician->technicianId.'.png') }}" alt="">
             </div>
             <div class="mb-2">{{ $technician->name }}</div>
             <div>{{ $technician->technicianId }}</div>

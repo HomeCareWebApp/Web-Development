@@ -109,6 +109,24 @@ class CustomerController extends Controller
         return redirect('/');
     }
 
+    public function myOrder()
+    {
+
+        $email = Auth::user()->email;
+
+        $cust = DB::table('customers')->where('email',$email)->first();
+        $id = $cust->customerId ;
+
+
+        $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
+        ->where('customerId',$id)->where('status','accepted')->paginate(5);
+
+        return view('myOrder',[
+            'data' => $data
+        ]);
+
+    }
+
     
     
 
