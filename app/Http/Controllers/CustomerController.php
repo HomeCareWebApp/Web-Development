@@ -33,7 +33,7 @@ class CustomerController extends Controller
 
     public function chooseService(String $name)
     {
-        $technician = DB::table('technicians')->where('category', 'test')->paginate(5);
+        $technician = DB::table('technicians')->where('category', $name)->paginate(5);
 
         return view('chooseTechnician', [
             'servName' => $name,
