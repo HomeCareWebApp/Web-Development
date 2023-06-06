@@ -38,6 +38,8 @@ Route::get('/service/{name}', [CustomerController::class, 'chooseService']);
 
 // Route::get('/technician', [CustomerController::class, 'technician']);
 
+Route::get('/myOrderDetail/{id}', [CustomerController::class, 'orderDetail']);
+
 Route::get('/technician/{id}', [CustomerController::class, 'chooseTechnician']);
 
 Route::get('/order', [CustomerController::class, 'orderPage']);
@@ -49,6 +51,8 @@ Route::get('/myOrder', [CustomerController::class, 'myOrder']);
 Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
 
 Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
+
+Route::get('/order/onGoing', [TechnicianController::class, 'onGoing']);
 
 Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
 

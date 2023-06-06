@@ -14,9 +14,9 @@
         <div class="desc">
             <div class="kata">Service</div>
             <div> : {{ $order->service }}</div>
-        </div>
+        </div> 
         <div class="desc">
-            <div class="kata">Customer</div>
+            <div class="kata">Technician</div>
             <div> : {{ $order->name }}</div>
         </div>
         <div>
@@ -34,9 +34,11 @@
             </div>
             <div>{{ $order->description }}</div>
         </div>
+       
         <div class="d-flex justify-content-end">
-            <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a>
+            <a href="/" class="btn btnAcc">Cancel</a>
         </div>
+      
     </div>
    
 </div>

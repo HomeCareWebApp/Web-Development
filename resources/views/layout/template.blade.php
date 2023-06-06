@@ -25,7 +25,7 @@
                   Pesanan
                 </a>
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="/">Pesanan Saya</a></li>
+                  <li><a class="dropdown-item" href="/myOrder">Pesanan Saya</a></li>
                   <li><a class="dropdown-item" href="/">Sedang Berlangsung</a></li>
                   
                 </ul>
@@ -39,13 +39,13 @@
                   Pesanan
                 </a>
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="/">Daftar Pesanan</a></li>
-                  <li><a class="dropdown-item" href="/">Sedang Berlangsung</a></li>
+                  <li><a class="dropdown-item" href="/viewOrder">Daftar Pesanan</a></li>
+                  <li><a class="dropdown-item" href="/order/onGoing">Sedang Berlangsung</a></li>
                   
                 </ul>
               </li>
             </div>
-            <a href="/" class="na">Profil</a>
+            <a href="/changeProfile" class="na">Profil</a>
 
           @endif
           
@@ -95,7 +95,7 @@
                         Pesanan
                       </a>
                       <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item" href="/logout">Request Order</a></li>
+                        <li><a class="dropdown-item" href="/myOrder">Request Order</a></li>
                         <li><a class="dropdown-item" href="/logout">On Going Order</a></li>
                         
                       </ul>
@@ -103,7 +103,7 @@
                   </div>
                 @elseif(auth()->user()->role == 'Technician')
                   <li><a class="menu__item" href="/viewOrder">Request Order</a></li>
-                  <li><a class="menu__item" href="#section-2">On Going Order</a></li>
+                  <li><a class="menu__item" href="/order/onGoing">On Going Order</a></li>
                   <li><a class="menu__item" href="/changeProfile">Profile</a></li>
                 @endif
                 <li><a class="menu__item" href="/logout">Logout</a></li>

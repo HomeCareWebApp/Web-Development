@@ -37,11 +37,11 @@
                     <div class="mb-3">
                         <label for="" class="form-label">Location</label>
                         <select class="form-select" aria-label="Default select example" id="mySelect" name="selected">
-                            <option value="Jakarta">Jakarta</option>
-                            <option value="Bogor">Bogor</option>
-                            <option value="Depok">Depok</option>
-                            <option value="Tangerang">Tangerang</option>
-                            <option value="Bekasi">Bekasi</option>
+                            <option value="jakarta">Jakarta</option>
+                            <option value="bogor">Bogor</option>
+                            <option value="depok">Depok</option>
+                            <option value="tangerang">Tangerang</option>
+                            <option value="bekasi">Bekasi</option>
                         </select>
                     </div>
                     <div class="mb-3">

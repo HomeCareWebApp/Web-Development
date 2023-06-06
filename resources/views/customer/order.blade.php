@@ -16,14 +16,12 @@
 
             <div class="desc">
                 <div class="kata">Service</div>
-                <div> : </div>
-                <div>{{ $technician->category }}</div>
+                <div> : {{ $technician->category }}</div>
                 <input type="hidden" name="service" id="service" value="{{ $technician->category }}">
             </div>
             <div class="desc">
                 <div class="kata">Technician</div>
-                <div> : </div>
-                <div>{{ $technician->name }} - {{ $technician->technicianId }}</div>
+                <div> : {{ $technician->name }} - {{ $technician->technicianId }}</div>
                 <input type="hidden" name="technician" id="technician" value="{{ $technician->technicianId }}">
             </div>
             <div>

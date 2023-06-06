@@ -12,14 +12,19 @@ class TechnicianController extends Controller
     public function viewOrder()
     {
 
-        $data = DB::table('customers')->join('orders', 'customers.customerId','=', 'orders.customerId')
-        ->where('technicianId','T0001')->where('status','requested')->paginate(5);
+        $email = Auth::user()->email;
 
-        return view('viewOrder',[
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId ;
+
+        $data = DB::table('customers')->join('orders', 'customers.customerId','=', 'orders.customerId')
+        ->where('technicianId',$id)->where('status','requested')->paginate(5);
+
+        return view('technician/viewOrder',[
             'data' => $data
         ]);
 
-        // return $data;
+        // return $id;
     }
 
     public function orderDetail(String $id)
@@ -27,8 +32,26 @@ class TechnicianController extends Controller
         $order = DB::table('orders')->join('customers', 'orders.customerId','=','customers.customerId')
         ->where('orderId',$id)->first();
 
-        return view('orderDetail',[
+       
+
+        return view('technician/orderDetail',[
             'order' => $order
+        ]);
+        // return $order;
+    }
+
+    public function onGoing()
+    {
+        $email = Auth::user()->email;
+
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId ;
+
+        $data = DB::table('customers')->join('orders', 'customers.customerId','=', 'orders.customerId')
+        ->where('technicianId',$id)->where('status','accepted')->paginate(5);
+
+        return view('technician/onGoing',[
+            'data' => $data
         ]);
     }
 
@@ -36,7 +59,7 @@ class TechnicianController extends Controller
     {
         DB::table('orders')->where('orderId', $id)->update(['status' => 'accepted']);
 
-        return redirect('/');
+        return redirect('/order/onGoing');
     }
 
     public function orderHistory()
@@ -52,22 +75,27 @@ class TechnicianController extends Controller
     public function viewProfile(String $id)
     {
         $technician = DB::table('technicians')->where('technicianId',$id)->first();
-        return view('technicianProfile',[
+        return view('technician/technicianProfile',[
             'technician' => $technician
         ]);
     }
 
     public function changeProfile(String $id)
     {
-        
+        $email = Auth::user()->email;
+
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId ;
 
         $technician = DB::table('technicians')->where('technicianId',$id)->first();
 
-        return view('changeProfile',[
-            'technician' => $technician
+        return view('technician/changeProfile',[
+            'technician' => $technician,
+            'id' => $id
         ]);
 
     }
+
 
     public function changePicture(Request $request)
     {

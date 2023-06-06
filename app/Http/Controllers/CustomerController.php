@@ -126,12 +126,23 @@ class CustomerController extends Controller
 
 
         $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
-        ->where('customerId',$id)->where('status','accepted')->paginate(5);
+        ->where('customerId',$id)->where('status','requested')->paginate(5);
 
-        return view('myOrder',[
+        return view('customer/myOrder',[
             'data' => $data
         ]);
 
+    }
+
+    public function orderDetail(String $id)
+    {
+        $order = DB::table('orders')->join('technicians', 'technicians.technicianId','=','technicians.technicianId')
+        ->where('orderId',$id)->first();
+
+        return view('customer/orderDetail',[
+            'order' => $order
+        ]);
+        // return $order;
     }
 
     

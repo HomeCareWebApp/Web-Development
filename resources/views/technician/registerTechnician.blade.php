@@ -59,11 +59,11 @@
                 <div class="form-floating mb-3">
                     <select class="form-select @error('location') is-invalid @enderror ph" id="floatingSelect" name="location" aria-label="Floating label select example">
                       <option value="0">Choose Location</option>
-                      <option value="Jakarta">Jakarta</option>
-                      <option value="Bogor">Bogor</option>
-                      <option value="Depok">Depok</option>
-                      <option value="Tangerang">Tangerang</option>
-                      <option value="Bekasi">Bekasi</option>
+                      <option value="jakarta">Jakarta</option>
+                      <option value="bogor">Bogor</option>
+                      <option value="depok">Depok</option>
+                      <option value="tangerang">Tangerang</option>
+                      <option value="bekasi">Bekasi</option>
                     </select>
                     <label class="ph" for="floatingSelect">
                         <div>
