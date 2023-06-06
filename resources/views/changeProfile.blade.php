@@ -25,18 +25,18 @@
         <div class="rightPart">
             <div  class="descCont">
 
-                <form>
+                <form action="/saveChange" method="POST">
                     <div class="mb-3">
                       <label for="" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="emailHelp" value="{{ $technician->name }}">
+                      <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" value="{{ $technician->name }}">
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Age</label>
-                        <input type="number" class="form-control" id="age" aria-describedby="emailHelp" value="">
+                        <input type="number" class="form-control" id="age" name="age" aria-describedby="emailHelp" value="">
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Location</label>
-                        <select class="form-select" aria-label="Default select example" id="mySelect">
+                        <select class="form-select" aria-label="Default select example" id="mySelect" name="selected">
                             <option value="Jakarta">Jakarta</option>
                             <option value="Bogor">Bogor</option>
                             <option value="Depok">Depok</option>
@@ -46,10 +46,10 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Experience</label>
-                        <textarea class="form-control" aria-label="With textarea">{{ $technician->experience }}</textarea>
+                        <textarea class="form-control" name="experience" aria-label="With textarea">{{ $technician->experience }}</textarea>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
                 </form>
 
 

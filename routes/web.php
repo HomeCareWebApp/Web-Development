@@ -32,7 +32,7 @@ Route::post('/registerTechnician', [AuthController::class, 'registerTech'])->mid
 
 Route::get('/logout',[AuthController::class, 'logout'])->middleware('auth');
 
-Route::get('/service', [CustomerController::class, 'service'])->middleware('auth');
+Route::get('/service', [CustomerController::class, 'service'])->middleware('auth')->middleware('customer');
 
 Route::get('/service/{name}', [CustomerController::class, 'chooseService']);
 
@@ -55,6 +55,8 @@ Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
 Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile']);
 
 Route::get('/changeProfile/{id}', [TechnicianController::class, 'changeProfile']);
+
+Route::post('/saveChange', [TechnicianController::class, 'saveChange']);
 
 Route::post('/changePicture', [TechnicianController::class, 'changePicture']);
 

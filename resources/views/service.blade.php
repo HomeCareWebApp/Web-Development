@@ -8,7 +8,7 @@
 
     <div class="content">
         <div class="jk">Jasa Kami</div>
-        <div class="servDesc">Kami menyediakan berbagai jasa service</div>
+        <div class="servDesc">Berikut jasa service yang kami sediakan</div>
         <div class="container d-flex justify-content-center">
 
             <div class="servCont row ">

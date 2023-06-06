@@ -24,7 +24,8 @@
         <div class="hcdesc">
             <div class="descText">
                 HomeCare adalah aplikasi penyedia jasa service untuk merawat dan memperbaiki
-                peralatan di rumah anda. HomeCare menyediakan servis berupa (..........).
+                peralatan di rumah anda. HomeCare menyediakan jasa berupa servis AC,
+                listrik, air, pembersihan rumah dan kulkas.
                 HomeCare memberikan anda kebebasan untuk memilik teknisi yang anda inginkan.
                 Dengan adanya HomeCare, rumah anda akan tetap terjaga 
     

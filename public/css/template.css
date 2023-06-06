@@ -52,6 +52,10 @@
         color: white;
         font-weight: 600;
     }
+
+    .ord{
+        color: white;
+    }
 }
 
 /* tablet */
@@ -115,6 +119,7 @@
         background-color: #00B4D7;
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
    }
 
    .usr{
@@ -188,6 +193,7 @@
         transition-duration: .25s;
         z-index: 1;
     }
+    
     .menu__item {
         display: block;
         padding: 12px 24px;
@@ -198,7 +204,13 @@
         transition-duration: .25s;
     }
     .menu__item:hover {
-        background-color: #CFD8DC;
+        color: #03045E;
     }
+
+    .ord{
+        color: white;
+    }
+
+    
 
 }

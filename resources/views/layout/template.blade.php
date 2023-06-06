@@ -13,24 +13,56 @@
        <div class="judul">
            <a href="/" class="hm">HomeCare</a>
        </div>
+       
        <div class="d-flex dir nav-menu justify-content-around">
-           <a href="/#section-2" class="na">Tentang</a>
-           <a href="/service" class="na">Service</a>
-           <a href="/" class="na">Pesanan</a>
+         @auth
+          @if (auth()->user()->role == 'Customer')
+            <a href="/#section-2" class="na">Tentang</a>
+            <a href="/service" class="na">Service</a>
+            <div class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pesanan
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="/">Pesanan Saya</a></li>
+                  <li><a class="dropdown-item" href="/">Sedang Berlangsung</a></li>
+                  
+                </ul>
+              </li>
+            </div>
+            
+          @elseif(auth()->user()->role == 'Technician')
+            <div class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pesanan
+                </a>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="/">Daftar Pesanan</a></li>
+                  <li><a class="dropdown-item" href="/">Sedang Berlangsung</a></li>
+                  
+                </ul>
+              </li>
+            </div>
+            <a href="/" class="na">Profil</a>
 
-           @auth
+          @endif
+          
            <div class="navbar-nav">
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle usr" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ auth()->user()->name }}
                 </a>
-                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="/logout">Keluar</a></li>
                  
                 </ul>
               </li>
             </div>
            @else
+              <a href="/#section-2" class="na">Tentang</a>
+              <a href="/service" class="na">Service</a>
               <div class="d-flex dir">
                   <a href="/register" class="na">Daftar</a>
                   <div class="">/</div>
@@ -51,13 +83,34 @@
             </label>
         
             <ul class="menu__box">
-              <li><a class="menu__item" href="/">Home</a></li>
-              <li><a class="menu__item" href="#section-2">Tentang</a></li>
-              <li><a class="menu__item" href="/service">Servis</a></li>
-              <li><a class="menu__item" href="/">Pesanan</a></li>
               @auth
+                @if (auth()->user()->role == 'Customer')
+                  <li><a class="menu__item" href="/">Home</a></li>
+                  <li><a class="menu__item" href="#section-2">Tentang</a></li>
+                  <li><a class="menu__item" href="/service">Servis</a></li>
+                  {{-- <li><a class="menu__item" href="/">Pesanan</a></li> --}}
+                  <div class="navbar-nav">
+                    <li class="nav-item dropdown menu__item">
+                      <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pesanan
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/logout">Request Order</a></li>
+                        <li><a class="dropdown-item" href="/logout">On Going Order</a></li>
+                        
+                      </ul>
+                    </li>
+                  </div>
+                @elseif(auth()->user()->role == 'Technician')
+                  <li><a class="menu__item" href="/viewOrder">Request Order</a></li>
+                  <li><a class="menu__item" href="#section-2">On Going Order</a></li>
+                  <li><a class="menu__item" href="/changeProfile">Profile</a></li>
+                @endif
                 <li><a class="menu__item" href="/logout">Logout</a></li>
               @else
+                <li><a class="menu__item" href="/">Home</a></li>
+                <li><a class="menu__item" href="#section-2">Tentang</a></li>
+                <li><a class="menu__item" href="/service">Servis</a></li>
                 <li><a class="menu__item" href="/register">Daftar</a></li>
                 <li><a class="menu__item" href="/login">Masuk</a></li>
               @endauth

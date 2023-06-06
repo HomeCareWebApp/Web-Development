@@ -89,4 +89,14 @@ class TechnicianController extends Controller
 
     }
 
+    public function saveChange(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|max:50',
+            'age'  => 'required|numeric',
+            'location' => 'required',
+            'experience' => 'required'
+        ]);
+    }
+
 }

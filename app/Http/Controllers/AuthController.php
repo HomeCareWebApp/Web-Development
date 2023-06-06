@@ -27,10 +27,18 @@ class AuthController extends Controller
         if(Auth::attempt($infoLogin)){
 
             session()->regenerate();
-            return redirect()->intended('/');
+            if(Auth::user()->role == 'Customer')
+            {
+                return redirect()->intended('/');
+            }
+            elseif(Auth::user()->role == 'Technician')
+            {
+                return redirect('/viewOrder');
+            }
+            
         }
-       
         return back()->with('errorLogin', 'Invalid Username or Password');
+       
        
     }
 
@@ -48,7 +56,7 @@ class AuthController extends Controller
     {
         $validateData = $request->validate([
             'email' => 'required|unique:customers|email',
-            'name' =>  'required',
+            'name' =>  'required|max:50',
             'phone' => 'required|numeric',
             'location' => 'required|not_in:0',
             'password' => 'required|min:8',
@@ -96,7 +104,7 @@ class AuthController extends Controller
     {
         $validateData = $request->validate([
             'email' => 'required|unique:customers|email',
-            'name' =>  'required',
+            'name' =>  'required|max:50',
             'phone' => 'required|numeric',
             'location' => 'required|not_in:0',
             'category' => 'required|not_in:0',
