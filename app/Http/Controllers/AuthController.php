@@ -89,6 +89,7 @@ class AuthController extends Controller
         $userData['email'] = $request->email;
         $userData['password'] = bcrypt($request->password);
         $userData['name'] = $request->name;
+        $userData['role'] = 'Customer';
 
 
         Customer::create($validateData);
@@ -141,7 +142,7 @@ class AuthController extends Controller
         $userData['email'] = $request->email;
         $userData['password'] = bcrypt($request->password);
         $userData['name'] = $request->name;
-
+        $userData['role'] = 'Technician';
 
         Technician::create($validateData);
 
