@@ -16,7 +16,7 @@
         <div class="techCont">
             <div class="leftPart d-flex align-items-center">
                 <div>
-                    <img class="techImg" src="" alt="">
+                    <img class="techImg" src="{{ asset('techImg/'.$t->technicianId.'.png') }}" alt="">
                 </div>
                 <div>
                     {{ $t->name }}

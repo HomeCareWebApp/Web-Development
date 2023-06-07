@@ -8,11 +8,11 @@
 
     <div class="content">
 
-        <div class="ro">My Order</div>
+        <div class="ro">On Going Order</div>
         <div class="line"></div>
-        <div class="dt">Daftar Order Servis</div>
+        <div class="dt">Daftar pesanan yang Sedang Berlangsung</div>
         @if($data->isEmpty())
-        <div>Anda belum memiliki pesanan</div>
+        <div>Anda tidak memiliki pesanan yang sedang berlangsung</div>
         @else
         
             <div class="ordCont">
@@ -29,7 +29,6 @@
                     </div>
                     <div class="rightPart">
                         <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
-                        <button class="btn btnAction">Accept</button>
                     </div>
                 @endforeach
             </div>
