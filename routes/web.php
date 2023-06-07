@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\RatingController;
 use App\Http\Controllers\TechnicianController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,7 +35,11 @@ Route::get('/logout',[AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/service', [CustomerController::class, 'service'])->middleware('auth')->middleware('customer');
 
+Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile'])->middleware('auth')->middleware('customer');
+
 Route::get('/service/{name}', [CustomerController::class, 'chooseService']);
+
+Route::get('/rating/{orderId}', [CustomerController::class, 'ratingPage'])->middleware('auth')->middleware('customer');
 
 // Route::get('/technician', [CustomerController::class, 'technician']);
 
@@ -52,7 +57,7 @@ Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
 
 Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
 
-Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile']);
+Route::get('/profile', [TechnicianController::class, 'viewProfile']);
 
 Route::get('/changeProfile/{id}', [TechnicianController::class, 'changeProfile']);
 

@@ -19,7 +19,8 @@ class Order extends Model
         'address',
         'description',
         'technicianId',
-        'customerId'
+        'customerId',
+        'status'
     ];
 
     public function Technician()

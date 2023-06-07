@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Technician;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -49,8 +50,12 @@ class TechnicianController extends Controller
         return view('orderHistoryDetail');
     }
 
-    public function viewProfile(String $id)
+    public function viewProfile(Request $request)
     {
+        $user = Auth::user();
+        if($request->id == null){
+            $id = Technician::select('technicianId')->where('email',$user->email)->first()->technicianId;
+        } else $id = $request->id;
         $technician = DB::table('technicians')->where('technicianId',$id)->first();
         return view('technicianProfile',[
             'technician' => $technician
@@ -60,7 +65,6 @@ class TechnicianController extends Controller
     public function changeProfile(String $id)
     {
         
-
         $technician = DB::table('technicians')->where('technicianId',$id)->first();
 
         return view('changeProfile',[

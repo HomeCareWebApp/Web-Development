@@ -33,7 +33,14 @@ class CustomerController extends Controller
 
     public function chooseService(String $name)
     {
-        $technician = DB::table('technicians')->where('category', 'test')->paginate(5);
+
+        $email = Auth::user()->email;
+
+        $cust = DB::table('customers')->where('email', $email)->first();
+        $loc = $cust->location;
+
+        $technician = DB::table('technicians')->where('category', $name)->
+        where('location', $loc)->paginate(5);
 
         return view('chooseTechnician', [
             'servName' => $name,
@@ -116,8 +123,7 @@ class CustomerController extends Controller
 
         $cust = DB::table('customers')->where('email',$email)->first();
         $id = $cust->customerId ;
-
-
+        
         $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
         ->where('customerId',$id)->where('status','accepted')->paginate(5);
 
@@ -126,9 +132,15 @@ class CustomerController extends Controller
         ]);
 
     }
+    public function ratingPage(Request $request)
+    {
+        $orderId = $request->orderId;
 
-    
-    
+        $orders = Order::selectRaw('service,name')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
 
+        return view('rating',[
+            'orders' => $orders
+        ]);
+    }
 
 }
