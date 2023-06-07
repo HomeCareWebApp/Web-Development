@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('customerId')->primary();
             $table->string('name',50);
             $table->string('email',50);
-            $table->string('password',50);
+            $table->string('password');
             $table->string('location',50);
             $table->string('phone',15);
             $table->timestamps();

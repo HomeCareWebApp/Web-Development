@@ -28,7 +28,7 @@ class CustomerController extends Controller
 
     public function service()
     {
-        return view('customer/service');
+        return view('service');
     }
 
     public function chooseService(String $name)
@@ -42,7 +42,7 @@ class CustomerController extends Controller
         $technician = DB::table('technicians')->where('category', $name)->
         where('location', $loc)->paginate(5);
 
-        return view('customer/chooseTechnician', [
+        return view('chooseTechnician', [
             'servName' => $name,
             'technician' => $technician
         ]);
@@ -56,7 +56,7 @@ class CustomerController extends Controller
     {
         $tech = DB::table('technicians')->where('technicianId',$id)->first();
 
-        return view ('customer/order',['technician' => $tech]);
+        return view ('order',['technician' => $tech]);
     }
 
     // public function technician()
@@ -123,26 +123,24 @@ class CustomerController extends Controller
 
         $cust = DB::table('customers')->where('email',$email)->first();
         $id = $cust->customerId ;
-
-
+        
         $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
-        ->where('customerId',$id)->where('status','requested')->paginate(5);
+        ->where('customerId',$id)->where('status','accepted')->paginate(5);
 
-        return view('customer/myOrder',[
+        return view('myOrder',[
             'data' => $data
         ]);
 
     }
-
-    public function orderDetail(String $id)
+    public function ratingPage(Request $request)
     {
-        $order = DB::table('orders')->join('technicians', 'technicians.technicianId','=','technicians.technicianId')
-        ->where('orderId',$id)->first();
+        $orderId = $request->orderId;
 
-        return view('customer/orderDetail',[
-            'order' => $order
+        $orders = Order::selectRaw('service,name')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
+
+        return view('rating',[
+            'orders' => $orders
         ]);
-        // return $order;
     }
 
     public function cancel(String $id)

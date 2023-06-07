@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('age');
             $table->float('rating',3,2);
             $table->string('email',50);
-            $table->string('password',50);
+            $table->string('password');
             $table->string('category',50);
             $table->string('experience',50);
             $table->string('location',50);
