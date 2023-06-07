@@ -38,7 +38,7 @@
         </div>
        
         <div class="d-flex justify-content-end">
-            <a href="/cancel/{{ $order->orderId }}" class="btn btnCancel">Cancel</a>
+           {{-- <div>Status : {{ $order->status }}</div> --}}
             {{-- <a href="https://wa.me/082248009200">Send Message</a> --}}
         </div>
       

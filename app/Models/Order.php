@@ -19,6 +19,7 @@ class Order extends Model
         'address',
         'description',
         'technicianId',
+        'status',
         'customerId'
     ];
 

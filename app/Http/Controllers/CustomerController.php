@@ -28,7 +28,7 @@ class CustomerController extends Controller
 
     public function service()
     {
-        return view('service');
+        return view('customer/service');
     }
 
     public function chooseService(String $name)
@@ -42,7 +42,7 @@ class CustomerController extends Controller
         $technician = DB::table('technicians')->where('category', $name)->
         where('location', $loc)->paginate(5);
 
-        return view('chooseTechnician', [
+        return view('customer/chooseTechnician', [
             'servName' => $name,
             'technician' => $technician
         ]);
@@ -56,7 +56,7 @@ class CustomerController extends Controller
     {
         $tech = DB::table('technicians')->where('technicianId',$id)->first();
 
-        return view ('order',['technician' => $tech]);
+        return view ('customer/order',['technician' => $tech]);
     }
 
     // public function technician()
@@ -125,13 +125,25 @@ class CustomerController extends Controller
         $id = $cust->customerId ;
         
         $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
-        ->where('customerId',$id)->where('status','accepted')->paginate(5);
+        ->where('customerId',$id)->where('status','requested')->paginate(5);
 
-        return view('myOrder',[
+        return view('customer/myOrder',[
             'data' => $data
         ]);
 
     }
+
+    public function orderDetail(String $id)
+    {
+        $order = DB::table('orders')->join('technicians', 'technicians.technicianId','=','technicians.technicianId')
+        ->where('orderId',$id)->first();
+
+        return view('customer/orderDetail',[
+            'order' => $order
+        ]);
+        // return $order;
+    }
+
     public function ratingPage(Request $request)
     {
         $orderId = $request->orderId;
