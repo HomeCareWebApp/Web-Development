@@ -51,6 +51,8 @@ Route::get('/order', [CustomerController::class, 'orderPage']);
 
 Route::post('/order', [CustomerController::class, 'order']);
 
+Route::get('/cancel/{id}', [CustomerController::class, 'cancel']);
+
 Route::get('/myOrder', [CustomerController::class, 'myOrder']);
 
 Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);

@@ -125,16 +125,22 @@ class CustomerController extends Controller
         $id = $cust->customerId ;
         
         $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
-        ->where('customerId',$id)->where('status','requested')->paginate(5);
+        ->where('customerId',$id)->where('status','accepted')->paginate(5);
 
-        return view('customer/myOrder',[
+        return view('myOrder',[
             'data' => $data
         ]);
 
     }
+    public function ratingPage(Request $request)
+    {
+        $orderId = $request->orderId;
 
-    
-    
+        $orders = Order::selectRaw('service,name')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
 
+        return view('rating',[
+            'orders' => $orders
+        ]);
+    }
 
 }

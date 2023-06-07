@@ -29,7 +29,7 @@
                     </div>
                     <div class="rightPart">
                         <a href="/myOrderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
-                        <button class="btn btnAction">Cancel</button>
+                        <a class="btn btnCancel">Cancel</a>
                     </div>
                 @endforeach
             </div>

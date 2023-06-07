@@ -36,6 +36,7 @@
 
     .kata{
         width: 100px;
+        margin-right: 5px;
     }
 
     .textArea{
@@ -44,11 +45,17 @@
         height: 80px;
     }
 
-    .btnAcc{
+    .btnCancel{
         color: white !important;
-        background-color: #00B4D7 !important;
+        background-color: red !important;
         border: 1px solid #0078B7;
         font-size: 14px !important; 
+    }
+
+    .isi{
+        margin-left: 5px;
+        width: 460px;
+        /* background-color: red !important; */
     }
 
 }
@@ -90,6 +97,7 @@
 
     .kata{
         width: 100px;
+        margin-right: 5px;
     }
 
     .textArea{
@@ -98,11 +106,16 @@
         height: 80px;
     }
 
-    .btnAcc{
+    .btnCancel{
         color: white !important;
-        background-color: #00B4D7 !important;
+        background-color: red !important;
         border: 1px solid #0078B7;
         font-size: 14px !important; 
+    }
+
+    .isi{
+        margin-left: 5px;
+        width: 460px;
     }
 }
 
@@ -143,6 +156,7 @@
 
     .kata{
         width: 100px;
+        margin-right: 5px;
     }
 
     .textArea{
@@ -151,10 +165,16 @@
         height: 120px;
     }
 
-    .btnAcc{
+    .btnCancel{
         color: white !important;
-        background-color: #00B4D7 !important;
+        background-color: red !important;
         border: 1px solid #0078B7;
         font-size: 14px !important; 
+    }
+
+    .isi{
+        margin-left: 5px;
+        width: 200px;
+        /* background-color: red; */
     }
 }
