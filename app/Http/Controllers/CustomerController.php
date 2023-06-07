@@ -28,7 +28,7 @@ class CustomerController extends Controller
 
     public function service()
     {
-        return view('service');
+        return view('customer/service');
     }
 
     public function chooseService(String $name)
@@ -42,7 +42,7 @@ class CustomerController extends Controller
         $technician = DB::table('technicians')->where('category', $name)->
         where('location', $loc)->paginate(5);
 
-        return view('chooseTechnician', [
+        return view('customer/chooseTechnician', [
             'servName' => $name,
             'technician' => $technician
         ]);
@@ -56,7 +56,7 @@ class CustomerController extends Controller
     {
         $tech = DB::table('technicians')->where('technicianId',$id)->first();
 
-        return view ('order',['technician' => $tech]);
+        return view ('customer/order',['technician' => $tech]);
     }
 
     // public function technician()
@@ -143,6 +143,13 @@ class CustomerController extends Controller
             'order' => $order
         ]);
         // return $order;
+    }
+
+    public function cancel(String $id)
+    {
+        DB::table('orders')->where('orderId', '=', $id)->delete();
+
+        return redirect('/myOrder');
     }
 
     
