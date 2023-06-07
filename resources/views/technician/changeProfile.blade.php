@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/changeProfile.css') }}">
+<link rel="stylesheet" href="{{ asset('css/technician/changeProfile.css') }}">
 
 @extends('layout.template')
 
@@ -10,6 +10,18 @@
 
     <div class="ro">Technician Profile</div>
     <div class="line"></div>
+    @if(session()->has('change'))
+    <div class="alert alert-success alert-dismissible fade show al" role="alert">
+        {{ session('change') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+    @if(session()->has('picture'))
+    <div class="alert alert-success alert-dismissible fade show al" role="alert">
+        {{ session('picture') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
     <div class="d-flex cont">
         <div class="leftPart">
             <div class="imgCont mb-2">
@@ -26,60 +38,45 @@
             <div  class="descCont">
 
                 <form action="/saveChange" method="POST">
+                    @csrf
                     <div class="mb-3">
                       <label for="" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" value="{{ $technician->name }}">
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label">Age</label>
-                        <input type="number" class="form-control" id="age" name="age" aria-describedby="emailHelp" value="">
+                      <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" aria-describedby="emailHelp" value="{{ $technician->name }}">
+                      @error('name')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Location</label>
-                        <select class="form-select" aria-label="Default select example" id="mySelect" name="selected">
+                        <select class="form-select @error('location') is-invalid @enderror" aria-label="Default select example" id="mySelect" name="location">
                             <option value="jakarta">Jakarta</option>
                             <option value="bogor">Bogor</option>
                             <option value="depok">Depok</option>
                             <option value="tangerang">Tangerang</option>
                             <option value="bekasi">Bekasi</option>
                         </select>
+                        @error('location')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Experience</label>
-                        <textarea class="form-control" name="experience" aria-label="With textarea">{{ $technician->experience }}</textarea>
+                        <textarea class="form-control @error('experience') is-invalid @enderror" name="experience" aria-label="With textarea">{{ $technician->experience }}</textarea>
+                        @error('experience')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <div class="btnCont">
+                        <button type="submit" class="btn btnSC">Save Changes</button>
+                    </div>
                 </form>
-
-
-
-
-
-                
-                    {{-- <div class="det">Age </div>
-                    <div>30</div>
-                
-                <div class="desc">
-                    <div class="det">Rating</div>
-                    <div>{{ $technician->rating }} / 5.00</div>
-                </div>
-                <div class="desc">
-                    <div class="det">Category</div>
-                    <div>{{ $technician->category }}</div>
-                </div>
-                <div class="desc">
-                    <div class="det">Location</div>
-                    <div>{{ $technician->location }}</div>
-                </div>
-                <div class="desc">
-                    <div class="det">Experience</div>
-                    <div>Value</div>
-                </div> --}}
             </div>
-            {{-- <div>
-                <button class="btn">Back to Order</button>
-            </div> --}}
         </div>
     </div>
    

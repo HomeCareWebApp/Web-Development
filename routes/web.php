@@ -50,6 +50,8 @@ Route::get('/cancel/{id}', [CustomerController::class, 'cancel']);
 
 Route::get('/myOrder', [CustomerController::class, 'myOrder']);
 
+Route::get('/myOrder/onGoing', [CustomerController::class, 'onGoing']);
+
 Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
 
 Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
@@ -57,6 +59,8 @@ Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
 Route::get('/order/onGoing', [TechnicianController::class, 'onGoing']);
 
 Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
+
+Route::get('/complete/{id}', [TechnicianController::class, 'complete']);
 
 Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile']);
 

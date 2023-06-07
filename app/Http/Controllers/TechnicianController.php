@@ -21,7 +21,8 @@ class TechnicianController extends Controller
         ->where('technicianId',$id)->where('status','requested')->paginate(5);
 
         return view('technician/viewOrder',[
-            'data' => $data
+            'data' => $data,
+            'id' => $id
         ]);
 
         // return $id;
@@ -29,13 +30,20 @@ class TechnicianController extends Controller
 
     public function orderDetail(String $id)
     {
+
+        
         $order = DB::table('orders')->join('customers', 'orders.customerId','=','customers.customerId')
         ->where('orderId',$id)->first();
+        
+        $email = Auth::user()->email;
 
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId;
        
 
         return view('technician/orderDetail',[
-            'order' => $order
+            'order' => $order,
+            'id' => $id
         ]);
         // return $order;
     }
@@ -51,7 +59,8 @@ class TechnicianController extends Controller
         ->where('technicianId',$id)->where('status','accepted')->paginate(5);
 
         return view('technician/onGoing',[
-            'data' => $data
+            'data' => $data,
+            'id' => $id
         ]);
     }
 
@@ -60,6 +69,13 @@ class TechnicianController extends Controller
         DB::table('orders')->where('orderId', $id)->update(['status' => 'accepted']);
 
         return redirect('/order/onGoing');
+    }
+
+    public function complete(String $id)
+    {
+        DB::table('orders')->where('orderId', $id)->update(['status' => 'completed']);
+
+        return redirect('/viewOrder');
     }
 
     public function orderHistory()
@@ -112,19 +128,36 @@ class TechnicianController extends Controller
 
         DB::table('technicians')->where('technicianId',$id)->update(['profilePicture' => $id]);
 
-        return back();
+        session()->flash('picture', 'Successfully change profile picture');
+
+        return redirect('/changeProfile'.'/'.$id);
 
 
     }
 
     public function saveChange(Request $request)
     {
+
+       
         $request->validate([
             'name' => 'required|max:50',
-            'age'  => 'required|numeric',
             'location' => 'required',
             'experience' => 'required'
         ]);
+
+        $email = Auth::user()->email;
+
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId ;
+
+        DB::table('technicians')->where('technicianId', $id)
+        ->update(['name' => $request->name, 
+        'location' => $request->location, 
+        'experience' => $request->experience]);
+
+        session()->flash('change','Successfully change profile');
+
+        return redirect('/changeProfile'.'/'.$id);
     }
 
 }

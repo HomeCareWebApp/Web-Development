@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/techProfile.css') }}">
+<link rel="stylesheet" href="{{ asset('css/technician/techProfile.css') }}">
 
 @extends('layout.template')
 

@@ -152,6 +152,22 @@ class CustomerController extends Controller
         return redirect('/myOrder');
     }
 
+    public function onGoing()
+    {
+        $email = Auth::user()->email;
+
+        $cust = DB::table('customers')->where('email',$email)->first();
+        $id = $cust->customerId ;
+
+        $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
+        ->where('customerId',$id)->where('status','accepted')->paginate(5);
+
+        return view('customer/onGoing',[
+            'data' => $data,
+            'id' => $id
+        ]);
+    }
+
     
     
 

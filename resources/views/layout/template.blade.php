@@ -26,7 +26,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                   <li><a class="dropdown-item" href="/myOrder">Pesanan Saya</a></li>
-                  <li><a class="dropdown-item" href="/">Sedang Berlangsung</a></li>
+                  <li><a class="dropdown-item" href="/myOrder/onGoing">Sedang Berlangsung</a></li>
                   
                 </ul>
               </li>
@@ -45,7 +45,7 @@
                 </ul>
               </li>
             </div>
-            <a href="/changeProfile" class="na">Profil</a>
+            <a href="/changeProfile/{{ $id }}" class="na">Profil</a>
 
           @endif
           
@@ -96,7 +96,7 @@
                       </a>
                       <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                         <li><a class="dropdown-item" href="/myOrder">Request Order</a></li>
-                        <li><a class="dropdown-item" href="/logout">On Going Order</a></li>
+                        <li><a class="dropdown-item" href="/myOrder/onGoing">On Going Order</a></li>
                         
                       </ul>
                     </li>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{ asset('css/viewOrder.css') }}">
+<link rel="stylesheet" href="{{ asset('css/technician/viewOrder.css') }}">
 
 @extends('layout.template')
 
@@ -29,7 +29,7 @@
                     </div>
                     <div class="rightPart">
                         <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
-                        <button class="btn btnAction">Accept</button>
+                        <a href="/accept/{{ $dt->orderId }}" class="btn btnAction">Accept</a>
                     </div>
                 @endforeach
             </div>
