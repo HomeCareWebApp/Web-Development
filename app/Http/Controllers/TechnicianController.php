@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+use function PHPUnit\Framework\isEmpty;
+use function PHPUnit\Framework\isNull;
+
 class TechnicianController extends Controller
 {
     public function viewOrder()
@@ -108,8 +111,27 @@ class TechnicianController extends Controller
             $id = Technician::select('technicianId')->where('email',$user->email)->first()->technicianId;
         } else $id = $request->id;
         $technician = DB::table('technicians')->where('technicianId',$id)->first();
+        $rating = Order::select('rating')->where('technicianId',$id)->where('rated',1)->get();
+
+        $temp = 0;
+        foreach ($rating as $data) {
+            $temp += $data->rating;
+        }
+        $counter = Order::selectRaw('count(rating) as counter')->where('technicianId',$id)->where('rated',1)->groupBy('technicianId')->first();
+        
+        if($counter == null){
+            $newRating = 0;
+            $count = 0;
+        }
+        else {
+            $counter = $count = $counter->counter;
+            $newRating = $temp / $count;
+        }
+
         return view('technician/technicianProfile',[
-            'technician' => $technician
+            'technician' => $technician,
+            'rating'=>$newRating,
+            'count' =>$count
         ]);
     }
 

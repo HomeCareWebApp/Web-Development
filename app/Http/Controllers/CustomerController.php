@@ -162,7 +162,7 @@ class CustomerController extends Controller
     {
         $orderId = $request->orderId;
 
-        $orders = Order::selectRaw('service,name,orders.technicianId')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
+        $orders = Order::selectRaw('service,name,orderId')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
 
         return view('rating',[
             'orders' => $orders
@@ -171,26 +171,18 @@ class CustomerController extends Controller
 
     public function rateTechnician(Request $request)
     {
-        $currRating = Technician::select('rating')->where('technicianId',$request->technicianId)->first()->rating;
-        $newRating = $request->rating;
-        $counter = Technician::select('counter')->where('technicianId',$request->technicianId)->first()->counter;
+        $rating = doubleval($request->rating);
+        $checkIfRated = Order::select('rated')->where('orderId',$request->orderId)->first()->rated;
+        if($checkIfRated == 0) {
+            DB::table('orders')
+                ->where('orderId',$request->orderId)
+                ->update(array(
+                    'rating' => $rating,
+                    'rated' => 1
+                ));
+        } 
 
-        if($counter==0){
-            $counter+=1;
-            $rating = $newRating;
-        }else {
-            $rating = (($currRating * $counter) + $newRating) / ($counter+1);
-            $counter+=1;
-        }
-
-        DB::table('technicians')
-            ->where('technicianId',$request->technicianId)
-            ->update(array(
-                'rating' => $rating,
-                'counter' => $counter
-            ));
-
-        return redirect()->back();
+        return redirect()->back()->withErrors('Anda telah memberikan rating sebelumnya');
     }
 
     public function cancel(String $id)

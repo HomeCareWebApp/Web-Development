@@ -10,6 +10,9 @@
 
     <div class="ro">Technician Profile</div>
     <div class="line"></div>
+    <a href="{{url()->previous()}}" class="btn btn-primary mb-3">
+        < Back
+    </a>
     <div class="d-flex cont">
         <div class="leftPart">
             <div class="imgCont mb-2">
@@ -26,7 +29,7 @@
                 </div>
                 <div class="desc">
                     <div class="det">Rating</div>
-                    <div>{{ $technician->rating }} / 5.00</div>
+                    <div>{{ number_format($rating,2) }} / 5.00 ({{$count}})</div>
                 </div>
                 <div class="desc">
                     <div class="det">Category</div>

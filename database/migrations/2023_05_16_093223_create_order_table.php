@@ -17,8 +17,10 @@ return new class extends Migration
             $table->string('orderId')->primary();
             $table->date('orderDate');
             $table->string('service',50);
+            $table->text('description');
             $table->string('address');
             $table->timestamps();
+            $table->float('rating',3,2);
 
             $table->string('technicianId');
 

@@ -17,8 +17,6 @@ return new class extends Migration
             $table->string('technicianId')->primary();
             $table->string('name',50);
             $table->integer('age');
-            $table->float('rating',3,2);
-            $table->integer('counter')->default(0);
             $table->string('email',50);
             $table->string('password');
             $table->string('category',50);

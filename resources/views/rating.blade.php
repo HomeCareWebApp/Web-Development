@@ -10,6 +10,18 @@
 
     <div class="rating">Rating Technician</div>
     <div class="line"></div>
+    <a href="/orderHistoryCust" class="btn btn-primary mb-3">
+        < Back
+    </a>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="/rate" method="post">
         @csrf
         <div class="box p-3 gap-2 ">
@@ -32,7 +44,7 @@
                 <input type="radio" class="btn-check" name="rating" value="5" id="btnradio5" autocomplete="off">
                 <label class="btn btn-outline-primary" for="btnradio5">Very Good</label>
             </div>
-            <input type="hidden" name="technicianId" value="{{$orders->technicianId}}">
+            <input type="hidden" name="orderId" value="{{$orders->orderId}}">
             <button type="submit" class="btn btn-warning jsutify-content-center">Submit</button>
         </div>
     </form>

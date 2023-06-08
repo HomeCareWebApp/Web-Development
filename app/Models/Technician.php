@@ -16,7 +16,6 @@ class Technician extends Model
         'technicianId',
         'name',
         'age',
-        'rating',
         'counter',
         'email',
         'password',

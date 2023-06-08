@@ -10,6 +10,9 @@
 
     <div class="judull">Request Order</div>
     <div class="line"></div>
+    <a href="{{url()->previous()}}" class="btn btn-primary mb-3">
+        < Back
+    </a>
     <form action="/order" method="POST">
         @csrf
         <div class="descCont">

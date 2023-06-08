@@ -7,11 +7,10 @@
 @section('content')
 
     <div class="content">
-
         <div class="ro">Order History</div>
         <div class="line"></div>
+        @foreach($completed as $data)
         <form action="/rating" method="get">
-            @foreach($completed as $data)
             <div class="descCont">
                 <div class="leftPart ">
                     <div class="d-flex ordTxt">
@@ -22,6 +21,11 @@
                         {{$data->orderDate}}
                     </div>
                 </div>
+                @if($data->rated == 1)
+                    <span class="mx-3 text-success">Rated</span>
+                @else
+                    <span class="mx-3 text-danger">Not Rated</span>
+                @endif
                 <div class="rightPart">
                     <!-- {{$role = Auth::user()->role}} -->
                     @if($role == 'Customer')
@@ -31,8 +35,8 @@
                     <button type="button" class="btn btnAction">View Detail</button>
                 </div>
             </div>
-            @endforeach
         </form>
+        @endforeach
     </div>
     
 

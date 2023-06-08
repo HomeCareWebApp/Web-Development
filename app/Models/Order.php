@@ -20,6 +20,8 @@ class Order extends Model
         'description',
         'technicianId',
         'status',
+        'rating',
+        'rated',
         'customerId'
     ];
 

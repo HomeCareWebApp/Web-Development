@@ -8,9 +8,16 @@
 
 <div class="content">
 
-    <div class="judulJasa">Jasa Servis {{ $servName }}</div>
+    <div class="judulJasa">
+        <div class="text-center">Jasa Servis {{ $servName }}</div>
+    </div>
     <div class="line"></div>
-    <div class="dt">Daftar Teknisi</div>
+    <div class="dt">
+        Daftar Teknisi
+    </div>
+    <a href="/service" class="btn btn-primary mb-3">
+        < Back
+    </a>
     @foreach ($technician as $t)
     
         <div class="techCont">
