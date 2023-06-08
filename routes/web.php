@@ -39,8 +39,9 @@ Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile'])->middl
 
 Route::get('/service/{name}', [CustomerController::class, 'chooseService']);
 
-Route::get('/rating/{orderId}', [CustomerController::class, 'ratingPage'])->middleware('auth')->middleware('customer');
+Route::get('/rating', [CustomerController::class, 'ratingPage'])->middleware('auth')->middleware('customer');
 
+Route::post('/rate', [CustomerController::class, 'rateTechnician'])->middleware('auth')->middleware('customer');
 // Route::get('/technician', [CustomerController::class, 'technician']);
 
 Route::get('/myOrderDetail/{id}', [CustomerController::class, 'orderDetail']);
@@ -75,7 +76,9 @@ Route::post('/saveChange', [TechnicianController::class, 'saveChange']);
 
 Route::post('/changePicture', [TechnicianController::class, 'changePicture']);
 
-Route::get('/orderHistory', [TechnicianController::class, 'orderHistory']);
+Route::get('/orderHistoryCust', [CustomerController::class, 'orderHistoryCust']);
+
+Route::get('/orderHistoryTech', [TechnicianController::class, 'orderHistory']);
 
 Route::get('/orderHistoryDetail', [TechnicianController::class, 'orderHistoryDetail']);
 

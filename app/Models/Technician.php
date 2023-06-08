@@ -17,6 +17,7 @@ class Technician extends Model
         'name',
         'age',
         'rating',
+        'counter',
         'email',
         'password',
         'category',

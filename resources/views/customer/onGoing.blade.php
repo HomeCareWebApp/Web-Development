@@ -26,6 +26,10 @@
                             <div class="kata">Technician</div>
                             <div> : {{ $dt->name }}</div>
                         </div>
+                        <div class="d-flex ordTxt">
+                            <div class="kata">Status</div>
+                            <div class="text-success"> : Sedang Dalam Penanganan</div>
+                        </div>
                     </div>
                     <div class="rightPart">
                         <a href="/myOrderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>

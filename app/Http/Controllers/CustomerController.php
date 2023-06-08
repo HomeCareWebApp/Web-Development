@@ -47,90 +47,104 @@ class CustomerController extends Controller
             'technician' => $technician
         ]);
 
-        
-
-        // return $tech;
     }
-
+    // return $tech;
+    
     public function chooseTechnician(String $id)
     {
         $tech = DB::table('technicians')->where('technicianId',$id)->first();
-
+        
         return view ('customer/order',['technician' => $tech]);
     }
-
+    
     // public function technician()
     // {
-    //     $technician = Technician::paginate(5);
-    //     // dd($technician);
-    //     return view('chooseTechnician', compact('technician'));
-    // }
-
-    public function orderPage()
-    {
-        // $email = Auth::user()->email;
-
-        // $cust = DB::table('customers')->where('email',$email)->first();
-        // return $cust->customerId;
-        return view('order');
-    }
-
-    public function order(Request $request)
+        //     $technician = Technician::paginate(5);
+        //     // dd($technician);
+        //     return view('chooseTechnician', compact('technician'));
+        // }
+        
+        public function orderPage()
+        {
+            // $email = Auth::user()->email;
+            
+            // $cust = DB::table('customers')->where('email',$email)->first();
+            // return $cust->customerId;
+            return view('order');
+        }
+        
+        public function order(Request $request)
     {
         $validateData = $request->validate([
             'address' => 'required',
             'description' =>  'required',
         ]);
-
+        
         $last = DB::table('orders')->orderBy('orderId', 'DESC')->first();
-
+        
         if($last == null)
         {
             $newId = 'ORD0001';
         }
         else
         {
-
-            $lastId = $last->customerId;
-    
-            $sub = substr($lastId,2);
-    
+            
+            $lastId = $last->orderId;
+            
+            $sub = substr($lastId,3);
+            
             $pad = str_pad($sub + 1, 4, '0', STR_PAD_LEFT);
-    
+            
             $newId = 'ORD'.$pad;
         }
-
+        
         $validateData['orderId'] = $newId;
         $validateData['service'] = $request->service;
         $validateData['orderDate'] = date("Y-m-d H:i:s");
         $validateData['status'] = 'requested';
         $validateData['technicianId'] = $request->technician;
-
+        
         $email = Auth::user()->email;
-
+        
         $cust = DB::table('customers')->where('email',$email)->first();
         $validateData['customerId'] = $cust->customerId ;
-
+        
         Order::create($validateData);
-
-        return redirect('/');
+        
+        return redirect('/myOrder');
     }
-
+    
     public function myOrder()
     {
-
+        
         $email = Auth::user()->email;
-
+        
         $cust = DB::table('customers')->where('email',$email)->first();
         $id = $cust->customerId ;
         
         $data = DB::table('technicians')->join('orders', 'technicians.technicianId','=', 'orders.technicianId')
         ->where('customerId',$id)->where('status','requested')->paginate(5);
-
+        
         return view('customer/myOrder',[
             'data' => $data
         ]);
+        
+    }
+    
+    public function orderHistoryCust(Request $request)
+    {
 
+        $email = Auth::user()->email;
+        
+        $cust = DB::table('customers')->where('email',$email)->first();
+        $id = $cust->customerId ;
+        
+        $completedData = DB::table('orders')->where('customerId',$id)->where('status','completed')->paginate(5);
+        
+        return view('orderHistory',[
+            'completed' => $completedData
+        ]);
+        
     }
 
     public function orderDetail(String $id)
@@ -148,11 +162,35 @@ class CustomerController extends Controller
     {
         $orderId = $request->orderId;
 
-        $orders = Order::selectRaw('service,name')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
+        $orders = Order::selectRaw('service,name,orders.technicianId')->leftJoin('technicians','orders.technicianId','technicians.technicianId')->where('orderId',$orderId)->first();
 
         return view('rating',[
             'orders' => $orders
         ]);
+    }
+
+    public function rateTechnician(Request $request)
+    {
+        $currRating = Technician::select('rating')->where('technicianId',$request->technicianId)->first()->rating;
+        $newRating = $request->rating;
+        $counter = Technician::select('counter')->where('technicianId',$request->technicianId)->first()->counter;
+
+        if($counter==0){
+            $counter+=1;
+            $rating = $newRating;
+        }else {
+            $rating = (($currRating * $counter) + $newRating) / ($counter+1);
+            $counter+=1;
+        }
+
+        DB::table('technicians')
+            ->where('technicianId',$request->technicianId)
+            ->update(array(
+                'rating' => $rating,
+                'counter' => $counter
+            ));
+
+        return redirect()->back();
     }
 
     public function cancel(String $id)

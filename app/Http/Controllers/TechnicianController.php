@@ -81,7 +81,19 @@ class TechnicianController extends Controller
 
     public function orderHistory()
     {
-        return view('orderHistory');
+        $email = Auth::user()->email;
+        
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId ;
+        
+        $completedData = DB::table('orders')->where('technicianId',$id)->where('status','completed')->paginate(5);
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId;
+        
+        return view('orderHistory',[
+            'completed' => $completedData,
+            'id' => $id
+        ]);
     }
 
     public function orderHistoryDetail()

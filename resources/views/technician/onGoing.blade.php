@@ -15,23 +15,23 @@
         <div>Anda tidak memiliki pesanan yang sedang berlangsung</div>
         @else
         
+        @foreach ($data as $dt) 
             <div class="ordCont">
-                @foreach ($data as $dt) 
-                    <div class="leftPart ">
-                        <div class="d-flex ordTxt">
-                            <div class="kata">Service</div>
-                            <div> : {{$dt->service }} </div>
-                        </div>
-                        <div class="d-flex ordTxt">
-                            <div class="kata">Technician</div>
-                            <div> : {{ $dt->name }}</div>
-                        </div>
+                <div class="leftPart ">
+                    <div class="d-flex ordTxt">
+                        <div class="kata">Service</div>
+                        <div> : {{$dt->service }} </div>
                     </div>
-                    <div class="rightPart">
-                        <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
+                    <div class="d-flex ordTxt">
+                        <div class="kata">Customer</div>
+                        <div> : {{ $dt->name }}</div>
                     </div>
-                @endforeach
+                </div>
+                <div class="rightPart">
+                    <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
+                </div>
             </div>
+            @endforeach
         @endif
     </div>
 

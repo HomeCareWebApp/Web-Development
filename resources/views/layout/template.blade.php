@@ -27,12 +27,12 @@
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                   <li><a class="dropdown-item" href="/myOrder">Pesanan Saya</a></li>
                   <li><a class="dropdown-item" href="/myOrder/onGoing">Sedang Berlangsung</a></li>
-                  
+                  <li><a class="dropdown-item" href="/orderHistoryCust">Riwayat Pesanan</a></li>
                 </ul>
               </li>
             </div>
             
-          @elseif(auth()->user()->role == 'Technician')
+            @elseif(auth()->user()->role == 'Technician')
             <div class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,11 +41,11 @@
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                   <li><a class="dropdown-item" href="/viewOrder">Daftar Pesanan</a></li>
                   <li><a class="dropdown-item" href="/order/onGoing">Sedang Berlangsung</a></li>
-                  
+                  <li><a class="dropdown-item" href="/orderHistoryTech">Riwayat Pesanan</a></li>                  
                 </ul>
               </li>
             </div>
-            <a href="/changeProfile/{{ $id }}" class="na">Profil</a>
+            <a href="/changeProfile/{{$id}}" class="na">Profil</a>
 
           @endif
           
