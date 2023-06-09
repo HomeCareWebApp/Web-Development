@@ -8,11 +8,13 @@
 
 <div class="content">
 
-    <div class="judull">Request Order</div>
+    <div class="upper">
+        <a href="{{url()->previous()}}" class="back">
+            <img src="/img/left-arrow.png" class="backBtn">
+        </a>
+        <div class="judull">Request Order</div>
+    </div>
     <div class="line"></div>
-    <a href="{{url()->previous()}}" class="btn btn-primary mb-3">
-        < Back
-    </a>
     <form action="/order" method="POST">
         @csrf
         <div class="descCont">

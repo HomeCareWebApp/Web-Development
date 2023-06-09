@@ -8,11 +8,13 @@
 
 <div class="content">
 
-    <div class="ro">Technician Profile</div>
+    <div class="upper">
+        <a href="{{url()->previous()}}" class="back">
+            <img src="/img/left-arrow.png" class="backBtn">
+        </a>
+        <div class="ro">Technician Profile</div>
+    </div>
     <div class="line"></div>
-    <a href="{{url()->previous()}}" class="btn btn-primary mb-3">
-        < Back
-    </a>
     <div class="d-flex cont">
         <div class="leftPart">
             <div class="imgCont mb-2">

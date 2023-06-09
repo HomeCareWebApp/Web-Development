@@ -14,6 +14,23 @@
     font-weight: bold;
   }
 
+  .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+  }
+
+  .back {
+    position: absolute;
+    margin-right: 550px;
+  }
+
+  .backBtn {
+    width: 60px;
+    height: 60px;
+  }
+
   .line {
     border: 1px solid black !important;
     width: 600px;

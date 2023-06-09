@@ -8,11 +8,13 @@
 
 <div class="content">
 
-    <div class="rating">Rating Technician</div>
+    <div class="upper">
+        <a href="/orderHistoryCust" class="back">
+            <img src="/img/left-arrow.png" class="backBtn">
+        </a>
+        <div class="rating">Rating Technician</div>
+    </div>
     <div class="line"></div>
-    <a href="/orderHistoryCust" class="btn btn-primary mb-3">
-        < Back
-    </a>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

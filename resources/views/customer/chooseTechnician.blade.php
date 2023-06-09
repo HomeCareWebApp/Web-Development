@@ -9,15 +9,16 @@
 <div class="content">
 
     <div class="judulJasa">
+        <a href="/service" class="back">
+            <img src="/img/left-arrow.png" class="backBtn">
+        </a>
         <div class="text-center">Jasa Servis {{ $servName }}</div>
     </div>
+    </a>
     <div class="line"></div>
     <div class="dt">
         Daftar Teknisi
     </div>
-    <a href="/service" class="btn btn-primary mb-3">
-        < Back
-    </a>
     @foreach ($technician as $t)
     
         <div class="techCont">

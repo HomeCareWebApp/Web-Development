@@ -1,194 +1,204 @@
-@media screen and (min-width : 993px){
+@media screen and (min-width: 993px) {
+  .content {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+  .juduljasa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    font-size: 40px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .juduljasa{
-        font-size: 40px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 600px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .back {
+    position: absolute;
+    margin-right: 550px;
+  }
 
-    .dt{
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+  .backBtn {
+    width: 60px;
+    height: 60px;
+  }
 
-    .techCont{
-        width: 600px;
-        height: 60px;
-        border : 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .pagi{
-        width: 600px;
-    }
+  .dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-    .techImg{
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        margin-right: 5px;
-        border-radius: 50%;
-    }
+  .techCont {
+    width: 600px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 
-    .btnAction{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  .pagi {
+    width: 600px;
+  }
 
+  .techImg {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
 
+  .btnAction {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
 }
 
-@media screen and (min-width : 601px) and (max-width : 992px){
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .content {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .juduljasa{
-        font-size: 32px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 500px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .juduljasa {
+    font-size: 32px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .dt{
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .techCont{
-        width: 500px;
-        height: 60px;
-        border : 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+  .dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-    .pagi{
-        width: 500px;
-    }
+  .techCont {
+    width: 500px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
 
-    .techImg{
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        margin-right: 5px;
-        border-radius: 50%;
-    }
+  .pagi {
+    width: 500px;
+  }
 
-    .btnAction{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  .techImg {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
 
+  .btnAction {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
 }
 
-@media screen and (max-width : 600px) {
-    .content{
-        height: 750px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+@media screen and (max-width: 600px) {
+  .content {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .juduljasa{
-        font-size: 30px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 300px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .juduljasa {
+    font-size: 30px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .dt{
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .techCont{
-        width: 300px;
-        height: 100px;
-        border : 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+  .dt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-    /* .pagi
+  .techCont {
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* .pagi
     {
         width: 300px;
     } */
 
-    .techImg{
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-        margin-right: 5px;
-        border-radius: 50%;
-    }
+  .techImg {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
 
-    .rightPart{
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
+  .rightPart {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
-    .btnAction{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  .btnAction {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
 }
