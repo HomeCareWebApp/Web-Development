@@ -122,6 +122,37 @@
         flex-direction: column;
     }
 
+    .caraa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .step{
+        font-size: 20px;
+    }
+
+    .sec5{
+        height: 600px;
+        background-color: #fcfcfc;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      
+    }
+
+    .body{
+        color: #333;
+        background: #fcfcfc;
+        font-family: 'Raleway', sans-serif;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
     .cara{
         display: flex;
         align-items: center;
@@ -129,13 +160,79 @@
         height: 150px;
         font-size: 40px;
         font-weight: bold;
-
+        color: #0078B7;
     }
 
-    .step{
+   
+      
+      .faq-content {
+        margin: 0 auto;
+      }
+      
+      .faq-question {
+        padding: 20px 0;
+        border-bottom: 1px dotted #ccc;
+      }
+      
+      .panel-title {
         font-size: 20px;
-        width: 500px;
-    }
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0 48px;
+        display: block;
+        cursor: pointer;
+      }
+      
+      .panel-content {
+        font-size: 20px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        /* position: relative; */
+        opacity: 0;
+        -webkit-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -o-transition: .4s ease;
+        transition: .4s ease;
+      }
+      
+      .panel:checked ~ .panel-content{
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+      }
+      
+      .plus {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 4px;
+        z-index: 5;
+        font-size: 36px;
+        line-height: 100%;
+        -webkit-user-select: none;    
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+      }
+      
+      .panel:checked ~ .plus {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      .panel {
+        display: none;
+      }
 }
 
 @media screen and (min-width : 601px) and (max-width : 992px){
@@ -251,6 +348,127 @@
     .pointDesc{
         font-size: 16px;
     }
+
+    .sec4{
+        height: 500px;
+        background-color: #00B4D7;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .caraa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .step{
+        font-size: 16px;
+        width: 500px;
+    }
+
+    .sec5{
+        height: 500px;
+        background-color: #fcfcfc;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      
+    }
+
+    .body{
+        color: #333;
+        background: #fcfcfc;
+        font-family: 'Raleway', sans-serif;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .cara{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #0078B7;
+    }
+
+      
+      .faq-content {
+        margin: 0 auto;
+      }
+      
+      .faq-question {
+        padding: 20px 0;
+        border-bottom: 1px dotted #ccc;
+      }
+      
+      .panel-title {
+        font-size: 16px;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0 48px;
+        display: block;
+        cursor: pointer;
+      }
+      
+      .panel-content {
+        font-size: 16px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        /* position: relative; */
+        opacity: 0;
+        -webkit-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -o-transition: .4s ease;
+        transition: .4s ease;
+      }
+      
+      .panel:checked ~ .panel-content{
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+      }
+      
+      .plus {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 4px;
+        z-index: 5;
+        font-size: 30px;
+        line-height: 100%;
+        -webkit-user-select: none;    
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+      }
+      
+      .panel:checked ~ .plus {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      .panel {
+        display: none;
+      }
 }
 
 @media screen and (max-width:600px) {
@@ -367,6 +585,126 @@
     .pointDesc{
         font-size: 12px;
     }
+
+    .sec4{
+        height: 500px;
+        background-color: #00B4D7;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .caraa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .step{
+        font-size: 12px;
+        width: 300px;
+    }
+
+    .sec5{
+        height: 600px;
+        background-color: #fcfcfc;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      
+    }
+
+    .body{
+        color: #333;
+        background: #fcfcfc;
+        font-family: 'Raleway', sans-serif;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .cara{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #0078B7;
+    }
+      
+      .faq-content {
+        margin: 0 auto;
+      }
+      
+      .faq-question {
+        padding: 20px 0;
+        border-bottom: 1px dotted #ccc;
+      }
+      
+      .panel-title {
+        font-size: 12px;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0 48px;
+        display: block;
+        cursor: pointer;
+      }
+      
+      .panel-content {
+        font-size: 12px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        /* position: relative; */
+        opacity: 0;
+        -webkit-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -o-transition: .4s ease;
+        transition: .4s ease;
+      }
+      
+      .panel:checked ~ .panel-content{
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+      }
+      
+      .plus {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 4px;
+        z-index: 5;
+        font-size: 24px;
+        line-height: 100%;
+        -webkit-user-select: none;    
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+      }
+      
+      .panel:checked ~ .plus {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      .panel {
+        display: none;
+      }
     
     
 }
