@@ -53,6 +53,19 @@
             </div>
         </div>
     </div>
+
+    <div class="sec4">
+        <div class="cara">Cara Pemesanan</div>
+        <div class="step">
+            <div>1. Pilih jasa servis yang diinginkan</div>
+            <div>2. Pilih teknisi yang diinginkan. Anda dapat melihat profil teknisi terlebih dahulu sebelum memilih</div>
+            <div>3. Mengisi alamat anda dan deskripsi tentang servis yang diinginkan</div>
+            <div>4. Melakukan pemesanan jasa servis</div>
+            <div>5. Menunggu konfirmasi dari teknisi</div>
+            <div>6. Setelah terkonfirmasi, anda dapat mengubungi teknisi ataupun teknisi akan menghubungi anda</div>
+            <div>7. Diskusi harga dan pembayaran akan dilakukan secara langsung oleh pelanggan dan teknisi</div>
+        </div>
+    </div>
 </div>
 
 {{-- <div class="tabContent">

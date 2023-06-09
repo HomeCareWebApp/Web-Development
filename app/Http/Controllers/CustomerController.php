@@ -103,6 +103,8 @@ class CustomerController extends Controller
         $validateData['orderDate'] = date("Y-m-d H:i:s");
         $validateData['status'] = 'requested';
         $validateData['technicianId'] = $request->technician;
+        $validateData['rated'] = 0;
+        $validateData['rating'] = 0.00;
         
         $email = Auth::user()->email;
         
@@ -207,6 +209,8 @@ class CustomerController extends Controller
             'id' => $id
         ]);
     }
+
+    
 
     
     

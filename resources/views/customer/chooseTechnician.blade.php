@@ -12,12 +12,15 @@
         <div class="text-center">Jasa Servis {{ $servName }}</div>
     </div>
     <div class="line"></div>
-    <div class="dt">
-        Daftar Teknisi
-    </div>
     <a href="/service" class="btn btn-primary mb-3">
         < Back
     </a>
+    <div class="dt">
+        Daftar Teknisi
+    </div>
+    @if($technician->isEmpty())
+        <div>Anda belum memiliki pesanan</div>
+    @else
     @foreach ($technician as $t)
     
         <div class="techCont">
@@ -39,6 +42,7 @@
         <div class="pagi">
             {{ $technician->links() }}
         </div>
+        @endif
 </div>
 
 @endsection

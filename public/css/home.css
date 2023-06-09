@@ -112,6 +112,30 @@
     .pointDesc{
         font-size: 20px;
     }
+
+    .sec4{
+        height: 600px;
+        background-color: #00B4D7;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cara{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        font-size: 40px;
+        font-weight: bold;
+
+    }
+
+    .step{
+        font-size: 20px;
+        width: 500px;
+    }
 }
 
 @media screen and (min-width : 601px) and (max-width : 992px){

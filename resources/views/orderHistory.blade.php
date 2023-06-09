@@ -31,8 +31,11 @@
                     @if($role == 'Customer')
                     <input type="hidden" name="orderId" value="{{$data->orderId}}">
                     <button type="submit" class="btn btnAction">Rating</button>
+                    <a href="/myOrderDetail/{{ $data->orderId }}"  class="btn btnAction">View Detail</a>
+                    @else
+                    <a href="/orderDetail/{{ $data->orderId }}"  class="btn btnAction">View Detail</a>
                     @endif
-                    <button type="button" class="btn btnAction">View Detail</button>
+                    
                 </div>
             </div>
         </form>
