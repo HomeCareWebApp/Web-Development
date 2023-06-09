@@ -1,181 +1,198 @@
-@media screen and (min-width : 993px){
+@media screen and (min-width: 993px) {
+  .content {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+  .judull {
+    font-size: 40px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .judull{
-        font-size: 40px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 600px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    font-size: 40px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .descCont{
-        width: 600px;
-        /* height: 400px; */
-        background-color: #E3FAFF;
-        padding: 15px;
-        border: 1px solid black;
-    }
+  .back {
+    position: absolute;
+    margin-right: 550px;
+  }
 
-    .desc{
-        margin: 5px 0px;
-        display: flex;
-    }
+  .backBtn {
+    width: 60px;
+    height: 60px;
+  }
 
-    .kata{
-        width: 100px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    #floatingTextarea{
-        margin: 5px 0px;
-        height: 100px;
-    }
+  .descCont {
+    width: 600px;
+    /* height: 400px; */
+    background-color: #e3faff;
+    padding: 15px;
+    border: 1px solid black;
+  }
 
-    .btnOrder{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  .desc {
+    margin: 5px 0px;
+    display: flex;
+  }
 
-    .form-floating>.form-control-plaintext~label::after, 
-    .form-floating>.form-control:focus~label::after, 
-    .form-floating>.form-control:not(:placeholder-shown)~label::after,
-     .form-floating>.form-select~label::after {
-        position: static !important;
-    }
+  .kata {
+    width: 100px;
+  }
 
+  #floatingTextarea {
+    margin: 5px 0px;
+    height: 100px;
+  }
+
+  .btnOrder {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
+
+  .form-floating > .form-control-plaintext ~ label::after,
+  .form-floating > .form-control:focus ~ label::after,
+  .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+  .form-floating > .form-select ~ label::after {
+    position: static !important;
+  }
 }
 
-@media screen and (min-width : 601px) and (max-width : 992px){
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .content {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .judull{
-        font-size: 32px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width:500px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .judull {
+    font-size: 32px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .descCont{
-        width: 500px;
-        background-color: #E3FAFF;
-        padding: 15px;
-        border: 1px solid black;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .desc{
-        margin: 5px 0px;
-        display: flex;
-    }
+  .descCont {
+    width: 500px;
+    background-color: #e3faff;
+    padding: 15px;
+    border: 1px solid black;
+  }
 
-    .kata{
-        width: 100px;
-    }
+  .desc {
+    margin: 5px 0px;
+    display: flex;
+  }
 
+  .kata {
+    width: 100px;
+  }
 
-    #floatingTextarea{
-        margin: 5px 0px;
-        height: 100px;
-    }
+  #floatingTextarea {
+    margin: 5px 0px;
+    height: 100px;
+  }
 
-    .btnOrder{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  .btnOrder {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
 
-    .form-floating>.form-control-plaintext~label::after, 
-    .form-floating>.form-control:focus~label::after, 
-    .form-floating>.form-control:not(:placeholder-shown)~label::after,
-     .form-floating>.form-select~label::after {
-        position: static !important;
-    }
+  .form-floating > .form-control-plaintext ~ label::after,
+  .form-floating > .form-control:focus ~ label::after,
+  .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+  .form-floating > .form-select ~ label::after {
+    position: static !important;
+  }
 }
 
-@media screen and (max-width : 600px) {
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+@media screen and (max-width: 600px) {
+  .content {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .judull{
-        font-size: 28px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width:300px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .judull {
+    font-size: 28px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .descCont{
-        width: 300px;
-        background-color: #E3FAFF;
-        padding: 15px;
-        border: 1px solid black;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .desc{
-        margin: 5px 0px;
-        display: flex;
-    }
+  .descCont {
+    width: 300px;
+    background-color: #e3faff;
+    padding: 15px;
+    border: 1px solid black;
+  }
 
-    .kata{
-        width: 90px;
-    }
+  .desc {
+    margin: 5px 0px;
+    display: flex;
+  }
 
-    #floatingTextarea{
-        margin: 5px 0px;
-        width: 270px;
-        height: 100px;
-    }
+  .kata {
+    width: 90px;
+  }
 
-    .btnOrder{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  #floatingTextarea {
+    margin: 5px 0px;
+    width: 270px;
+    height: 100px;
+  }
 
-    .form-floating>.form-control-plaintext~label::after, 
-    .form-floating>.form-control:focus~label::after, 
-    .form-floating>.form-control:not(:placeholder-shown)~label::after,
-     .form-floating>.form-select~label::after {
-        position: static !important;
-    }
+  .btnOrder {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
+
+  .form-floating > .form-control-plaintext ~ label::after,
+  .form-floating > .form-control:focus ~ label::after,
+  .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+  .form-floating > .form-select ~ label::after {
+    position: static !important;
+  }
 }

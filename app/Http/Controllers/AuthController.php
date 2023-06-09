@@ -44,12 +44,12 @@ class AuthController extends Controller
 
     public function registerPage()
     {
-        return view('register');
+        return view('customer/register');
     }
 
     public function registerTechPage()
     {
-        return view('registerTechnician');
+        return view('technician/registerTechnician');
     }
 
     public function register(Request $request)
