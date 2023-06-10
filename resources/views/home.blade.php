@@ -80,15 +80,7 @@
         <div class="body">
 
             <div class="faq-content">
-                <div class="faq-question">
-                    <input id="q1" type="checkbox" class="panel">
-                    <div class="plus">+</div>
-                    <label for="q1" class="panel-title">Bagaimana cara melakukan pemesanan?</label>
-                    <div class="panel-content">
-       
-                    </div>
-                </div>
-              
+               
                 <div class="faq-question">
                     <input id="q2" type="checkbox" class="panel">
                     <div class="plus">+</div>
@@ -104,6 +96,16 @@
                         terdapat opsi untuk mendaftar menjadi teknisi
                     </div>
                 </div>
+
+                <div class="faq-question">
+                    <input id="q1" type="checkbox" class="panel">
+                    <div class="plus">+</div>
+                    <label for="q1" class="panel-title">Apakah saya bisa melakukan beberapa pesanan sekaligus?</label>
+                    <div class="panel-content">
+                        Ya, anda dapat melakukan beberapa pesanan dalam waktu yang bersamaan.
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

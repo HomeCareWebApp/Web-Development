@@ -8,6 +8,9 @@ use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class CustomerController extends Controller
 {
@@ -38,14 +41,55 @@ class CustomerController extends Controller
 
         $cust = DB::table('customers')->where('email', $email)->first();
         $loc = $cust->location;
+        $id = $cust->customerId;
+
+        // $technician = DB::table('technicians')->where('category', $name)->
+        // where('location', $loc)->paginate(5);
 
         $technician = DB::table('technicians')->where('category', $name)->
-        where('location', $loc)->paginate(5);
+        where('location', $loc)->get();
+
+        $order = DB::table('orders')->where('customerId', $id)->
+        where('status', 'requested')->orWhere('status','accepted')->get();
+
+        $otId = [];
+        $tId = [];
+
+        foreach($order as $o)
+        {
+            array_push($otId, $o->technicianId);
+        }
+
+        foreach($technician as $t)
+        {
+            array_push($tId, $t->technicianId);
+        }
+
+        $diff = array_diff($tId, $otId);
+
+        $techList = [];
+        for($i = 0 ; $i < sizeof($technician) ; $i++)
+        {
+            for($j = 0 ; $j < sizeof($diff) ; $j++)
+            {
+                if($technician[$i]->technicianId == $diff[$j])
+                {
+                    array_push($techList, $technician[$i]);
+                }
+            }
+        }
+
+
+        // print_r(collect($techList));
+       
+        $tl = $this->paginate($techList);
 
         return view('customer/chooseTechnician', [
             'servName' => $name,
-            'technician' => $technician
+            'technician' => $tl
         ]);
+
+        // return $diff;
 
     }
     // return $tech;
@@ -210,6 +254,12 @@ class CustomerController extends Controller
         ]);
     }
 
+    public function paginate($items, $perPage = 5, $page = null, $options = [])
+    {
+        $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
+        $items = $items instanceof Collection ? $items : Collection::make($items);
+        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
+    }
     
 
     
