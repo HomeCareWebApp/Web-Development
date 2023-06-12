@@ -44,43 +44,43 @@ Route::get('/rating', [CustomerController::class, 'ratingPage'])->middleware('au
 Route::post('/rate', [CustomerController::class, 'rateTechnician'])->middleware('auth')->middleware('customer');
 // Route::get('/technician', [CustomerController::class, 'technician']);
 
-Route::get('/myOrderDetail/{id}', [CustomerController::class, 'orderDetail']);
+Route::get('/myOrderDetail/{id}', [CustomerController::class, 'orderDetail'])->middleware('auth')->middleware('customer');
 
-Route::get('/technician/{id}', [CustomerController::class, 'chooseTechnician']);
+Route::get('/technician/{id}', [CustomerController::class, 'chooseTechnician'])->middleware('auth')->middleware('customer');
 
-Route::get('/order', [CustomerController::class, 'orderPage']);
+Route::get('/order', [CustomerController::class, 'orderPage'])->middleware('auth')->middleware('customer');
 
-Route::post('/order', [CustomerController::class, 'order']);
+Route::post('/order', [CustomerController::class, 'order'])->middleware('auth')->middleware('customer');
 
-Route::get('/cancel/{id}', [CustomerController::class, 'cancel']);
+Route::get('/cancel/{id}', [CustomerController::class, 'cancel'])->middleware('auth')->middleware('customer');
 
-Route::get('/myOrder', [CustomerController::class, 'myOrder']);
+Route::get('/myOrder', [CustomerController::class, 'myOrder'])->middleware('auth')->middleware('customer');
 
-Route::get('/myOrder/onGoing', [CustomerController::class, 'onGoing']);
+Route::get('/myOrder/onGoing', [CustomerController::class, 'onGoing'])->middleware('auth')->middleware('customer');
 
-Route::get('/viewOrder', [TechnicianController::class, 'viewOrder']);
+Route::get('/viewOrder', [TechnicianController::class, 'viewOrder'])->middleware('auth')->middleware('technician');
 
-Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail']);
+Route::get('/orderDetail/{id}', [TechnicianController::class, 'orderDetail'])->middleware('auth')->middleware('technician');
 
-Route::get('/order/onGoing', [TechnicianController::class, 'onGoing']);
+Route::get('/order/onGoing', [TechnicianController::class, 'onGoing'])->middleware('auth')->middleware('technician');
 
-Route::get('/accept/{id}', [TechnicianController::class, 'accept']);
+Route::get('/accept/{id}', [TechnicianController::class, 'accept'])->middleware('auth')->middleware('technician');
 
-Route::get('/complete/{id}', [TechnicianController::class, 'complete']);
+Route::get('/complete/{id}', [TechnicianController::class, 'complete'])->middleware('auth')->middleware('technician');
 
-Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile']);
+Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile'])->middleware('auth')->middleware('technician');
 
-Route::get('/changeProfile/{id}', [TechnicianController::class, 'changeProfile']);
+Route::get('/changeProfile/{id}', [TechnicianController::class, 'changeProfile'])->middleware('auth')->middleware('technician');;
 
-Route::post('/saveChange', [TechnicianController::class, 'saveChange']);
+Route::post('/saveChange', [TechnicianController::class, 'saveChange'])->middleware('auth')->middleware('technician');;
 
-Route::post('/changePicture', [TechnicianController::class, 'changePicture']);
+Route::post('/changePicture', [TechnicianController::class, 'changePicture'])->middleware('auth')->middleware('technician');;
 
-Route::get('/orderHistoryCust', [CustomerController::class, 'orderHistoryCust']);
+Route::get('/orderHistoryCust', [CustomerController::class, 'orderHistoryCust'])->middleware('auth')->middleware('customer');;
 
-Route::get('/orderHistoryTech', [TechnicianController::class, 'orderHistory']);
+Route::get('/orderHistoryTech', [TechnicianController::class, 'orderHistory'])->middleware('auth')->middleware('technician');;
 
-Route::get('/orderHistoryDetail', [TechnicianController::class, 'orderHistoryDetail']);
+Route::get('/orderHistoryDetail', [TechnicianController::class, 'orderHistoryDetail'])->middleware('auth')->middleware('technician');;
 
 
 // Route::get('/')
