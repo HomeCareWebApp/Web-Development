@@ -23,7 +23,6 @@
         <div>Anda belum memiliki pesanan</div>
     @else
     @foreach ($technician as $t)
-    
         <div class="techCont">
             <div class="leftPart d-flex align-items-center">
                 <div>

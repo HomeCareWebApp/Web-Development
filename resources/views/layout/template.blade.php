@@ -125,6 +125,18 @@
 
     @yield('content')
 
+    <div class="footer">
+      <div class="footernav">
+        <a href="/#section-2" class="na">Tentang</a>
+        <a href="/service" class="na">Service</a>
+        <a href="/register" class="na">Daftar</a>
+        <a href="/login" class="na">Masuk</a>
+      </div>
+      <div class="line"></div>
+      <div class="footerjudul">
+          <div class="text-light">©2023 HomeCare</div>
+      </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>

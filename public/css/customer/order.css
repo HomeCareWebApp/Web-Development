@@ -117,6 +117,26 @@
     width: 100px;
   }
 
+  .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    font-size: 40px;
+    color: #0078b7;
+    font-weight: bold;
+  }
+
+  .back {
+    position: absolute;
+    margin-right: 350px;
+  }
+
+  .backBtn {
+    width: 60px;
+    height: 60px;
+  }
+
   #floatingTextarea {
     margin: 5px 0px;
     height: 100px;
@@ -174,6 +194,26 @@
 
   .kata {
     width: 90px;
+  }
+
+  .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    font-size: 40px;
+    color: #0078b7;
+    font-weight: bold;
+  }
+
+  .back {
+    position: absolute;
+    margin-right: 320px;
+  }
+
+  .backBtn {
+    width: 60px;
+    height: 60px;
   }
 
   #floatingTextarea {

@@ -67,17 +67,29 @@ class CustomerController extends Controller
 
         $diff = array_diff($tId, $otId);
 
+        // dd($tId);
+        // dd($otId);
+
         $techList = [];
-        for($i = 0 ; $i < sizeof($technician) ; $i++)
-        {
-            for($j = 0 ; $j < sizeof($diff) ; $j++)
-            {
-                if($technician[$i]->technicianId == $diff[$j])
-                {
-                    array_push($techList, $technician[$i]);
-                }
+
+        // dd($diff);
+
+        foreach ($technician as $data) {
+            foreach ($diff as $item) {
+                if($data->technicianId == $item) array_push($techList, $data);
             }
         }
+
+        // for($i = 0 ; $i < sizeof($technician) ; $i++)
+        // {
+        //     for($j = 0 ; $j < sizeof($diff) ; $j++)
+        //     {
+        //         if($technician[$i]->technicianId == $diff[1])
+        //         {
+        //             array_push($techList, $technician[$i]);
+        //         }
+        //     }
+        // }
 
 
         // print_r(collect($techList));

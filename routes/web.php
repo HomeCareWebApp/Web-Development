@@ -35,8 +35,6 @@ Route::get('/logout',[AuthController::class, 'logout'])->middleware('auth');
 
 Route::get('/service', [CustomerController::class, 'service'])->middleware('auth')->middleware('customer');
 
-Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile'])->middleware('auth')->middleware('customer');
-
 Route::get('/service/{name}', [CustomerController::class, 'chooseService']);
 
 Route::get('/rating', [CustomerController::class, 'ratingPage'])->middleware('auth')->middleware('customer');
@@ -68,7 +66,7 @@ Route::get('/accept/{id}', [TechnicianController::class, 'accept'])->middleware(
 
 Route::get('/complete/{id}', [TechnicianController::class, 'complete'])->middleware('auth')->middleware('technician');
 
-Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile'])->middleware('auth')->middleware('technician');
+Route::get('/profile/{id}', [TechnicianController::class, 'viewProfile'])->middleware('auth');
 
 Route::get('/changeProfile/{id}', [TechnicianController::class, 'changeProfile'])->middleware('auth')->middleware('technician');;
 
