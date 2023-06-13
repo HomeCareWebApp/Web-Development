@@ -15,8 +15,8 @@
         <div>Anda tidak memiliki pesanan yang sedang berlangsung</div>
         @else
         
+        @foreach ($data as $dt) 
             <div class="ordCont">
-                @foreach ($data as $dt) 
                     <div class="leftPart ">
                         <div class="d-flex ordTxt">
                             <div class="kata">Service</div>
@@ -28,14 +28,14 @@
                         </div>
                         <div class="d-flex ordTxt">
                             <div class="kata">Status</div>
-                            <div class="text-success"> : Sedang Dalam Penanganan</div>
+                            <div class="text-success"> : Dalam Penanganan</div>
                         </div>
                     </div>
                     <div class="rightPart">
                         <a href="/myOrderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         @endif
     </div>
 

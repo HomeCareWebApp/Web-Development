@@ -146,6 +146,8 @@ class TechnicianController extends Controller
             'id' => $id
         ]);
 
+        // return $technician;
+
     }
 
 
@@ -190,6 +192,8 @@ class TechnicianController extends Controller
         ->update(['name' => $request->name, 
         'location' => $request->location, 
         'experience' => $request->experience]);
+
+        DB::table('users')->where('email', $tech->email)->update(['name' => $request->name]);
 
         session()->flash('change','Successfully change profile');
 

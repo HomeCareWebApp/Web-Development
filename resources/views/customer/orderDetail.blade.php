@@ -42,10 +42,9 @@
             </div>
         </div>
        
-        <div class="d-flex justify-content-end">
-            <a class="btn btnMsg" href="https://wa.me/{{ $order->phone }}">Send Message</a>
+        <div class="d-flex btnCon">
             @if($order->status == 'accepted')
-
+                <a class="btn btnMsg" href="https://wa.me/{{ $order->phone }}">Send Message</a>
             @else
                 <a class="btn btnCancel" href="/cancel">Cancel</a>
             @endif

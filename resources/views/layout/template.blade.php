@@ -97,14 +97,14 @@
                       <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                         <li><a class="dropdown-item" href="/myOrder">Request Order</a></li>
                         <li><a class="dropdown-item" href="/myOrder/onGoing">On Going Order</a></li>
-                        
+                        <li><a class="dropdown-item" href="/orderHistoryCust">Riwayat Pesanan</a></li>
                       </ul>
                     </li>
                   </div>
                 @elseif(auth()->user()->role == 'Technician')
                   <li><a class="menu__item" href="/viewOrder">Request Order</a></li>
                   <li><a class="menu__item" href="/order/onGoing">On Going Order</a></li>
-                  <li><a class="menu__item" href="/changeProfile">Profile</a></li>
+                  <li><a class="menu__item" href="/changeProfile/{{$id}}">Profile</a></li>
                 @endif
                 <li><a class="menu__item" href="/logout">Logout</a></li>
               @else

@@ -31,6 +31,18 @@
         font-size: 23px;
     }
 
+    .prefix{
+        height: 56px;
+        width: 56px;
+        font-size: 16px !important;
+    }
+
+    #phonee{
+        width: 214px;
+        height: 56px;
+        font-size: 16px !important;
+    }
+
     #floatingInput, #floatingPassword
     {
         width: 270px;
@@ -101,6 +113,18 @@
         width: 260px;
         padding-bottom: 10px;
         font-size: 20px !important;
+    }
+
+    .prefix{
+        height: 56px;
+        width: 56px;
+        font-size: 14px !important;
+    }
+
+    #phonee{
+        width: 204px;
+        height: 56px;
+        font-size: 14px !important;
     }
 
     #floatingInput, #floatingPassword
@@ -177,6 +201,18 @@
     /* .form-floating{
         z-index: -1;
     } */
+
+    .prefix{
+        height: 56px;
+        width: 56px;
+        font-size: 13px !important;
+    }
+
+    #phonee{
+        width: 194px;
+        height: 56px;
+        font-size: 13px !important;
+    }
 
     #floatingInput, #floatingPassword
     {

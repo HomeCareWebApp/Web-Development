@@ -43,18 +43,21 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" id="floatingInput" placeholder="name@example.com" value="{{ old('phone') }}">
-                    <label class="ph" for="floatingInput">
-                        <div>
-                            Phone
+                <div class="input-group">
+                    <span class="input-group-text prefix" id="basic-addon1">+62</span>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control @error('phone') is-invalid @enderror phoneCon" name="phone" id="phonee" placeholder="name@example.com" value="{{ old('phone') }}">
+                        <label class="ph" for="floatingInput">
+                            <div>
+                                Phone
+                            </div>
+                        </label>
+                        @error('phone')
+                        <div class="invalid-feedback">
+                            {{ $message }}
                         </div>
-                    </label>
-                    @error('phone')
-                    <div class="invalid-feedback">
-                        {{ $message }}
+                        @enderror
                     </div>
-                    @enderror
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select @error('location') is-invalid @enderror ph" id="floatingSelect" name="location" aria-label="Floating label select example">

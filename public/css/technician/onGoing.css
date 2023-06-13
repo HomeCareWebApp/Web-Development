@@ -127,7 +127,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
     .ro{
@@ -147,6 +147,7 @@
         font-size: 18px;
         font-weight: bold;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .ordCont{

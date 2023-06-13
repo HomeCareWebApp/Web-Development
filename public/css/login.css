@@ -144,7 +144,7 @@
 @media screen and (max-width:600px) {
 
     .sec{
-        height: 400px;
+        height: 440px;
         /* background-color: red; */
         display: flex;
         justify-content: center;

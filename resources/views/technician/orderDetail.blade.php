@@ -36,15 +36,15 @@
                 <div class="isi">{{ $order->description }}</div>
             </div>
         </div>
+        <div class="d-flex btnCon">
         @if($order->status == 'accepted')
-            <div class="d-flex justify-content-end">
-                <a href="/complete/{{ $order->orderId }}" class="btn btnAcc">Complete</a>
-            </div>
+            <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
+            <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
+            <a href="/complete/{{ $order->orderId }}" class="btn btnAcc">Complete</a>
         @else
-            <div class="d-flex justify-content-end">
-                <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a>
-            </div>
+            <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a>
         @endif
+        </div>
     </div>
    
 </div>
