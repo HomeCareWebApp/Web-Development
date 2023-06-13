@@ -6,6 +6,7 @@
     <title>@yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/template.css') }}">
+    <script src="{{ asset('js/template.js') }}"></script>
   </head>
   <body>
     
@@ -88,7 +89,7 @@
                   <li><a class="menu__item" href="/">Home</a></li>
                   <li><a class="menu__item" href="#section-2">Tentang</a></li>
                   <li><a class="menu__item" href="/service">Servis</a></li>
-                  {{-- <li><a class="menu__item" href="/">Pesanan</a></li> --}}
+                  <li><a class="menu__item" href="/">Pesanan</a></li>
                   <div class="navbar-nav">
                     <li class="nav-item dropdown menu__item">
                       <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -121,9 +122,15 @@
             Hi, {{ auth()->user()->name }}
           </div>
         @endauth
+
+       
     </div>
 
-    @yield('content')
+    <div id="content">
+      @yield('content')
+
+    </div>
+
 
     <div class="footer">
       <div class="footernav">
