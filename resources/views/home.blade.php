@@ -73,6 +73,9 @@
             <div>6. Setelah terkonfirmasi, anda dapat mengubungi teknisi ataupun teknisi akan menghubungi anda</div>
             <div>7. Diskusi harga dan pembayaran akan dilakukan secara langsung oleh pelanggan dan teknisi</div>
         </div>
+        <div class="d-flex justify-content-center">
+            <a href="/service" class="ps">Pesan Sekarang</a>
+        </div>
     </div>
 
     <div class="sec5">
