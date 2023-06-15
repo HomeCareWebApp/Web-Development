@@ -1,6 +1,8 @@
 @media screen and (min-width: 993px) {
   .content {
-    height: 600px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +39,6 @@
     justify-content: space-between;
     padding: 10px;
     margin-bottom: 10px;
-
   }
 
   .kata {
@@ -61,7 +62,9 @@
 
 @media screen and (min-width: 601px) and (max-width: 992px) {
   .content {
-    height: 500px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,7 +101,6 @@
     justify-content: space-between;
     padding: 10px;
     margin-bottom: 10px;
-
   }
 
   .kata {
@@ -122,7 +124,9 @@
 
 @media screen and (max-width: 600px) {
   .content {
-    height: 600px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,7 +163,6 @@
     flex-direction: column;
     padding: 10px;
     margin-bottom: 10px;
-
   }
 
   .kata {

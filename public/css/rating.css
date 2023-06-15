@@ -48,6 +48,12 @@
     background-color: #b0e5f0;
   }
 
+  .rateBox {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
   .btnAction {
     color: white !important;
     background-color: #00b4d7 !important;
@@ -70,6 +76,39 @@
     font-size: 32px;
     color: #0078b7;
     font-weight: bold;
+  }
+
+  .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+  }
+
+  .back {
+    position: absolute;
+    margin-right: 400px;
+  }
+
+  .backBtn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .box {
+    border: 1px solid black;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: #b0e5f0;
+  }
+
+  .rateBox {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
   }
 
   .line {
@@ -128,9 +167,44 @@
   }
 
   .rating {
-    font-size: 30px;
+    font-size: 28px;
     color: #0078b7;
     font-weight: bold;
+  }
+
+  .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+
+  .back {
+    position: absolute;
+    margin-right: 300px;
+  }
+
+  .backBtn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .rateBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .box {
+    border: 1px solid black;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: #b0e5f0;
   }
 
   .line {

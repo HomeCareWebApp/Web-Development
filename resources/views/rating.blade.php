@@ -30,21 +30,25 @@
             <span class="">Service : {{$orders->service}}</span>
             <span class="">Technician : {{$orders->name}}</span>
             <span>Rating Technician :</span>
-            <div class="btn-group my-2" role="group" aria-label="Basic radio toggle button group">
-                <input type="radio" class="btn-check" name="rating" value="1" id="btnradio1" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio1">Very Bad</label>
+            <div class="btn-group rateBox my-2" role="group" aria-label="Basic radio toggle button group">
+                <div class="rateBoxUpper">
+                    <input type="radio" class="btn-check w-50" name="rating" value="1" id="btnradio1" autocomplete="off">
+                    <label class="rateText btn btn-outline-primary" for="btnradio1">Very Bad</label>
 
-                <input type="radio" class="btn-check" name="rating" value="2" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">Bad</label>
+                    <input type="radio" class="btn-check" name="rating" value="2" id="btnradio2" autocomplete="off">
+                    <label class="rateText btn btn-outline-primary" for="btnradio2">Bad</label>
 
-                <input type="radio" class="btn-check" name="rating" value="3" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio3">Neutral</label>
+                    <input type="radio" class="btn-check" name="rating" value="3" id="btnradio3" autocomplete="off">
+                    <label class="rateText btn btn-outline-primary" for="btnradio3">Neutral</label>
+                </div>
                 
-                <input type="radio" class="btn-check" name="rating" value="4" id="btnradio4" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio4">Good</label>
+                <div class="rateBoxLower">
+                    <input type="radio" class="btn-check" name="rating" value="4" id="btnradio4" autocomplete="off">
+                    <label class="rateText btn btn-outline-primary" for="btnradio4">Good</label>
 
-                <input type="radio" class="btn-check" name="rating" value="5" id="btnradio5" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio5">Very Good</label>
+                    <input type="radio" class="btn-check" name="rating" value="5" id="btnradio5" autocomplete="off">
+                    <label class="rateText btn btn-outline-primary" for="btnradio5">Very Good</label>
+                </div>
             </div>
             <input type="hidden" name="orderId" value="{{$orders->orderId}}">
             <button type="submit" class="btn btn-warning jsutify-content-center">Submit</button>
