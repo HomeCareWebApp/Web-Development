@@ -1,174 +1,178 @@
-@media screen and (min-width : 993px){
+@media screen and (min-width: 993px) {
+  .content {
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+  .ro {
+    font-size: 40px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .ro{
-        font-size: 40px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 600px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .dt{
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+  .dt {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-    .descCont{
-        width: 600px;
-        height: 60px;
-        border : 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-    }
+  .descCont {
+    width: 600px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
 
-    .kata{
-        width: 60px;
-    }
+  .kata {
+    width: 60px;
+  }
 
-    .btnAction{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
-
-
+  .btnAction {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
 }
 
-@media screen and (min-width : 601px) and (max-width : 992px){
-    .content{
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  .content {
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+  }
 
-    .ro{
-        font-size: 32px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 500px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .ro {
+    font-size: 32px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .dt{
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .descCont{
-        width: 500px;
-        height: 60px;
-        border : 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-    }
+  .dt {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-    .kata{
-        width: 60px;
-    }
+  .descCont {
+    width: 500px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
 
-    .btnAction{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-    }
+  .kata {
+    width: 60px;
+  }
 
+  .btnAction {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+  }
 }
 
-@media screen and (max-width : 600px) {
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
-    }
+@media screen and (max-width: 600px) {
+  .content {
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    /* background-color: aqua; */
+  }
 
-    .ro{
-        font-size: 30px;
-        color: #0078B7;
-        font-weight: bold;
-    }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 300px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .ro {
+    margin-top: 30px;
+    font-size: 30px;
+    color: #0078b7;
+    font-weight: bold;
+  }
 
-    .dt{
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
+  .line {
+    border: 1px solid black !important;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
-    .descCont{
-        width: 300px;
-        height: 140px;
-        border : 1px solid black;
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
+  .dt {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
-    .kata{
-        width: 60px;
-    }
+  .descCont {
+    width: 300px;
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
 
-    .leftPart{
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+  .kata {
+    width: 60px;
+  }
 
-    .rightPart{
-        height: 100px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
+  .leftPart {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
-    .btnAction{
-        color: white !important;
-        background-color: #00B4D7 !important;
-        border: 1px solid #0078B7;
-        font-size: 14px !important; 
-        width: 100px;
-        height: 40px;
-    }
+  .rightPart {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .btnAction {
+    color: white !important;
+    background-color: #00b4d7 !important;
+    border: 1px solid #0078b7;
+    font-size: 14px !important;
+    width: 100px;
+    height: 40px;
+  }
 }
