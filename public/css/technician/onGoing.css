@@ -1,11 +1,11 @@
 @media screen and (min-width: 993px) {
   .content {
-    height: auto;
+    height: 700px;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     /* background-color: aqua; */
   }
@@ -31,13 +31,14 @@
 
   .ordCont {
     width: 600px;
-    height: 60px;
-    border: 1px solid black;
+    height: 80px;
+    /* border: 1px solid black; */
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   .kata {
@@ -65,12 +66,12 @@
 
 @media screen and (min-width: 601px) and (max-width: 992px) {
   .content {
-    height: auto;
+    height: 660px;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     /* background-color: aqua; */
   }
@@ -96,13 +97,15 @@
 
   .ordCont {
     width: 500px;
-    height: 60px;
-    border: 1px solid black;
+    height: 80px;
+    /* border: 1px solid black; */
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   }
 
   .kata {
@@ -130,12 +133,12 @@
 
 @media screen and (max-width: 600px) {
   .content {
-    height: auto;
+    height: 960px;
     margin-top: 30px;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     /* background-color: aqua; */
   }
@@ -163,11 +166,13 @@
   .ordCont {
     width: 300px;
     height: 140px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   }
 
   .kata {

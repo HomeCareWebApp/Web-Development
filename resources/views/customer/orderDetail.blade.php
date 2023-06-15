@@ -45,7 +45,7 @@
         <div class="d-flex btnCon">
             @if($order->status == 'accepted')
                 <a class="btn btnMsg" href="https://wa.me/{{ $order->phone }}">Send Message</a>
-            @else
+            @elseif($order->status == 'requested')
                 <a class="btn btnCancel" href="/cancel">Cancel</a>
             @endif
         </div>

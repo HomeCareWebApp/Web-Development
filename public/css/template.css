@@ -146,6 +146,11 @@
     text-decoration: none;
   }
 
+  .ord {
+    color: white;
+    font-size: 14px;
+  }
+
   .hm:hover {
     text-decoration: none;
   }

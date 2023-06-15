@@ -1,6 +1,8 @@
 @media screen and (min-width: 993px) {
   .content {
     height: 600px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,7 +47,14 @@
 
   .cont {
     width: 600px;
+    /* border: 1px solid black; */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
   }
+
+ 
 
   .leftPart {
     width: 30%;
@@ -63,9 +72,9 @@
 
   .descCont {
     height: 400px;
-    background-color: #e3faff;
+    /* background-color: #e3faff; */
     padding: 20px;
-    border: 1px solid black;
+    /* border: px solid #e3faff !important; */
   }
 
   .desc {
@@ -98,7 +107,9 @@
 
 @media screen and (min-width: 601px) and (max-width: 992px) {
   .content {
-    height: 500px;
+    height: 460px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,15 +136,11 @@
   }
 
   .backBtn {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
-  .backBtn {
-    width: 80px;
-    height: 60px;
-  }
-
+ 
   .line {
     border: 1px solid black !important;
     width: 500px;
@@ -143,6 +150,10 @@
 
   .cont {
     width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
   }
 
   .leftPart {
@@ -161,9 +172,9 @@
 
   .descCont {
     height: 300px;
-    background-color: #e3faff;
+    /* background-color: #e3faff; */
     padding: 15px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   .desc {
@@ -196,7 +207,9 @@
 
 @media screen and (max-width: 600px) {
   .content {
-    height: 700px;
+    height: 640px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,13 +234,17 @@
     width: 360px;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
   }
 
   .upper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    /* width: 600px; */
   }
 
   .back {
@@ -236,14 +253,11 @@
   }
 
   .backBtn {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 
-  .backBtn {
-    width: 80px;
-    height: 60px;
-  }
+ 
 
   .leftPart {
     font-size: 18px;
@@ -261,9 +275,9 @@
   .descCont {
     height: 300px;
     width: 300px;
-    background-color: #e3faff;
+    /* background-color: #e3faff; */
     padding: 15px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
 
   .desc {

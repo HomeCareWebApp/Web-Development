@@ -89,7 +89,7 @@
                   <li><a class="menu__item" href="/">Home</a></li>
                   <li><a class="menu__item" href="#section-2">Tentang</a></li>
                   <li><a class="menu__item" href="/service">Servis</a></li>
-                  <li><a class="menu__item" href="/">Pesanan</a></li>
+                  {{-- <li><a class="menu__item" href="/">Pesanan</a></li> --}}
                   <div class="navbar-nav">
                     <li class="nav-item dropdown menu__item">
                       <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

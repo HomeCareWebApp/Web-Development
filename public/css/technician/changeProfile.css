@@ -1,7 +1,9 @@
 @media screen and (min-width : 993px){
 
     .content{
-        height: 600px;
+        height: 580px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -29,6 +31,10 @@
 
     .cont{
         width: 600px;
+        height: 400px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding: 20px;
+        border-radius: 20px;
     }
 
     .leftPart{
@@ -123,7 +129,9 @@
 @media screen and (min-width : 601px) and (max-width : 992px){
 
     .content{
-        height: 600px;
+        height: 540px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -150,6 +158,10 @@
 
     .cont{
         width: 500px;
+        height: 380px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding: 20px;
+        border-radius: 20px;
     }
 
     .leftPart{
@@ -243,7 +255,9 @@
 @media screen and (max-width:600px) {
 
     .content{
-        height: 800px;
+        height: 720px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -270,8 +284,12 @@
 
     .cont{
         width: 360px;
+        height: 620px;
         flex-direction: column;
         align-items: center;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        padding: 20px;
+        border-radius: 20px;
     }
 
     .leftPart{

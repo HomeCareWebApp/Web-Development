@@ -95,6 +95,7 @@ class CustomerController extends Controller
         // print_r(collect($techList));
        
         $tl = $this->paginate($techList);
+        $tl->withPath($name);
 
         return view('customer/chooseTechnician', [
             'servName' => $name,
@@ -266,11 +267,15 @@ class CustomerController extends Controller
         ]);
     }
 
-    public function paginate($items, $perPage = 5, $page = null, $options = [])
+    public static function paginate($items, $perPage = 5, $page = null)
     {
         $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
-        $items = $items instanceof Collection ? $items : Collection::make($items);
-        return new LengthAwarePaginator($items->forPage($page, $perPage), $items->count(), $perPage, $page, $options);
+        $total = count($items);
+        $currentpage = $page;
+        $offset = ($currentpage * $perPage) - $perPage ;
+        $itemstoshow = array_slice($items , $offset , $perPage);
+        
+        return new LengthAwarePaginator($itemstoshow ,$total   ,$perPage);
     }
     
 

@@ -39,9 +39,11 @@
 
   .descCont {
     width: 500px;
-    background-color: #e3faff;
+    /* background-color: #e3faff; */
     padding: 15px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
   }
 
   .desc {
@@ -125,9 +127,11 @@
 
   .descCont {
     width: 500px;
-    background-color: #e3faff;
+    /* background-color: #e3faff; */
     padding: 15px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
   }
 
   .desc {
@@ -210,9 +214,11 @@
 
   .descCont {
     width: 300px;
-    background-color: #e3faff;
+    /* background-color: #e3faff; */
     padding: 15px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
   }
 
   .desc {
