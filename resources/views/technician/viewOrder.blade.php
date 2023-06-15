@@ -38,6 +38,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="pagi">
+                {{ $data->links() }}
+            </div>
         @endif
     </div>
 

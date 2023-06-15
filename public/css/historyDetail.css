@@ -44,6 +44,10 @@
         height: 80px;
     }
 
+    .pagi{
+        width: 600px;
+    }
+
    
 
 }
@@ -91,6 +95,10 @@
         margin: 5px 0px;
         width: 470px;
         height: 80px;
+    }
+
+    .pagi{
+        width: 500px;
     }
 
    

@@ -57,6 +57,10 @@
     border: 1px solid #0078b7;
     font-size: 14px !important;
   }
+
+  .pagi{
+    width: 600px;
+  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 992px) {
@@ -117,6 +121,10 @@
     background-color: red !important;
     border: 1px solid #0078b7;
     font-size: 14px !important;
+  }
+
+  .pagi{
+    width: 500px;
   }
 }
 

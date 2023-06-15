@@ -44,6 +44,9 @@
                 </div>
             </form>
             @endforeach
+            <div class="pagi">
+                {{ $completed->links() }}
+            </div>
         @endif
     </div>
     
