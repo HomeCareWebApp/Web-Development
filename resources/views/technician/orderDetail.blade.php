@@ -8,7 +8,12 @@
 
 <div class="content">
 
-    <div class="judull">Order Detail</div>
+    <div class="upper">
+        <a href="{{url()->previous()}}" class="back">
+            <img src="/img/left-arrow.png" class="backBtn">
+        </a>
+        <div class="judull">Order Detail</div>
+    </div>  
     <div class="line"></div>
     <div class="descCont">
         <div class="desc">

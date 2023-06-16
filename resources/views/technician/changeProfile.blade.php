@@ -8,7 +8,12 @@
 
 <div class="content">
 
-    <div class="ro">Technician Profile</div>
+    <div class="upper">
+        <a href="{{url()->previous()}}" class="back">
+            <img src="/img/left-arrow.png" class="backBtn">
+        </a>
+        <div class="ro">Technician Profile</div>
+    </div>
     <div class="line"></div>
     @if(session()->has('change'))
     <div class="alert alert-success alert-dismissible fade show al" role="alert">
@@ -32,7 +37,7 @@
                 @csrf
                 <input class="custom-file-input" type="file" name="image" id="image" onchange="form.submit()" >
             </form>
-            <input type="hidden" id="loc" value={{ $technician->location }}>
+            <input type="hidden" id="loc" value="{{ $technician->location }}">
         </div>
         <div class="rightPart">
             <div  class="descCont">
@@ -50,7 +55,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Location</label>
-                        <select class="form-select @error('location') is-invalid @enderror" aria-label="Default select example" id="mySelect" name="location">
+                        <select class="form-select @error('location') is-invalid @enderror" aria-label="Default select example" id="mySelect" name="location" >
                             <option value="jakarta">Jakarta</option>
                             <option value="bogor">Bogor</option>
                             <option value="depok">Depok</option>

@@ -35,8 +35,13 @@
                     <div> : </div>
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" name="address" id="floatingTextarea"></textarea>
+                    <textarea class="form-control @error('address') is-invalid @enderror" placeholder="Leave a comment here" name="address" id="floatingTextarea"></textarea>
                     <label for="floatingTextarea">Address</label>
+                    @error('address')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
             </div>
             <div>
@@ -45,8 +50,13 @@
                     <div>: </div>
                 </div>
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" name="description" id="floatingTextarea"></textarea>
+                    <textarea class="form-control @error('description') is-invalid @enderror" placeholder="Leave a comment here" name="description" id="floatingTextarea"></textarea>
                     <label for="floatingTextarea">Description</label>
+                    @error('description')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
             </div>
             <div class="d-flex justify-content-end">

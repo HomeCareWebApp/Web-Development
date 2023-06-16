@@ -72,14 +72,14 @@ class TechnicianController extends Controller
     {
         DB::table('orders')->where('orderId', $id)->update(['status' => 'accepted']);
 
-        return redirect('/order/onGoing');
+        return redirect('/order/onGoing')->with('success','Telah menerima orderan');
     }
 
     public function complete(String $id)
     {
         DB::table('orders')->where('orderId', $id)->update(['status' => 'completed']);
 
-        return redirect('/viewOrder');
+        return redirect()->route('orderHistoryTech')->with('success','Telah menyelesaikan orderan');
     }
 
     public function orderHistory()
