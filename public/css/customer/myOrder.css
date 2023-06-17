@@ -39,7 +39,6 @@
     justify-content: space-between;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
   }
 
   .kata {
@@ -60,7 +59,7 @@
     font-size: 14px !important;
   }
 
-  .pagi{
+  .pagi {
     width: 600px;
   }
 }
@@ -126,7 +125,7 @@
     font-size: 14px !important;
   }
 
-  .pagi{
+  .pagi {
     width: 500px;
   }
 }
@@ -171,7 +170,6 @@
     flex-direction: column;
     padding: 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
   }
 
   .kata {

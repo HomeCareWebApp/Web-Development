@@ -170,7 +170,7 @@ class CustomerController extends Controller
         
         Order::create($validateData);
         
-        return redirect('/myOrder')->with('success','Pesanan anda telah diterima oleh teknisi');
+        return redirect('/myOrder');
     }
     
     public function myOrder()
@@ -240,7 +240,7 @@ class CustomerController extends Controller
                     'rated' => 1
                 ));
 
-            return redirect()->route('orderHistoryCust')->with('success','Terima kasih telah memberikan penilaian pada teknisi');
+            return redirect()->route('orderHistoryCust');
         } 
 
         return redirect()->back()->withErrors('Anda telah memberikan rating sebelumnya');
