@@ -27,7 +27,7 @@
          @auth
           @if (auth()->user()->role == 'Customer')
             <a href="/#section-2" class="na">Tentang</a>
-            <a href="/service" class="na">Service</a>
+            <a href="/service" class="na">Servis</a>
             <div class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle ord" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,7 +71,7 @@
             </div>
            @else
               <a href="/#section-2" class="na">Tentang</a>
-              <a href="/service" class="na">Service</a>
+              <a href="/service" class="na">Servis</a>
               <div class="d-flex dir">
                   <a href="/register" class="na">Daftar</a>
                   <div class="">/</div>
@@ -144,7 +144,7 @@
     <div class="footer">
       <div class="footernav">
         <a href="/#section-2" class="na">Tentang</a>
-        <a href="/service" class="na">Service</a>
+        <a href="/service" class="na">Servis</a>
         <a href="/register" class="na">Daftar</a>
         <a href="/login" class="na">Masuk</a>
       </div>
