@@ -133,8 +133,6 @@ class AuthController extends Controller
 
         $validateData['password'] = bcrypt($validateData['password']);
         
-        $validateData['age'] = 20;
-        $validateData['rating'] = 0;
         $validateData['experience'] = '';
         $validateData['profilePicture'] = '';
         $validateData['technicianId'] = $newId;
