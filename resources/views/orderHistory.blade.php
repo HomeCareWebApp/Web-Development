@@ -37,7 +37,7 @@
                         <button type="submit" class="btn btnAction">Rating</button>
                         <a href="/myOrderDetail/{{ $data->orderId }}"  class="btn btnAction">View Detail</a>
                         @else
-                        <a href="/orderDetail/{{ $data->orderId }}"  class="btn btnAction">View Detail</a>
+                        <a href="/orderHistoryDetail/{{ $data->orderId }}"  class="btn btnAction">View Detail</a>
                         @endif
                         
                     </div>

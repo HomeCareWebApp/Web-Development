@@ -99,9 +99,22 @@ class TechnicianController extends Controller
         ]);
     }
 
-    public function orderHistoryDetail()
+    public function orderHistoryDetail(String $id)
     {
-        return view('orderHistoryDetail');
+        $order = DB::table('orders')->join('customers', 'orders.customerId','=','customers.customerId')
+        ->where('orderId',$id)->first();
+        
+        $email = Auth::user()->email;
+
+        $tech = DB::table('technicians')->where('email',$email)->first();
+        $id = $tech->technicianId;
+       
+
+        return view('orderHistoryDetail',[
+            'order' => $order,
+            'id' => $id
+        ]);
+        // return view('orderHistoryDetail');
     }
 
     public function viewProfile(Request $request)

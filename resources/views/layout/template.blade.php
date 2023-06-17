@@ -12,7 +12,15 @@
     
     <div class="header d-flex align-items-center">
        <div class="judul">
-           <a href="/" class="hm">HomeCare</a>
+        @auth
+          @if (auth()->user()->role == 'Technician')
+            <a href="/viewOrder" class="hm">HomeCare</a>
+          @else
+            <a href="/" class="hm">HomeCare</a>
+          @endif
+        @else
+            <a href="/" class="hm">HomeCare</a>
+        @endauth
        </div>
        
        <div class="d-flex dir nav-menu justify-content-around">

@@ -1,153 +1,268 @@
-@media screen and (min-width : 993px){
-
-    .content{
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
+@media screen and (min-width: 993px) {
+    .content {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-color: aqua; */
     }
-
-    .judull{
-        font-size: 40px;
-        color: #0078B7;
-        font-weight: bold;
+  
+    .judull {
+      font-size: 40px;
+      color: #0078b7;
+      font-weight: bold;
     }
-    
-    .line{
-        border: 1px solid black  !important;
-        width: 600px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+  
+    .line {
+      border: 1px solid black !important;
+      width: 600px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
-
-    .descCont{
-        width: 500px;
-        background-color: #E3FAFF;
-        padding: 15px;
-        border: 1px solid black;
+  
+    .upper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    .desc{
-        margin: 5px 0px;
-        display: flex;
+  
+    .back {
+      position: absolute;
+      margin-right: 550px;
     }
-
-    .kata{
-        width: 100px;
+  
+    .backBtn {
+      width: 60px;
+      height: 60px;
     }
-
-    .textArea{
-        margin: 5px 0px;
-        width: 470px;
-        height: 80px;
+  
+    .descCont {
+      width: 500px;
+      /* background-color: #e3faff; */
+      padding: 15px;
+      /* border: 1px solid black; */
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 10px;
     }
-
-    .pagi{
-        width: 600px;
+  
+    .desc {
+      margin: 5px 0px;
+      display: flex;
     }
-
-   
-
-}
-
-@media screen and (min-width : 601px) and (max-width : 992px){
-    .content{
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
+  
+    .kata {
+      width: 100px;
+      margin-right: 5px;
     }
-
-    .judull{
-        font-size: 32px;
-        color: #0078B7;
-        font-weight: bold;
+  
+    .textArea {
+      margin: 5px 0px;
+      width: 470px;
+      height: 80px;
     }
-    
-    .line{
-        border: 1px solid black  !important;
-        width:500px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  
+    .btnCon{
+      justify-content: flex-end;
+      margin-top: 20px;
 
-    .descCont{
-        width: 500px;
-        background-color: #E3FAFF;
-        padding: 15px;
-        border: 1px solid black;
     }
-
-    .desc{
-        margin: 5px 0px;
-        display: flex;
+  
+    .btnCancel {
+      color: white !important;
+      background-color: red !important;
+      border: 1px solid red;
+      font-size: 14px !important;
     }
-
-    .kata{
-        width: 100px;
+  
+    .btnMsg {
+      border: 1px solid #0078b7 !important;
+      /* background-color: white !important; */
+      font-size: 14px !important;
     }
-
-    .textArea{
-        margin: 5px 0px;
-        width: 470px;
-        height: 80px;
+  
+    .isi {
+      margin-left: 5px;
+      width: 460px;
+      /* background-color: red !important; */
     }
-
-    .pagi{
-        width: 500px;
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 992px) {
+    .content {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-color: aqua; */
     }
-
-   
-}
-
-@media screen and (max-width : 600px) {
-    .content{
-        height: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* background-color: aqua; */
+  
+    .judull {
+      font-size: 32px;
+      color: #0078b7;
+      font-weight: bold;
     }
-
-    .judull{
-        font-size: 28px;
-        color: #0078B7;
-        font-weight: bold;
+  
+    .upper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    
-    .line{
-        border: 1px solid black  !important;
-        width:300px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+  
+    .back {
+      position: absolute;
+      margin-right: 350px;
     }
-
-    .descCont{
-        width: 300px;
-        background-color: #E3FAFF;
-        padding: 15px;
-        border: 1px solid black;
+  
+    .backBtn {
+      width: 60px;
+      height: 60px;
     }
-
-    .desc{
-        margin: 5px 0px;
-        display: flex;
+  
+    .line {
+      border: 1px solid black !important;
+      width: 500px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
-
-    .kata{
-        width: 100px;
+  
+    .descCont {
+      width: 500px;
+      /* background-color: #e3faff; */
+      padding: 15px;
+      /* border: 1px solid black; */
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 10px;
     }
-
-    .textArea{
-        margin: 5px 0px;
-        width: 270px;
-        height: 120px;
+  
+    .desc {
+      margin: 5px 0px;
+      display: flex;
     }
+  
+    .kata {
+      width: 100px;
+      margin-right: 5px;
+    }
+  
+    .textArea {
+      margin: 5px 0px;
+      width: 470px;
+      height: 80px;
+    }
+  
+    .btnCon{
+      justify-content: flex-end;
+      margin-top: 20px;
 
-   
-}
+    }
+  
+    .btnCancel {
+      color: white !important;
+      background-color: red !important;
+      border: 1px solid #0078b7;
+      font-size: 14px !important;
+    }
+  
+    .btnMsg {
+      border: 1px solid #0078b7 !important;
+      /* background-color: white !important; */
+      font-size: 14px !important;
+    }
+  
+    .isi {
+      margin-left: 5px;
+      width: 460px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .content {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-color: aqua; */
+    }
+  
+    .judull {
+      font-size: 28px;
+      color: #0078b7;
+      font-weight: bold;
+    }
+  
+    .upper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .back {
+      position: absolute;
+      margin-right: 300px;
+    }
+  
+    .backBtn {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .line {
+      border: 1px solid black !important;
+      width: 300px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .descCont {
+      width: 300px;
+      /* background-color: #e3faff; */
+      padding: 15px;
+      /* border: 1px solid black; */
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 10px;
+    }
+  
+    .desc {
+      margin: 5px 0px;
+      display: flex;
+    }
+  
+    .kata {
+      width: 100px;
+      margin-right: 5px;
+    }
+  
+    .textArea {
+      margin: 5px 0px;
+      width: 270px;
+      height: 120px;
+    }
+  
+    .btnCon{
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+  
+    .btnCancel {
+      color: white !important;
+      background-color: red !important;
+      border: 1px solid #0078b7;
+      font-size: 14px !important;
+    }
+  
+    .btnMsg {
+      border: 1px solid #0078b7 !important;
+      /* background-color: white !important; */
+      font-size: 14px !important;
+    }
+  
+    .isi {
+      margin-left: 5px;
+      width: 200px;
+      /* background-color: red; */
+    }
+  }
+  

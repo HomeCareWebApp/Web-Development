@@ -78,7 +78,7 @@ Route::get('/orderHistoryCust', [CustomerController::class, 'orderHistoryCust'])
 
 Route::get('/orderHistoryTech', [TechnicianController::class, 'orderHistory'])->middleware('auth')->middleware('technician');;
 
-Route::get('/orderHistoryDetail', [TechnicianController::class, 'orderHistoryDetail'])->middleware('auth')->middleware('technician');;
+Route::get('/orderHistoryDetail/{id}', [TechnicianController::class, 'orderHistoryDetail'])->middleware('auth')->middleware('technician');;
 
 
 // Route::get('/')
