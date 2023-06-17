@@ -61,6 +61,16 @@
     text-decoration: none;
   }
 
+  .btnClose{
+    background-color: #00b4d7;
+    color: white;
+  }
+
+  .btnOut{
+    background-color: red;
+    color: white;
+  }
+
   .footer {
     display: flex;
     background-color: #00b4d7;
@@ -153,6 +163,16 @@
 
   .hm:hover {
     text-decoration: none;
+  }
+
+  .btnClose{
+    background-color: #00b4d7;
+    color: white;
+  }
+
+  .btnOut{
+    background-color: red;
+    color: white;
   }
 
   .footer {
@@ -298,6 +318,16 @@
 
   .hm:hover {
     text-decoration: none;
+  }
+
+  .btnClose{
+    background-color: #00b4d7;
+    color: white;
+  }
+
+  .btnOut{
+    background-color: red;
+    color: white;
   }
 
   .footer {

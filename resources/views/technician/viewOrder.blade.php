@@ -34,9 +34,27 @@
                     </div>
                     <div class="rightPart">
                         <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
-                        <a href="/accept/{{ $dt->orderId }}" class="btn btnAction">Accept</a>
+                        <a class="btn btnAction" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{ $dt->orderId }}">Accept</a>
                     </div>
                 </div>
+
+                <div class="modal fade" id="staticBackdrop-{{ $dt->orderId }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Accept Order</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Anda yakin ingin menerima pesanan ini?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btnOut" data-bs-dismiss="modal">Tutup</button>
+                          <a href="/accept/{{ $dt->orderId }}" class="btn btnClose">Accept</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             @endforeach
             <div class="pagi">
                 {{ $data->links() }}

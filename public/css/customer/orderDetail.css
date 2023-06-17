@@ -64,6 +64,7 @@
 
   .btnCon{
     justify-content: flex-end;
+    margin-top: 20px;
   }
 
   .btnCancel {
@@ -77,6 +78,7 @@
     border: 1px solid #0078b7 !important;
     /* background-color: white !important; */
     font-size: 14px !important;
+    margin-right: 10px;
   }
 
   .isi {
@@ -152,6 +154,7 @@
 
   .btnCon{
     justify-content: flex-end;
+    margin-top: 20px;
   }
 
   .btnCancel {
@@ -165,6 +168,7 @@
     border: 1px solid #0078b7 !important;
     /* background-color: white !important; */
     font-size: 14px !important;
+    margin-right: 10px;
   }
 
   .isi {
@@ -238,7 +242,8 @@
   }
 
   .btnCon{
-    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
   }
 
   .btnCancel {
@@ -252,6 +257,7 @@
     border: 1px solid #0078b7 !important;
     /* background-color: white !important; */
     font-size: 14px !important;
+    /* margin-right: 10px; */
   }
 
   .isi {

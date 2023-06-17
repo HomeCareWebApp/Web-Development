@@ -65,6 +65,7 @@
 
   .btnCon {
     justify-content: flex-end;
+    margin-top: 20px;
   }
 
   .btnAcc {
@@ -155,6 +156,7 @@
 
   .btnCon {
     justify-content: flex-end;
+    margin-top: 20px;
   }
 
   .btnAcc {
@@ -244,6 +246,7 @@
 
   .btnCon {
     justify-content: space-around;
+    margin-top: 20px;
   }
 
   .btnAcc {

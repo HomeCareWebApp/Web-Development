@@ -64,7 +64,7 @@
                   {{ auth()->user()->name }}
                 </a>
                 <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="/logout">Keluar</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Keluar</a></li>
                  
                 </ul>
               </li>
@@ -83,6 +83,7 @@
 
        
     </div>
+
 
     <div class="mobHeader">
         <div class="hamburger-menu">
@@ -150,6 +151,24 @@
       <div class="line"></div>
       <div class="footerjudul">
           <div class="text-light">©2023 HomeCare</div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Keluar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Anda yakin ingin keluar? Aksi ini tidak dapat dikembalikan
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btnClose" data-bs-dismiss="modal">Tutup</button>
+            <a href="/logout" class="btn btnOut">Keluar</a>
+          </div>
+        </div>
       </div>
     </div>
     

@@ -39,13 +39,15 @@
   }
 
   .box {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    background-color: #b0e5f0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 10px;
   }
 
   .rateBox {
@@ -96,13 +98,15 @@
   }
 
   .box {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    background-color: #b0e5f0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 10px;
   }
 
   .rateBox {
@@ -198,13 +202,15 @@
   }
 
   .box {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    background-color: #b0e5f0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+      border-radius: 10px;
   }
 
   .line {

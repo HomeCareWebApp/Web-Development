@@ -248,7 +248,8 @@ class CustomerController extends Controller
 
     public function cancel(String $id)
     {
-        DB::table('orders')->where('orderId', '=', $id)->delete();
+       
+        DB::table('orders')->where('orderId',$id)->update(['status' => 'canceled']);
 
         return redirect('/myOrder');
     }

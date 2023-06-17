@@ -45,13 +45,51 @@
         @if($order->status == 'accepted')
             <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
             <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
-            <a href="/complete/{{ $order->orderId }}" class="btn btnAcc">Complete</a>
+            <a class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Complete</a>
         @else
-            <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a>
+            {{-- <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a> --}}
+            <a  class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accept</a>
         @endif
         </div>
     </div>
    
 </div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Accept Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Anda yakin ingin menerima pesanan ini?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btnOut" data-bs-dismiss="modal">Tutup</button>
+          <a href="/accept/{{ $order->orderId }}" class="btn btnClose">Accept</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Complete Order</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Anda yakin ingin menyelesaikan pesanan ini?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btnOut" data-bs-dismiss="modal">Tutup</button>
+          <a href="/complete/{{ $order->orderId }}" class="btn btnClose">Complete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 @endsection
