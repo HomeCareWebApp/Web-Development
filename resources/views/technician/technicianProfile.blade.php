@@ -26,10 +26,6 @@
         <div class="rightPart">
             <div  class="descCont">
                 <div class="desc">
-                    <div class="det">Age </div>
-                    <div>30</div>
-                </div>
-                <div class="desc">
                     <div class="det">Rating</div>
                     <div>{{ number_format($rating,2) }} / 5.00 ({{$count}})</div>
                 </div>
@@ -43,7 +39,7 @@
                 </div>
                 <div class="desc">
                     <div class="det">Experience</div>
-                    <div>Value</div>
+                    <div>{{ $technician->experience }}</div>
                 </div>
             </div>
             {{-- <div>
