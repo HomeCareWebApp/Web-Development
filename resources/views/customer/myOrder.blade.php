@@ -10,7 +10,14 @@
 
         <div class="ro">My Order</div>
         <div class="line"></div>
+        @if(session()->has('success'))
+            <div class="alert alert-success alert-dismissible fade show al" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
         <div class="dt">Daftar Pesanan Saya</div>
+
         @if($data->isEmpty())
         <div>Anda belum memiliki pesanan</div>
         @else
