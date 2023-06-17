@@ -79,7 +79,7 @@ class TechnicianController extends Controller
     {
         DB::table('orders')->where('orderId', $id)->update(['status' => 'completed']);
 
-        return redirect('/viewOrder');
+        return redirect()->route('orderHistoryTech');
     }
 
     public function orderHistory()

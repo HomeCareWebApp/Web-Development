@@ -74,9 +74,9 @@ Route::post('/saveChange', [TechnicianController::class, 'saveChange'])->middlew
 
 Route::post('/changePicture', [TechnicianController::class, 'changePicture'])->middleware('auth')->middleware('technician');;
 
-Route::get('/orderHistoryCust', [CustomerController::class, 'orderHistoryCust'])->middleware('auth')->middleware('customer');;
+Route::get('/orderHistoryCust', [CustomerController::class, 'orderHistoryCust'])->middleware('auth')->middleware('customer')->name('orderHistoryCust');
 
-Route::get('/orderHistoryTech', [TechnicianController::class, 'orderHistory'])->middleware('auth')->middleware('technician');;
+Route::get('/orderHistoryTech', [TechnicianController::class, 'orderHistory'])->middleware('auth')->middleware('technician')->name('orderHistoryTech');
 
 Route::get('/orderHistoryDetail/{id}', [TechnicianController::class, 'orderHistoryDetail'])->middleware('auth')->middleware('technician');;
 

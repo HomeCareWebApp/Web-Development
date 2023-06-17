@@ -8,6 +8,7 @@
 
     <div class="content">
         <div class="ro">Order History</div>
+        
         <div class="line"></div>
         @if($completed->isEmpty())
             <div>Anda tidak memiliki riwayat pesanan</div>

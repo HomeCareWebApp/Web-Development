@@ -239,6 +239,8 @@ class CustomerController extends Controller
                     'rating' => $rating,
                     'rated' => 1
                 ));
+
+            return redirect()->route('orderHistoryCust');
         } 
 
         return redirect()->back()->withErrors('Anda telah memberikan rating sebelumnya');
