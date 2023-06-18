@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Services')
+@section('title','Servis')
 
 @section('content')
 
@@ -21,25 +21,25 @@
                 <div id="aa" class="perServ col">
                     <a href="/service/electrical" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Electrical.png') }}" alt=""></div>
-                        <div>Electrical</div>
+                        <div>Listrik</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
                     <a href="/service/cleaning" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Cleaning.png') }}" alt=""></div>
-                        <div>Cleaning</div>
+                        <div>Pembersihan</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
                     <a href="/service/water" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Water.png') }}" alt=""></div>
-                        <div>Water</div>
+                        <div>Air</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
                     <a href="/service/refrigirator" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Refrigirator.png') }}" alt=""></div>
-                        <div>Refrigirator</div>
+                        <div>Kulkas</div>
                     </a>
                 </div>
             </div>

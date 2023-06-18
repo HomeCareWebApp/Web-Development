@@ -9,7 +9,7 @@
 <div class="content">
     <div class="sec">
         <div class="cont">
-            <div class="loginTxt">Login</div>
+            <div class="loginTxt">Masuk</div>
             @if(session()->has('errorLogin'))
                 <div class="alert alert-danger alert-dismissible fade show al" role="alert">
                     {{ session('errorLogin') }}
@@ -22,7 +22,7 @@
                     <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}">
                     <label class="ph" for="floatingInput">
                         <div>
-                            Email Address
+                            Email
                         </div>
                     </label>
                     @error('email')
@@ -35,7 +35,7 @@
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="floatingPassword" placeholder="Password">
                     <label class="ph" for="floatingPassword">
                         <div>
-                            Password
+                            Kata Sandi
                         </div>
                     </label>
                     @error('password')

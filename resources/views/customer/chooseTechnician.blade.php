@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Choose Technician')
+@section('title','Daftar Teknisi')
 
 @section('content')
 
@@ -33,8 +33,8 @@
                 </div>
             </div>
             <div class="rightPart">
-                <a href="/profile/{{ $t->technicianId }}" class="btn btnAction">View Profile</a>
-                <a href="/technician/{{ $t->technicianId }}" class="btn btnAction">Choose</a>
+                <a href="/profile/{{ $t->technicianId }}" class="btn btnAction">Lihat Profil</a>
+                <a href="/technician/{{ $t->technicianId }}" class="btn btnAction">Pilih</a>
             </div>
         </div>
         

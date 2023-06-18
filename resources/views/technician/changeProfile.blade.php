@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Profile')
+@section('title','Profil')
 
 @section('content')
 
@@ -12,7 +12,7 @@
         <a href="{{url()->previous()}}" class="back">
             <img src="/img/left-arrow.png" class="backBtn">
         </a>
-        <div class="ro">Technician Profile</div>
+        <div class="ro">Profil Teknisi</div>
     </div>
     <div class="line"></div>
     @if(session()->has('change'))
@@ -45,7 +45,7 @@
                 <form action="/saveChange" method="POST">
                     @csrf
                     <div class="mb-3">
-                      <label for="" class="form-label">Name</label>
+                      <label for="" class="form-label">Nama</label>
                       <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" aria-describedby="emailHelp" value="{{ $technician->name }}">
                       @error('name')
                         <div class="invalid-feedback">
@@ -54,7 +54,7 @@
                         @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Location</label>
+                        <label for="" class="form-label">Lokasi</label>
                         <select class="form-select @error('location') is-invalid @enderror" aria-label="Default select example" id="mySelect" name="location" >
                             <option value="jakarta">Jakarta</option>
                             <option value="bogor">Bogor</option>
@@ -69,7 +69,7 @@
                     @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="" class="form-label">Experience</label>
+                        <label for="" class="form-label">Pengalaman</label>
                         <textarea class="form-control @error('experience') is-invalid @enderror" name="experience" aria-label="With textarea">{{ $technician->experience }}</textarea>
                         @error('experience')
                         <div class="invalid-feedback">
@@ -78,7 +78,7 @@
                     @enderror
                     </div>
                     <div class="btnCont">
-                        <button type="submit" class="btn btnSC">Save Changes</button>
+                        <button type="submit" class="btn btnSC">Simpan</button>
                     </div>
                 </form>
             </div>

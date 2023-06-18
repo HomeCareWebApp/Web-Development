@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Order Detail')
+@section('title','Detail Pesanan')
 
 @section('content')
 
@@ -12,23 +12,23 @@
         <a href="{{url()->previous()}}" class="back">
             <img src="/img/left-arrow.png" class="backBtn">
         </a>
-        <div class="judull">Order Detail</div>
+        <div class="judull">Detail Pesanan</div>
     </div>  
     <div class="line"></div>
     <div class="descCont">
         <div class="desc">
-            <div class="kata">Service</div>
+            <div class="kata">Servis</div>
             <div> : </div>
             <div class="isi">{{ $order->service }}</div>
         </div> 
         <div class="desc">
-            <div class="kata">Customer</div>
+            <div class="kata">Pelanggan</div>
             <div> : </div>
             <div class="isi">{{ $order->name }}</div>
         </div>
         <div>
             <div class="desc">
-                <div class="kata">Address</div>
+                <div class="kata">Alamat</div>
                 <div> : </div>
                 <div class="isi">{{ $order->address }}</div>
             </div>
@@ -36,7 +36,7 @@
         </div>
         <div>
             <div class="desc">
-                <div class="kata">Description</div>
+                <div class="kata">Deskripsi</div>
                 <div>: </div>
                 <div class="isi">{{ $order->description }}</div>
             </div>
@@ -45,10 +45,10 @@
         @if($order->status == 'accepted')
             <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
             <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
-            <a class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Complete</a>
+            <a class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Selesaikan</a>
         @else
             {{-- <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a> --}}
-            <a  class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Accept</a>
+            <a  class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Terima</a>
         @endif
         </div>
     </div>
@@ -59,7 +59,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Accept Order</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Terima Pesanan</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -67,7 +67,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btnOut" data-bs-dismiss="modal">Tutup</button>
-          <a href="/accept/{{ $order->orderId }}" class="btn btnClose">Accept</a>
+          <a href="/accept/{{ $order->orderId }}" class="btn btnClose">Terima</a>
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Complete Order</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Selesaikan Pesanan</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -85,7 +85,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btnOut" data-bs-dismiss="modal">Tutup</button>
-          <a href="/complete/{{ $order->orderId }}" class="btn btnClose">Complete</a>
+          <a href="/complete/{{ $order->orderId }}" class="btn btnClose">Selesaikan</a>
         </div>
       </div>
     </div>

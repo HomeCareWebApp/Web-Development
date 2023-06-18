@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Daftar Teknisi')
+@section('title','Daftar')
 
 @section('content')
 
@@ -10,7 +10,7 @@
     <div class="sec">
         
         <div class="cont">
-            <div class="registerTxt">Register</div>
+            <div class="registerTxt">Daftar Teknisi</div>
             @if(session()->has('success'))
                 <div class="alert alert-success alert-dismissible fade show al" role="alert">
                     {{ session('success') }}
@@ -22,7 +22,7 @@
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="floatingInput" placeholder="name@example.com" value="{{ old('email') }}">
                     <label class="ph" for="floatingInput">
-                        Email Address
+                        Email
                     </label>
                     @error('email')
                         <div class="invalid-feedback">
@@ -34,7 +34,7 @@
                     <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="floatingInput" placeholder="name@example.com" value="{{ old('name') }}">
                     <label class="ph" for="floatingInput">
                         <div>
-                            Name
+                            Nama
                         </div>
                     </label>
                     @error('name')
@@ -49,7 +49,7 @@
                         <input type="text" class="form-control @error('phone') is-invalid @enderror phoneCon" name="phone" id="phonee" placeholder="name@example.com" value="{{ old('phone') }}">
                         <label class="ph" for="floatingInput">
                             <div>
-                                Phone
+                                No HP
                             </div>
                         </label>
                         @error('phone')
@@ -61,7 +61,7 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select @error('location') is-invalid @enderror ph" id="floatingSelect" name="location" aria-label="Floating label select example">
-                      <option value="0">Choose Location</option>
+                      <option value="0">Pilih Lokasi</option>
                       <option value="jakarta">Jakarta</option>
                       <option value="bogor">Bogor</option>
                       <option value="depok">Depok</option>
@@ -70,7 +70,7 @@
                     </select>
                     <label class="ph" for="floatingSelect">
                         <div>
-                            Location
+                            Lokasi
                         </div>
                     </label>
                     @error('location')
@@ -82,7 +82,7 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select @error('category') is-invalid @enderror ph" id="floatingSelect" name="category" aria-label="Floating label select example">
-                      <option value="0">Choose Category</option>
+                      <option value="0">Pilih Kategori</option>
                       <option value="ac">AC</option>
                       <option value="electrical">Electrical</option>
                       <option value="cleaning">Cleaning</option>
@@ -91,7 +91,7 @@
                     </select>
                     <label class="ph" for="floatingSelect">
                         <div>
-                            Category
+                            Kategori
                         </div>
                     </label>
                     @error('category')
@@ -105,7 +105,7 @@
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="floatingPassword" placeholder="Password">
                     <label class="ph" for="floatingPassword">
                         <div>
-                            Password
+                            Kata Sandi
                         </div>
                     </label>
                     @error('password')
@@ -118,7 +118,7 @@
                     <input type="password" class="form-control @error('confirm_password') is-invalid @enderror" name="confirm_password" id="floatingPassword" placeholder="Password">
                     <label class="ph" for="floatingPassword">
                         <div>
-                            Confirm Password
+                            Konfirmasi Sandi
                         </div>
                     </label>
                     @error('confirm_password')
@@ -127,7 +127,7 @@
                     </div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btnReg">Register</button>
+                <button type="submit" class="btn btnReg">Daftar</button>
                <div class="keMasuk">
                    <div>Sudah ada akun? </div><a href="/login">Masuk</a>
                </div>

@@ -2,13 +2,13 @@
 
 @extends('layout.template')
 
-@section('title','View Order')
+@section('title','Pesanan')
 
 @section('content')
 
     <div class="content">
 
-        <div class="ro">Request Order</div>
+        <div class="ro">Daftar Pesanan</div>
         <div class="line"></div>
         <div class="dt">Daftar Order Servis</div>
         @if($data->isEmpty())
@@ -19,11 +19,11 @@
                 <div class="ordCont mb-3">
                     <div class="leftPart ">
                         <div class="d-flex ordTxt">
-                            <div class="kata">Service</div>
+                            <div class="kata">Servis</div>
                             <div> : {{$dt->service }} </div>
                         </div>
                         <div class="d-flex ordTxt">
-                            <div class="kata">Customer</div>
+                            <div class="kata">Pelanggan</div>
                             <div> : {{ $dt->name }}</div>
                         </div>
 
@@ -33,8 +33,8 @@
                         </div>
                     </div>
                     <div class="rightPart">
-                        <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
-                        <a class="btn btnAction" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{ $dt->orderId }}">Accept</a>
+                        <a href="/orderDetail/{{ $dt->orderId }}" class="btn btnAction">Lihat Pesanan</a>
+                        <a class="btn btnAction" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{ $dt->orderId }}">Terima</a>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="staticBackdropLabel">Accept Order</h5>
+                          <h5 class="modal-title" id="staticBackdropLabel">Terima Pesanan</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -50,7 +50,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btnOut" data-bs-dismiss="modal">Tutup</button>
-                          <a href="/accept/{{ $dt->orderId }}" class="btn btnClose">Accept</a>
+                          <a href="/accept/{{ $dt->orderId }}" class="btn btnClose">Terima</a>
                         </div>
                       </div>
                     </div>

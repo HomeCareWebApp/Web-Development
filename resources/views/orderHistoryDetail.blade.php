@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Order History Detail')
+@section('title','Detail Riwayat Pesanan')
 
 @section('content')
 
@@ -17,18 +17,18 @@
     <div class="line"></div>
     <div class="descCont">
         <div class="desc">
-            <div class="kata">Service</div>
+            <div class="kata">Servis</div>
             <div> : </div>
             <div class="isi">{{ $order->service }}</div>
         </div> 
         <div class="desc">
-            <div class="kata">Technician</div>
+            <div class="kata">Teknisi</div>
             <div> : </div>
             <div class="isi">{{ $order->name }}</div>
         </div>
         <div>
             <div class="desc">
-                <div class="kata">Address</div>
+                <div class="kata">Alamat</div>
                 <div> : </div>
                 <div class="isi">{{ $order->address }}</div>
             </div>
@@ -36,14 +36,14 @@
         </div>
         <div>
             <div class="desc">
-                <div class="kata">Description</div>
+                <div class="kata">Deskripsi</div>
                 <div>: </div>
                 <div class="isi">{{ $order->description }}</div>
             </div>
         </div>
        
         <div class="d-flex btnCon">
-           <div>Date : {{ $order->orderDate }}</div>
+           <div>Tanggal : {{ $order->orderDate }}</div>
         </div>
       
     </div>

@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Order Detail')
+@section('title','Detail Pesanan')
 
 @section('content')
 
@@ -17,18 +17,18 @@
     <div class="line"></div>
     <div class="descCont">
         <div class="desc">
-            <div class="kata">Service</div>
+            <div class="kata">Servis</div>
             <div> : </div>
             <div class="isi">{{ $order->service }}</div>
         </div> 
         <div class="desc">
-            <div class="kata">Technician</div>
+            <div class="kata">Teknisi</div>
             <div> : </div>
             <div class="isi">{{ $order->name }}</div>
         </div>
         <div>
             <div class="desc">
-                <div class="kata">Address</div>
+                <div class="kata">Alamat</div>
                 <div> : </div>
                 <div class="isi">{{ $order->address }}</div>
             </div>
@@ -36,7 +36,7 @@
         </div>
         <div>
             <div class="desc">
-                <div class="kata">Description</div>
+                <div class="kata">Deskripsi</div>
                 <div>: </div>
                 <div class="isi">{{ $order->description }}</div>
             </div>
@@ -45,10 +45,10 @@
         <div class="d-flex btnCon">
             @if($order->status == 'accepted')
                 <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
-                <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Send Message</a>
+                <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
             @elseif($order->status == 'requested')
                 {{-- <a class="btn btnCancel" href="/cancel/{{ $order->orderId }}">Cancel</a> --}}
-                <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cancel</a>
+                <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Batal</a>
             @elseif($order->status ==  'completed')
                 <div>Date : {{ $order->orderDate }}</div>
             @endif
@@ -62,7 +62,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Cancel Order</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">Batalkan Pesanan</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -70,7 +70,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btnClose" data-bs-dismiss="modal">Tutup</button>
-          <a href="/cancel/{{ $order->orderId }}" class="btn btnOut">Cancel</a>
+          <a href="/cancel/{{ $order->orderId }}" class="btn btnOut">Batalkan</a>
         </div>
       </div>
     </div>

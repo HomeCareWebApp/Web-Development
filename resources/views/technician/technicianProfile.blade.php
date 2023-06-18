@@ -2,7 +2,7 @@
 
 @extends('layout.template')
 
-@section('title','Profile')
+@section('title','Profil Teknisi')
 
 @section('content')
 
@@ -12,7 +12,7 @@
         <a href="{{url()->previous()}}" class="back">
             <img src="/img/left-arrow.png" class="backBtn">
         </a>
-        <div class="ro">Technician Profile</div>
+        <div class="ro">Profil Teknisi</div>
     </div>
     <div class="line"></div>
     <div class="d-flex cont">
@@ -30,15 +30,15 @@
                     <div>{{ number_format($rating,2) }} / 5.00 ({{$count}})</div>
                 </div>
                 <div class="desc">
-                    <div class="det">Category</div>
+                    <div class="det">Kategori</div>
                     <div>{{ $technician->category }}</div>
                 </div>
                 <div class="desc">
-                    <div class="det">Location</div>
+                    <div class="det">Lokasi</div>
                     <div>{{ $technician->location }}</div>
                 </div>
                 <div class="desc">
-                    <div class="det">Experience</div>
+                    <div class="det">Pengalaman</div>
                     <div>{{ $technician->experience }}</div>
                 </div>
             </div>

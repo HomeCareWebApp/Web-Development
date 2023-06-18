@@ -2,13 +2,13 @@
 
 @extends('layout.template')
 
-@section('title','My Order')
+@section('title','Pesanan')
 
 @section('content')
 
     <div class="content">
 
-        <div class="ro">My Order</div>
+        <div class="ro">Pesanan Saya</div>
         <div class="line"></div>
         @if(session()->has('success'))
             <div class="alert alert-success alert-dismissible fade show al" role="alert">
@@ -26,11 +26,11 @@
             <div class="ordCont mb-3">
                 <div class="leftPart ">
                     <div class="d-flex ordTxt">
-                        <div class="kata">Service</div>
+                        <div class="kata">Servis</div>
                         <div> : {{$dt->service }} </div>
                     </div>
                     <div class="d-flex ordTxt">
-                        <div class="kata">Technician</div>
+                        <div class="kata">Teknisi</div>
                         <div> : {{ $dt->name }}</div>
                     </div>
                     <div class="d-flex ordTxt">
@@ -39,9 +39,9 @@
                     </div>
                 </div>
                 <div class="rightPart">
-                    <a href="/myOrderDetail/{{ $dt->orderId }}" class="btn btnAction">View Order</a>
+                    <a href="/myOrderDetail/{{ $dt->orderId }}" class="btn btnAction">Lihat Pesanan</a>
                     {{-- <a href="/cancel/{{ $dt->orderId }}" class="btn btnCancel">Cancel</a> --}}
-                    <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{ $dt->orderId }}">Cancel</a>
+                    <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{ $dt->orderId }}">Batal</a>
                 </div>
             </div>
 
@@ -49,7 +49,7 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Cancel Order</h5>
+                      <h5 class="modal-title" id="staticBackdropLabel">Batalkan Pesanan</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btnClose" data-bs-dismiss="modal">Tutup</button>
-                      <a href="/cancel/{{ $dt->orderId }}" class="btn btnOut">Cancel</a>
+                      <a href="/cancel/{{ $dt->orderId }}" class="btn btnOut">Batalkan</a>
                     </div>
                   </div>
                 </div>
