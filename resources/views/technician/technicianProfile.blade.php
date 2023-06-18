@@ -27,19 +27,19 @@
             <div  class="descCont">
                 <div class="desc">
                     <div class="det">Rating</div>
-                    <div>{{ number_format($rating,2) }} / 5.00 ({{$count}})</div>
+                    <div class="detv">{{ number_format($rating,2) }} / 5.00 ({{$count}})</div>
                 </div>
                 <div class="desc">
                     <div class="det">Kategori</div>
-                    <div>{{ $technician->category }}</div>
+                    <div class="detv">{{ $technician->category }}</div>
                 </div>
                 <div class="desc">
                     <div class="det">Lokasi</div>
-                    <div>{{ $technician->location }}</div>
+                    <div class="detv">{{ $technician->location }}</div>
                 </div>
                 <div class="desc">
                     <div class="det">Pengalaman</div>
-                    <div>{{ $technician->experience }}</div>
+                    <div class="detv">{{ $technician->experience }}</div>
                 </div>
             </div>
             {{-- <div>

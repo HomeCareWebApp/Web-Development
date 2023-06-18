@@ -78,12 +78,16 @@
   }
 
   .desc {
-    width: 300px;
+    width: 400px;
     display: flex;
   }
 
   .det {
     width: 120px;
+  }
+
+  .detv{
+    width: 260px;
   }
 
   .imgCont {
@@ -178,12 +182,16 @@
   }
 
   .desc {
-    width: 300px;
+    width: 400px;
     display: flex;
   }
 
   .det {
     width: 120px;
+  }
+
+  .detv{
+    width: 260px;
   }
 
   .imgCont {
@@ -281,12 +289,16 @@
   }
 
   .desc {
-    width: 300px;
+    width: 400px;
     display: flex;
   }
 
   .det {
     width: 120px;
+  }
+
+  .detv{
+    width: 260px;
   }
 
   .imgCont {

@@ -9,7 +9,7 @@
 <div class="content">
 
     <div class="upper">
-        <div class="judull">Order Detail</div>
+        <div class="judull">Detail Pesanan</div>
         <a href="{{url()->previous()}}" class="back">
             <img src="/img/left-arrow.png" class="backBtn">
         </a>
