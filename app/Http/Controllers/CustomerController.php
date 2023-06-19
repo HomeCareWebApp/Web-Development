@@ -155,6 +155,8 @@ class CustomerController extends Controller
             $newId = 'ORD'.$pad;
         }
         
+        date_default_timezone_set('Asia/Jakarta');
+
         $validateData['orderId'] = $newId;
         $validateData['service'] = $request->service;
         $validateData['orderDate'] = date("Y-m-d H:i:s");
@@ -208,7 +210,7 @@ class CustomerController extends Controller
 
     public function orderDetail(String $id)
     {
-        $order = DB::table('orders')->join('technicians', 'technicians.technicianId','=','technicians.technicianId')
+        $order = DB::table('orders')->join('technicians', 'orders.technicianId','=','technicians.technicianId')
         ->where('orderId',$id)->first();
 
         return view('customer/orderDetail',[

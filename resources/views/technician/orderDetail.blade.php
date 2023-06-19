@@ -45,17 +45,17 @@
         @if($order->status == 'accepted')
             <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
             <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
-            <a class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Selesaikan</a>
+            <a class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#completeModal">Selesaikan</a>
         @else
             {{-- <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a> --}}
-            <a  class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Terima</a>
+            <a  class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#acceptModal">Terima</a>
         @endif
         </div>
     </div>
    
 </div>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="acceptModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -73,7 +73,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="completeModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

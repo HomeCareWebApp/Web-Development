@@ -25,7 +25,7 @@
                         Email
                     </label>
                     @error('email')
-                        <div class="invalid-feedback">
+                        <div class="invalid-feedback er">
                             {{ $message }}
                         </div>
                     @enderror
@@ -38,7 +38,7 @@
                         </div>
                     </label>
                     @error('name')
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback er">
                         {{ $message }}
                     </div>
                     @enderror
@@ -53,7 +53,7 @@
                             </div>
                         </label>
                         @error('phone')
-                        <div class="invalid-feedback">
+                        <div class="invalid-feedback err">
                             {{ $message }}
                         </div>
                         @enderror
@@ -74,7 +74,7 @@
                         </div>
                     </label>
                     @error('location')
-                        <div class="invalid-feedback">
+                        <div class="invalid-feedback er">
                             {{ $message }}
                         </div>
                     @enderror
@@ -95,7 +95,7 @@
                         </div>
                     </label>
                     @error('category')
-                        <div class="invalid-feedback">
+                        <div class="invalid-feedback er">
                             {{ $message }}
                         </div>
                     @enderror
@@ -109,7 +109,7 @@
                         </div>
                     </label>
                     @error('password')
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback er">
                         {{ $message }}
                     </div>
                     @enderror
@@ -122,7 +122,7 @@
                         </div>
                     </label>
                     @error('confirm_password')
-                    <div class="invalid-feedback">
+                    <div class="invalid-feedback er">
                         {{ $message }}
                     </div>
                     @enderror

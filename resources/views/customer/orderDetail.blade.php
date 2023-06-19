@@ -48,7 +48,7 @@
                 <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
             @elseif($order->status == 'requested')
                 {{-- <a class="btn btnCancel" href="/cancel/{{ $order->orderId }}">Cancel</a> --}}
-                <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Batal</a>
+                <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#cancelModal">Batal</a>
             @elseif($order->status ==  'completed')
                 <div>Date : {{ $order->orderDate }}</div>
             @endif
@@ -58,7 +58,7 @@
    
 </div>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="cancelModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

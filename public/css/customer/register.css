@@ -50,6 +50,14 @@
         font-size: 16px !important;
     }
 
+    .err{
+        width: 214px !important;
+    }
+
+    .er{
+        width: 270px;
+    }
+
     .ph{
         font-size: 16px !important;
     }
@@ -132,6 +140,14 @@
         height: 52px;
         font-size: 14px !important;
 
+    }
+
+    .err{
+        width: 204px !important;
+    }
+
+    .er{
+        width: 260px;
     }
 
     .ph{
@@ -219,6 +235,14 @@
         height: 48px;
         font-size: 13px !important;
 
+    }
+
+    .err{
+        width: 194px !important;
+    }
+
+    .er{
+        width: 250px !important;
     }
 
     .ph{

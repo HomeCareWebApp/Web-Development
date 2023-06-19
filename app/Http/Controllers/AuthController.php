@@ -57,7 +57,7 @@ class AuthController extends Controller
         $validateData = $request->validate([
             'email' => 'required|unique:customers|email',
             'name' =>  'required|max:50',
-            'phone' => 'required|numeric',
+            'phone' => 'required|numeric|starts_with:8',
             'location' => 'required|not_in:0',
             'password' => 'required|min:8',
             'confirm_password' => 'required|min:8|same:password'
@@ -106,7 +106,7 @@ class AuthController extends Controller
         $validateData = $request->validate([
             'email' => 'required|unique:customers|email',
             'name' =>  'required|max:50',
-            'phone' => 'required|numeric',
+            'phone' => 'required|numeric|starts_with:8',
             'location' => 'required|not_in:0',
             'category' => 'required|not_in:0',
             'password' => 'required|min:8',
