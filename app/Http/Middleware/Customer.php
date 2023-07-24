@@ -21,6 +21,6 @@ class Customer
         {
             return $next($request);
         }
-        return abort(404);
+        return redirect('/');
     }
 }

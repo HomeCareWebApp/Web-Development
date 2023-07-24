@@ -45,12 +45,12 @@
         <div class="d-flex btnCon">
             @if($order->status == 'accepted')
                 <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
-                <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
+                <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Pesan</a>
             @elseif($order->status == 'requested')
                 {{-- <a class="btn btnCancel" href="/cancel/{{ $order->orderId }}">Cancel</a> --}}
                 <a class="btn btnCancel" data-bs-toggle="modal" data-bs-target="#cancelModal">Batal</a>
             @elseif($order->status ==  'completed')
-                <div>Date : {{ $order->orderDate }}</div>
+                <div>Tanggal : {{ $order->orderDate }}</div>
             @endif
         </div>
       

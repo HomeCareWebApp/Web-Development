@@ -44,7 +44,7 @@
         <div class="d-flex btnCon">
         @if($order->status == 'accepted')
             <a class="btn btnMsg" href="tel:+62{{ $order->phone }}">Telefon</a>
-            <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Chat</a>
+            <a class="btn btnMsg" href="https://wa.me/+62{{ $order->phone }}">Pesan</a>
             <a class="btn btnAcc" data-bs-toggle="modal" data-bs-target="#completeModal">Selesaikan</a>
         @else
             {{-- <a href="/accept/{{ $order->orderId }}" class="btn btnAcc">Accept</a> --}}

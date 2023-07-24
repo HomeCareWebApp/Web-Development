@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [CustomerController::class, 'home']);
+Route::get('/', [CustomerController::class, 'home'])->middleware('guestandcust');
 
 Route::get('/login', [AuthController::class, 'loginPage'])->middleware('guest');
 
