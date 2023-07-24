@@ -253,7 +253,7 @@ class CustomerController extends Controller
        
         DB::table('orders')->where('orderId',$id)->update(['status' => 'canceled']);
 
-        return redirect('/myOrder')->with('success','Your order has been canceled');
+        return redirect('/myOrder')->with('success','Order anda telah dibatalkan');
     }
 
     public function onGoing()

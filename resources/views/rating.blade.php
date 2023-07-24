@@ -12,7 +12,7 @@
         <a href="/orderHistoryCust" class="back">
             <img src="/img/left-arrow.png" class="backBtn">
         </a>
-        <div class="rating">Rating Teknisi</div>
+        <div class="rating">Penilaian Teknisi</div>
     </div>
     <div class="line"></div>
     @if ($errors->any())
@@ -29,7 +29,7 @@
         <div class="box p-3 gap-2 ">
             <span class="">Servis : {{$orders->service}}</span>
             <span class="">Teknisi : {{$orders->name}}</span>
-            <span>Rating Teknisi :</span>
+            <span>Penilaian Teknisi :</span>
             <div class="btn-group rateBox my-2" role="group" aria-label="Basic radio toggle button group">
                 <div class="rateBoxUpper">
                     <input type="radio" class="btn-check w-50" name="rating" value="1" id="btnradio1" autocomplete="off">

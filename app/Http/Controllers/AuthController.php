@@ -29,6 +29,7 @@ class AuthController extends Controller
             session()->regenerate();
             if(Auth::user()->role == 'Customer')
             {
+                
                 return redirect()->intended('/');
             }
             elseif(Auth::user()->role == 'Technician')
@@ -37,7 +38,7 @@ class AuthController extends Controller
             }
             
         }
-        return back()->with('errorLogin', 'Invalid Username or Password');
+        return back()->with('errorLogin', 'Username atau Password salah');
        
        
     }
@@ -96,7 +97,7 @@ class AuthController extends Controller
 
         User::create($userData);
 
-        session()->flash('success','Registration Successfull! Please login');
+        session()->flash('success','Registrasi Berhasil! Silahkan Login');
     
         return redirect('register');
     }
@@ -146,7 +147,7 @@ class AuthController extends Controller
 
         User::create($userData);
 
-        session()->flash('success','Registration Successfull! Please login');
+        session()->flash('success','Registrasi Berhasil! Silahkan Login');
     
         return redirect('/registerTechnician');
 

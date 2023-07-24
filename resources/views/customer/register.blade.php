@@ -61,7 +61,11 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select @error('location') is-invalid @enderror ph" id="floatingSelect" name="location" aria-label="Floating label select example">
+                      @if (old('location') == null)
                       <option value="0">Pilih Lokasi</option>
+                      @else
+                      <option value="{{old('location')}}">{{old('location')}}</option>
+                      @endif
                       <option value="Jakarta">Jakarta</option>
                       <option value="Bogor">Bogor</option>
                       <option value="Depok">Depok</option>

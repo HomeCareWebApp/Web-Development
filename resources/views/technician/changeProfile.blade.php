@@ -9,9 +9,6 @@
 <div class="content">
 
     <div class="upper">
-        <a href="{{url()->previous()}}" class="back">
-            <img src="/img/left-arrow.png" class="backBtn">
-        </a>
         <div class="ro">Profil Teknisi</div>
     </div>
     <div class="line"></div>
@@ -33,7 +30,7 @@
                 <img class="pp" src="{{ asset('techImg/'.$technician->technicianId.'.png') }}" alt="">
             </div>
             <div>{{ $technician->technicianId }}</div>
-            <form action="/changePicture" method="POST" id="picture" enctype="multipart/form-data">
+            <form action="/changePicture" class="formcp" method="POST" id="picture" enctype="multipart/form-data">
                 @csrf
                 <input class="custom-file-input" type="file" name="image" id="image" onchange="form.submit()" >
             </form>
@@ -56,11 +53,11 @@
                     <div class="mb-3">
                         <label for="" class="form-label">Lokasi</label>
                         <select class="form-select @error('location') is-invalid @enderror" aria-label="Default select example" id="mySelect" name="location" >
-                            <option value="jakarta">Jakarta</option>
-                            <option value="bogor">Bogor</option>
-                            <option value="depok">Depok</option>
-                            <option value="tangerang">Tangerang</option>
-                            <option value="bekasi">Bekasi</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bogor">Bogor</option>
+                            <option value="Depok">Depok</option>
+                            <option value="Tangerang">Tangerang</option>
+                            <option value="Bekasi">Bekasi</option>
                         </select>
                         @error('location')
                         <div class="invalid-feedback">

@@ -26,7 +26,7 @@
         <div class="rightPart">
             <div  class="descCont">
                 <div class="desc">
-                    <div class="det">Rating</div>
+                    <div class="det">Penilaian</div>
                     <div class="detv">{{ number_format($rating,2) }} / 5.00 ({{$count}})</div>
                 </div>
                 <div class="desc">

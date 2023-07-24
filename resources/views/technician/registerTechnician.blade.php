@@ -61,12 +61,16 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select @error('location') is-invalid @enderror ph" id="floatingSelect" name="location" aria-label="Floating label select example">
+                      @if (old('location') == null)
                       <option value="0">Pilih Lokasi</option>
-                      <option value="jakarta">Jakarta</option>
-                      <option value="bogor">Bogor</option>
-                      <option value="depok">Depok</option>
-                      <option value="tangerang">Tangerang</option>
-                      <option value="bekasi">Bekasi</option>
+                      @else
+                      <option value="{{old('location')}}">{{old('location')}}</option>
+                      @endif
+                      <option value="Jakarta">Jakarta</option>
+                      <option value="Bogor">Bogor</option>
+                      <option value="Depok">Depok</option>
+                      <option value="Tangerang">Tangerang</option>
+                      <option value="Bekasi">Bekasi</option>
                     </select>
                     <label class="ph" for="floatingSelect">
                         <div>
@@ -82,12 +86,16 @@
                 </div>
                 <div class="form-floating mb-3">
                     <select class="form-select @error('category') is-invalid @enderror ph" id="floatingSelect" name="category" aria-label="Floating label select example">
+                      @if (old('category') == null)
                       <option value="0">Pilih Kategori</option>
-                      <option value="ac">AC</option>
-                      <option value="electrical">Electrical</option>
-                      <option value="cleaning">Cleaning</option>
-                      <option value="water">Water</option>
-                      <option value="refrigirator">Refrigirator</option>
+                      @else
+                      <option value="{{old('category')}}">{{old('category')}}</option>
+                      @endif
+                      <option value="AC">AC</option>
+                      <option value="Listrik">Listrik</option>
+                      <option value="Pembersihan">Pembersihan</option>
+                      <option value="Air">Air</option>
+                      <option value="Kulkas">Kulkas</option>
                     </select>
                     <label class="ph" for="floatingSelect">
                         <div>

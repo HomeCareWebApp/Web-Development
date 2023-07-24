@@ -179,7 +179,7 @@ class TechnicianController extends Controller
 
         DB::table('technicians')->where('technicianId',$id)->update(['profilePicture' => $id]);
 
-        session()->flash('picture', 'Successfully change profile picture');
+        session()->flash('picture', 'Foto Profil Anda Telah Berhasil Diganti');
 
         return redirect('/changeProfile'.'/'.$id);
 
@@ -208,7 +208,7 @@ class TechnicianController extends Controller
 
         DB::table('users')->where('email', $tech->email)->update(['name' => $request->name]);
 
-        session()->flash('change','Successfully change profile');
+        session()->flash('change','Profil Anda Telah Berhasil Diganti');
 
         return redirect('/changeProfile'.'/'.$id);
     }

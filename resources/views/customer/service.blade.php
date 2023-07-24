@@ -13,31 +13,31 @@
 
             <div class="servCont row ">
                 <div id="aa" class="perServ col">
-                    <a href="/service/ac" class="servLink">
+                    <a href="/service/AC" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/AC.png') }}" alt=""></div>
                         <div>AC</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="/service/electrical" class="servLink">
+                    <a href="/service/Listrik" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Electrical.png') }}" alt=""></div>
                         <div>Listrik</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="/service/cleaning" class="servLink">
+                    <a href="/service/Pembersihan" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Cleaning.png') }}" alt=""></div>
                         <div>Pembersihan</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="/service/water" class="servLink">
+                    <a href="/service/Air" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Water.png') }}" alt=""></div>
                         <div>Air</div>
                     </a>
                 </div>
                 <div id="aa" class="perServ col">
-                    <a href="/service/refrigirator" class="servLink">
+                    <a href="/service/Kulkas" class="servLink">
                         <div class="imgCont"><img src="{{ asset('img/Refrigirator.png') }}" alt=""></div>
                         <div>Kulkas</div>
                     </a>

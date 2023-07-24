@@ -56,7 +56,7 @@
             </div>
             <a href="/changeProfile/{{$id}}" class="na">Profil</a>
 
-          @endif
+            @endif
           
            <div class="navbar-nav">
              <li class="nav-item dropdown">

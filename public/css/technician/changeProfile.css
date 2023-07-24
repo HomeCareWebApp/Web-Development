@@ -105,13 +105,13 @@
 
   .custom-file-input {
     color: transparent;
-    width: 120px;
+    width: 90px;
   }
   .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
   }
   .custom-file-input::before {
-    content: "Change Picture";
+    content: "Ganti Foto";
     color: black;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -126,7 +126,6 @@
     text-shadow: 1px 1px #fff;
     font-weight: 500;
     font-size: 10pt;
-    margin-left: 3px;
   }
   .custom-file-input:hover::before {
     border-color: black;
@@ -246,13 +245,13 @@
 
   .custom-file-input {
     color: transparent;
-    width: 120px;
+    width: 90px;
   }
   .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
   }
   .custom-file-input::before {
-    content: "Change Picture";
+    content: "Ganti Foto";
     color: black;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
@@ -395,13 +394,13 @@
 
   .custom-file-input {
     color: transparent;
-    width: 120px;
+    width: 90px;
   }
   .custom-file-input::-webkit-file-upload-button {
     visibility: hidden;
   }
   .custom-file-input::before {
-    content: "Change Picture";
+    content: "Ganti Foto";
     color: black;
     display: inline-block;
     background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);

@@ -15,12 +15,13 @@ class Customer
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+    
     public function handle(Request $request, Closure $next)
     {
         if(Auth::user()->role == 'Customer')
         {
             return $next($request);
         }
-        return abort(404);
+        return redirect('/');
     }
 }
